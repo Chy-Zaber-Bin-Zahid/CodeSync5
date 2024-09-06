@@ -10,17 +10,18 @@ import { WhatsappLogo } from 'phosphor-react';
 
 function Navbar() {
     const currentPath = usePathname();
-    const baseLinkClass = "px-2 py-2 transition-all duration-300 no-underline";
-    const baseLinkActiveClass = "text-nav-active border-b-2 border-nav-active hover:text-nav-active";
+    const baseLinkCommonClass = "px-2 py-2 transition-all duration-300 no-underline border-b-2";
+    const baseLinkActiveClass = "text-nav-active border-nav-active hover:text-nav-active";
+    const baseLinkDefaultClass = "hover:text-nav-hover text-nav-default border-b-white";
     return (
-        <div className='sticky top-0 shadow-nav-shadow p-4 z-50'>
+        <div className='sticky top-0 shadow-nav-shadow p-4 z-50 bg-white'>
             <div className="flex gap-2 justify-between items-center max-w-big-screen mx-auto" >
                 <div>logo</div>
-                <div className='flex justify-between items-center gap-4' >
-                    <Link href="/" className={`${baseLinkClass} ${currentPath === "/" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default"}`}>Home</Link>
-                    <Link href="/about" className={`${baseLinkClass} ${currentPath === "/about" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default"}`}>About</Link>
+                <div className='flex justify-between items-center gap-3' >
+                    <Link href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass}`}>Home</Link>
+                    <Link href="/about" className={`${baseLinkCommonClass} ${currentPath === "/about" ? baseLinkActiveClass : baseLinkDefaultClass}`}>About</Link>
                     <Dropdown as={ButtonGroup}>
-                        <Link href="/services" className={`${baseLinkClass} ${currentPath === "/services" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default p-0"}`}>Services</Link>
+                        <Link href="/services" className={`${baseLinkCommonClass} ${currentPath === "/services" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default p-0 border-b-white"}`}>Services</Link>
 
                         <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className={`dropdown-toggle ${currentPath === "/services" ? "dropdown-toggle-active" : ""
                             }`} />
