@@ -14,7 +14,7 @@ function Navbar() {
     const baseLinkActiveClass = "text-nav-active border-b-2 border-nav-active hover:text-nav-active";
     return (
         <div className='sticky top-0 shadow-nav-shadow p-4 z-50'>
-            <div className="flex gap-2 justify-between items-center max-w-[1200px] mx-auto" >
+            <div className="flex gap-2 justify-between items-center max-w-big-screen mx-auto" >
                 <div>logo</div>
                 <div className='flex justify-between items-center gap-4' >
                     <Link href="/" className={`${baseLinkClass} ${currentPath === "/" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default"}`}>Home</Link>
@@ -35,7 +35,7 @@ function Navbar() {
                         href="https://rosetech.dev/services/devops/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-[#25d366] rounded text-white flex justify-center items-center gap-1 py-2 px-3 transition-all duration-300 hover:bg-[#1eab5e] no-underline"
+                        className="bg-whatsapp-default rounded text-white flex justify-center items-center gap-1 py-2 px-3 transition-all duration-300 hover:bg-whatsapp-hover no-underline"
                     >
                         <WhatsappLogo size={26} />
                         Whatsapp
