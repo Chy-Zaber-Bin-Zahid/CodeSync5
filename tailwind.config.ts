@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'nav-default': "#808080",
+        'nav-hover': "#000000",
+        'nav-active': "#0000ff",
       },
     },
   },
