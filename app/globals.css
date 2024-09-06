@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dropdown-toggle{
+    background-color: white !important;
+    color: #808080 !important;
+    border: none !important;
+    transition: color 300ms !important;
+    padding: 0rem .5rem !important;
+    border-radius: 0 !important;
+}
+
+.dropdown-toggle-active{
+    border-bottom: 2px solid #0000ff !important;
+    color: #0000ff !important;
+}
+
+.dropdown-toggle:hover {
+    color: #000000 !important;
+}
+
+.dropdown-toggle-active:hover {
+    color: #0000ff !important;
+}
+
+.dropdown-menu {
+    left: -75% !important;
+  }
+
+.drop-menu{
+    color: #808080 !important;
+}
+  
