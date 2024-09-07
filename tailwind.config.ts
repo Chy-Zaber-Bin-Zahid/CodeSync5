@@ -14,9 +14,21 @@ const config: Config = {
         'nav-default': "#808080",
         'nav-hover': "#000000",
         'nav-active': "#0000ff",
+        'whatsapp-default': "#25d366",
+        'whatsapp-hover': "#1eab5e",
+        'footerBg': "#212529",
       },
       boxShadow: {
         'nav-shadow': '0 2px 8px rgba(0, 0, 0, 0.1)',
+      },
+      maxWidth: {
+        'big-screen': '1200px',
+        'small-screen': '570px',
+      },
+      screens: {
+        'mq-400': {'max': '400px'},
+        'mq-765': {'max': '765px'},
+        'min-mq-765': {'min': '766px'},
       },
     },
   },
