@@ -7,8 +7,8 @@ import React from 'react'
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-footerBg text-white px-4 py-12">
-      <div className='max-w-big-screen mx-auto grid grid-cols-3 gap-x-2'>
+    <div className="bg-footerBg text-white px-3 py-12 ">
+      <div className='max-w-big-screen mx-auto grid grid-cols-3 gap-x-6 nav-mq:grid-cols-1 nav-mq:gap-y-8 nav-mq:max-w-small-screen'>
         <div className='flex flex-col justify-start items-start gap-1'>
           <h1>logo</h1>
           <p className='text-sm m-0'>Copyright © _____ | 2023-{currentYear}</p>

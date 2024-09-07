@@ -23,6 +23,10 @@ const config: Config = {
       },
       maxWidth: {
         'big-screen': '1200px',
+        'small-screen': '570px',
+      },
+      screens: {
+        'nav-mq': {'max': '765px'},
       },
     },
   },

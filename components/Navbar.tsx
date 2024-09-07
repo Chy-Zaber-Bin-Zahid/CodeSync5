@@ -14,7 +14,7 @@ function Navbar() {
     const baseLinkActiveClass = "text-nav-active border-nav-active hover:text-nav-active";
     const baseLinkDefaultClass = "hover:text-nav-hover text-nav-default border-b-white";
     return (
-        <div className='sticky top-0 shadow-nav-shadow p-4 z-50 bg-white'>
+        <div className='sticky top-0 shadow-nav-shadow py-4 px-2 z-50 bg-white'>
             <div className="flex gap-2 justify-between items-center max-w-big-screen mx-auto" >
                 <div>logo</div>
                 <div className='flex justify-between items-center gap-3' >
