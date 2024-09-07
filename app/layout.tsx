@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="overflow-x-hidden" >
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <div className="flex-grow flex">

@@ -26,7 +26,9 @@ const config: Config = {
         'small-screen': '570px',
       },
       screens: {
-        'nav-mq': {'max': '765px'},
+        'mq-400': {'max': '400px'},
+        'mq-765': {'max': '765px'},
+        'min-mq-765': {'min': '766px'},
       },
     },
   },
