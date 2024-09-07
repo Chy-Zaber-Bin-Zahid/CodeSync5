@@ -15,6 +15,7 @@ function Navbar() {
     const baseLinkActiveClass = "text-nav-active border-nav-active hover:text-nav-active";
     const baseLinkDefaultClass = "hover:text-nav-hover text-nav-default border-b-white";
     const [toggleNav,setToggleNav] = useState<boolean>(false)
+    console.log(currentPath);
     return (
         <div className='sticky top-0 shadow-nav-shadow min-mq-765:py-6 px-2 z-40 bg-white mq-765:py-2'>
             <div className="flex gap-2 justify-between items-center max-w-big-screen mx-auto" >
