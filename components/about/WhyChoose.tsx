@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { Check } from "phosphor-react";
 import React from "react";
 
 const WhyChoose = () => {
@@ -26,7 +28,7 @@ const WhyChoose = () => {
     },
   ];
   return (
-    <div className="w-4/5 mx-auto  my-8">
+    <div className="w-4/5 mx-auto  my-32">
       <h1 className="text-5xl text-center">
         Why Choose <span className="text-red-800">XYZ</span> Solutions
       </h1>
@@ -36,14 +38,16 @@ const WhyChoose = () => {
             src="/assets/about/WhyChooseIllustration.jpg"
             alt="Team Illustration"
             layout="fill"
-            objectFit="fill"
+            objectFit="contain"
             className="rounded-lg absolute inset-0"
           />
         </div>
         <div className="flex-1">
           {whyChoose.map((item, index) => (
             <div key={index} className="flex gap-2 text-2xl items-center">
-              <p>Check Icon</p>
+              <p>
+                <Check size={32} color="#921c1c" weight="fill" />
+              </p>
               <p>{item.title}</p>
             </div>
           ))}

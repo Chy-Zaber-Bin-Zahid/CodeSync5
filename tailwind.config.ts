@@ -18,6 +18,7 @@ const config: Config = {
         "whatsapp-default": "#25d366",
         "whatsapp-hover": "#1eab5e",
         footerBg: "#212529",
+        primaryText: "#991b1b",
       },
       boxShadow: {
         "nav-shadow": "0 2px 8px rgba(0, 0, 0, 0.1)",

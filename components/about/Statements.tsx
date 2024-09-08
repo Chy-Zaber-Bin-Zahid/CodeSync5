@@ -4,7 +4,7 @@ import React from "react";
 const Statements = () => {
   return (
     <section>
-      <div className="w-4/5 mx-auto my-8">
+      <div className="w-4/5 mx-auto my-32">
         <div className="flex justify-between items-center space-x-8">
           {" "}
           {/* Add spacing between the items */}
@@ -13,7 +13,7 @@ const Statements = () => {
               src="/assets/about/MissionIllustration.jpg"
               alt="Team Illustration"
               layout="fill"
-              objectFit="fill"
+              objectFit="contain"
               className="rounded-lg absolute inset-0"
             />
           </div>
@@ -35,7 +35,7 @@ const Statements = () => {
         </div>
       </div>
 
-      <div className="w-4/5 mx-auto my-8">
+      <div className="w-4/5 mx-auto my-32">
         <div className="flex flex-row-reverse justify-between items-center space-x-8">
           {" "}
           {/* Add spacing between the items */}
@@ -44,7 +44,7 @@ const Statements = () => {
               src="/assets/about/VisionIllustration.jpg"
               alt="Team Illustration"
               layout="fill"
-              objectFit="fill"
+              objectFit="contain"
               className="rounded-lg absolute inset-0"
             />
           </div>

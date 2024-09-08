@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col gap-2 w-4/5 mx-auto">
+    <div className="flex flex-col gap-2 w-4/5 mx-auto my-32">
       <h1 className="">
         About <span className="text-red-800">US</span>{" "}
       </h1>
@@ -19,7 +19,7 @@ const AboutUs = () => {
           src="/assets/about/TeamIllustration.jpg"
           alt="Team Illustration"
           layout="fill"
-          objectFit="fill"
+          objectFit="contain"
           className="rounded-lg absolute inset-0"
         />
       </div>

@@ -1,3 +1,5 @@
+"use client";
+import { Check } from "phosphor-react";
 import React from "react";
 
 const Services = () => {
@@ -25,14 +27,17 @@ const Services = () => {
     },
   ];
   return (
-    <div className="w-4/5 mx-auto">
+    <div className="w-4/5 mx-auto my-32">
       <h1 className="text-5xl text-center">
         Core <span className="text-red-800">Services</span>{" "}
       </h1>
       <ul className="grid grid-cols-2  my-8">
         {services.map((item, index) => (
           <li className="flex gap-2 items-center text-2xl mt-4" key={index}>
-            <span>Check Icon</span> {item.title}
+            <span>
+              <Check size={32} color="#921c1c" weight="fill" />
+            </span>{" "}
+            {item.title}
           </li>
         ))}
       </ul>
