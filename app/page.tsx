@@ -1,16 +1,10 @@
+import React from 'react';
+import Intro from '@/components/Home/Intro';
+
 export default function Home() {
   return (
-    <div className="py-4 text-[100px]">
-        <h1>Hello World!</h1>
-        <h1>Hello World!</h1>
-        <h1>Hello World!</h1>
-        <h1>Hello World!</h1>
-        <h1>Hello World!</h1>
-        <h1>Hello World!</h1>
-        <h1>Hello World!</h1>
-        <h1>Hello World!</h1>
-        <h1>Hello World!</h1>
-        <h1>Hello World!</h1>
-    </div>
+    <React.Fragment>
+      <Intro/>
+    </React.Fragment>
   );
 }
