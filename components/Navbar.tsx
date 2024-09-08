@@ -15,14 +15,14 @@ function Navbar() {
     const baseLinkActiveClass = "text-nav-active border-nav-active hover:text-nav-active";
     const baseLinkDefaultClass = "hover:text-nav-hover text-nav-default border-b-white";
     const [toggleNav,setToggleNav] = useState<boolean>(false)
-    console.log(currentPath.startsWith("/about"))
+    console.log(usePathname())
     return (
         <div className='sticky top-0 shadow-nav-shadow min-mq-765:py-6 px-3 z-40 bg-white mq-765:py-2'>
             <div className="flex gap-2 justify-between items-center max-w-big-screen mx-auto" >
                 <div>logo</div>
                 <div className='flex justify-between items-center gap-3 mq-765:hidden' >
                     <Link href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass}`}>Home</Link>
-                    <Link href="/about" className={`${baseLinkCommonClass} ${currentPath.startsWith("/about") ? baseLinkActiveClass : baseLinkDefaultClass}`}>About</Link>
+                    <Link href="/about" className={`${baseLinkCommonClass} ${currentPath === "It-Firm/about" ? baseLinkActiveClass : baseLinkDefaultClass}`}>About</Link>
                     <Dropdown as={ButtonGroup}>
                         <Link href="/services" className={`${baseLinkCommonClass} ${currentPath === "/services" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default p-0 border-b-white"}`}>Services</Link>
 
