@@ -35,7 +35,7 @@ const WhyChoose = () => {
       <div className="flex justify-between items-center">
         <div className="flex-1 h-96 relative">
           <Image
-            src="/assets/about/WhyChooseIllustration.jpg"
+            src="assets/about/WhyChooseIllustration.jpg"
             alt="Team Illustration"
             layout="fill"
             objectFit="contain"

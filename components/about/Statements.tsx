@@ -10,7 +10,7 @@ const Statements = () => {
           {/* Add spacing between the items */}
           <div className="flex-1 h-96 relative">
             <Image
-              src="/assets/about/MissionIllustration.jpg"
+              src="assets/about/MissionIllustration.jpg"
               alt="Team Illustration"
               layout="fill"
               objectFit="contain"
@@ -41,7 +41,7 @@ const Statements = () => {
           {/* Add spacing between the items */}
           <div className="flex-1 h-96 relative">
             <Image
-              src="/assets/about/VisionIllustration.jpg"
+              src="assets/about/VisionIllustration.jpg"
               alt="Team Illustration"
               layout="fill"
               objectFit="contain"
