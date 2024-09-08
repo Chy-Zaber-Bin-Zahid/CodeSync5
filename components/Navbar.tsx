@@ -22,7 +22,7 @@ function Navbar() {
                 <div>logo</div>
                 <div className='flex justify-between items-center gap-3 mq-765:hidden' >
                     <Link href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass}`}>Home</Link>
-                    <Link href="/about" className={`${baseLinkCommonClass} ${currentPath === "about" ? baseLinkActiveClass : baseLinkDefaultClass}`}>About</Link>
+                    <Link href="/about" className={`${baseLinkCommonClass} ${currentPath.startsWith("/about") ? baseLinkActiveClass : baseLinkDefaultClass}`}>About</Link>
                     <Dropdown as={ButtonGroup}>
                         <Link href="/services" className={`${baseLinkCommonClass} ${currentPath === "/services" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default p-0 border-b-white"}`}>Services</Link>
 
