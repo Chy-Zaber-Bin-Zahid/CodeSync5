@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/button": "^2.0.37",
     "bootstrap": "^5.3.3",
     "next": "14.2.8",
     "phosphor-react": "^1.4.1",
