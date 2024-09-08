@@ -15,12 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body >
+      <body>
         <div className="flex flex-col min-h-screen overflow-x-clip">
           <Navbar />
-          <div className="flex-grow flex">
-            {children}
-          </div>
+          <div className="flex-grow flex">{children}</div>
           <Footer />
         </div>
       </body>
