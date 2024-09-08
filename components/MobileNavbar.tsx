@@ -1,5 +1,12 @@
+"use client"
+
+import { X, WhatsappLogo } from 'phosphor-react';
 import React from 'react'
-import { X } from 'phosphor-react';
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 type MobileNavbar = {
     toggleNav: boolean,
@@ -7,11 +14,40 @@ type MobileNavbar = {
 }
 
 function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
+    const currentPath = usePathname();
+    const baseLinkCommonClass = "transition-all duration-300 no-underline border-b-2 pr-[4px]";
+    const baseLinkActiveClass = "text-nav-active border-nav-active hover:text-nav-active";
+    const baseLinkDefaultClass = "hover:text-nav-hover text-nav-default border-b-white";
     return (
-        <div className={`absolute top-0 right-0 z-50 bg-white h-screen w-3/4 border-l border-gray-300 py-3 px-4 transition-all duration-300 opacity-95 min-mq-765:hidden mq-765:block ${toggleNav ? "translate-x-0" : "translate-x-full"} mq-400:w-full`} >
-            <div className="flex justify-between items-center gap-4" >
+        <div className={`absolute top-0 right-0 z-50 bg-white h-screen w-3/4 border-l border-gray-300 py-3 px-4 transition-all duration-500 min-mq-765:hidden mq-765:block ${toggleNav ? "translate-x-0" : "translate-x-full"} mq-400:w-full`} >
+            <div className="flex justify-between items-center gap-4 mb-6" >
                 <div>logo</div>
                 <div onClick={() => setToggleNav(false)} className="hover:cursor-pointer hover:scale-125 transition-all duration-300" ><X size={26} /></div>
+            </div>
+            <div className='flex flex-col justify-start items-start gap-3' >
+                <Link onClick={() => setToggleNav(false)} href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>Home</Link>
+                <Link onClick={() => setToggleNav(false)} href="/about" className={`${baseLinkCommonClass} ${currentPath === "/about" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>About</Link>
+                <Dropdown as={ButtonGroup}>
+                    <Link onClick={() => setToggleNav(false)} href="/services" className={`${baseLinkCommonClass} ${currentPath === "/services" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default border-b-white"}`}>Services</Link>
+
+                    <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className={`dropdown-toggle ${currentPath === "/services" ? "dropdown-toggle-active" : ""
+                        }`} />
+
+                    <Dropdown.Menu className='dropdown-menu-mobile'>
+                        <Dropdown.Item onClick={() => setToggleNav(false)} href="#/action-1" className='drop-menu'>Web Application</Dropdown.Item>
+                        <Dropdown.Item onClick={() => setToggleNav(false)} href="#/action-2" className='drop-menu'>Mobile Application</Dropdown.Item>
+                        <Dropdown.Item onClick={() => setToggleNav(false)} href="#/action-3" className='drop-menu'>DevOps</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                <a
+                    href="https://rosetech.dev/services/devops/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-whatsapp-default rounded text-white flex justify-center items-center gap-1 py-2 px-3 transition-all duration-300 hover:bg-whatsapp-hover no-underline"
+                >
+                    <WhatsappLogo size={26} />
+                    Whatsapp
+                </a>
             </div>
         </div>
     )
