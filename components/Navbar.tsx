@@ -1,14 +1,14 @@
 "use client"
 
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import MobileNavbar from '@/components/MobileNavbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { List, WhatsappLogo } from 'phosphor-react';
+import { useState } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { List, WhatsappLogo } from 'phosphor-react';
-import MobileNavbar from '@/components/MobileNavbar';
-import Image from 'next/image'
 
 function Navbar() {
     const currentPath = usePathname();
@@ -17,9 +17,9 @@ function Navbar() {
     const baseLinkDefaultClass = "hover:text-nav-hover text-nav-default border-b-white";
     const [toggleNav, setToggleNav] = useState<boolean>(false)
     return (
-        <div className='sticky top-0 shadow-nav-shadow min-mq-765:py-6 px-3 z-40 bg-white mq-765:py-2'>
+        <div className='sticky top-0 shadow-nav-shadow min-mq-766:py-6 px-3 z-40 bg-white mq-765:py-2'>
             <div className="flex gap-2 justify-between items-center max-w-big-screen mx-auto" >
-                <div className="flex justify-end items-end gap-2">
+                <Link onClick={() => setToggleNav(false)} href="/" className="flex justify-end items-end gap-2 no-underline text-black">
                     <Image
                         src="assets/nav-logo.png"
                         width={33}
@@ -27,8 +27,8 @@ function Navbar() {
                         objectFit="contain"
                         alt="Logo"
                     />
-                    <h1 className='text-lg font-semibold m-0'>RoseTech</h1>
-                </div>
+                    <h1 className='text-lg font-semibold m-0'>Rose<span className="text-primaryText" >Tech</span></h1>
+                </Link>
                 <div className='flex justify-between items-center gap-3 mq-765:hidden' >
                     <Link href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass}`}>Home</Link>
                     <Link href="/about" className={`${baseLinkCommonClass} ${currentPath.startsWith("/about") ? baseLinkActiveClass : baseLinkDefaultClass}`}>About</Link>

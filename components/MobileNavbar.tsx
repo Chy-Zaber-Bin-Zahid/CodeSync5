@@ -1,12 +1,13 @@
 "use client"
 
-import { X, WhatsappLogo } from 'phosphor-react';
-import React from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { WhatsappLogo, X } from 'phosphor-react';
+import React from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 type MobileNavbar = {
     toggleNav: boolean,
@@ -18,25 +19,39 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
     const baseLinkCommonClass = "transition-all duration-300 no-underline border-b-2 pr-[4px]";
     const baseLinkActiveClass = "text-nav-active border-nav-active hover:text-nav-active";
     const baseLinkDefaultClass = "hover:text-nav-hover text-nav-default border-b-white";
+
+    const handleNav = () => {
+        setToggleNav(false)
+    }
+
     return (
-        <div className={`absolute top-0 right-0 z-50 bg-white h-screen w-3/4 border-l border-gray-300 py-3 px-4 transition-all duration-500 min-mq-765:hidden mq-765:block ${toggleNav ? "translate-x-0" : "translate-x-full"} mq-400:w-full`} >
+        <div className={`absolute top-0 right-0 z-50 bg-white h-screen w-3/4 border-l border-gray-300 py-3 px-4 transition-all duration-500 min-mq-766:hidden mq-765:block ${toggleNav ? "translate-x-0" : "translate-x-full"} mq-400:w-full`} >
             <div className="flex justify-between items-center gap-4 mb-6" >
-                <div>logo</div>
-                <div onClick={() => setToggleNav(false)} className="hover:cursor-pointer hover:scale-125 transition-all duration-300" ><X size={26} /></div>
+                <Link onClick={() => handleNav()} href="/" className="flex justify-end items-end gap-2 no-underline text-black">
+                    <Image
+                        src="assets/nav-logo.png"
+                        width={33}
+                        height={33}
+                        objectFit="contain"
+                        alt="Logo"
+                    />
+                    <h1 className='text-lg font-semibold m-0'>Rose<span className="text-primaryText" >Tech</span></h1>
+                </Link>
+                <div onClick={() => handleNav()} className="hover:cursor-pointer hover:scale-125 transition-all duration-300" ><X size={26} /></div>
             </div>
             <div className='flex flex-col justify-start items-start gap-3' >
-                <Link onClick={() => setToggleNav(false)} href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>Home</Link>
-                <Link onClick={() => setToggleNav(false)} href="/about" className={`${baseLinkCommonClass} ${currentPath === "/about" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>About</Link>
+                <Link onClick={() => handleNav()} href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>Home</Link>
+                <Link onClick={() => handleNav()} href="/about" className={`${baseLinkCommonClass} ${currentPath === "/about" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>About</Link>
                 <Dropdown as={ButtonGroup}>
-                    <Link onClick={() => setToggleNav(false)} href="/services" className={`${baseLinkCommonClass} ${currentPath === "/services" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default border-b-white"}`}>Services</Link>
+                    <Link onClick={() => handleNav()} href="/services" className={`${baseLinkCommonClass} ${currentPath === "/services" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default border-b-white"}`}>Services</Link>
 
                     <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className={`dropdown-toggle ${currentPath === "/services" ? "dropdown-toggle-active" : ""
                         }`} />
 
                     <Dropdown.Menu className='dropdown-menu-mobile'>
-                        <Dropdown.Item onClick={() => setToggleNav(false)} href="#/action-1" className='drop-menu'>Web Application</Dropdown.Item>
-                        <Dropdown.Item onClick={() => setToggleNav(false)} href="#/action-2" className='drop-menu'>Mobile Application</Dropdown.Item>
-                        <Dropdown.Item onClick={() => setToggleNav(false)} href="#/action-3" className='drop-menu'>DevOps</Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleNav()} href="#/action-1" className='drop-menu'>Web Application</Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleNav()} href="#/action-2" className='drop-menu'>Mobile Application</Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleNav()} href="#/action-3" className='drop-menu'>DevOps</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <a
