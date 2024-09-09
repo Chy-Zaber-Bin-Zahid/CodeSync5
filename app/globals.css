@@ -21,8 +21,8 @@
 }
 
 .dropdown-toggle-active {
-  border-bottom: 2px solid #0000ff !important;
-  color: #0000ff !important;
+  border-bottom: 2px solid #991b1b !important;
+  color: #991b1b !important;
 }
 
 .dropdown-toggle:hover {
@@ -30,7 +30,7 @@
 }
 
 .dropdown-toggle-active:hover {
-  color: #0000ff !important;
+  color: #991b1b !important;
 }
 
 .dropdown-menu-mobile {
