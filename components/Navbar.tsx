@@ -21,7 +21,7 @@ function Navbar() {
             <div className="flex gap-2 justify-between items-center max-w-big-screen mx-auto" >
                 <div className="flex justify-end items-end gap-2">
                     <Image
-                        src="/nav-logo.png"
+                        src="assets/nav-logo.png"
                         width={33}
                         height={33}
                         objectFit="contain"

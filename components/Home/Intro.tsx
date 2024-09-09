@@ -13,7 +13,7 @@ function Intro() {
           </div>
           <div className='w-[40%] pl-[21px]'>
             <Image
-              src="home/intro.svg"
+              src="assets/home/intro.svg"
               width={450}
               height={400}
               objectFit="contain"
