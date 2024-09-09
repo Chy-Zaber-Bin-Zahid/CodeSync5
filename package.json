@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/button": "^2.0.37",
     "bootstrap": "^5.3.3",
     "gsap": "^3.12.5",
     "next": "14.2.8",
