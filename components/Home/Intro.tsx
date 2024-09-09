@@ -20,7 +20,7 @@ function Intro() {
   });
 
   return (
-    <div className="mq-1300:h-[calc(100vh-90px)] mq-765:h-[calc(100vh-62px)] min-mq-1301:h-none w-full mq-1300:flex justify-center items-center" >
+    <div className="h-[calc(100vh-90px)] mq-765:h-[calc(100vh-62px)] min-mq-1301:h-fit w-full mq-1300:flex justify-center items-center" >
       <div className="w-full px-3 pt-4">
         <div className='mx-auto max-w-big-screen w-full flex gap-4 justify-between items-center'>
           <div id="intro-text" className='flex flex-col gap-3 justify-center items-start w-[60%]' >

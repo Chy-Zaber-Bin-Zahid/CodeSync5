@@ -47,3 +47,8 @@
 .drop-menu {
   color: #808080 !important;
 }
+
+.drop-menu:active {
+  color: white !important;
+  background-color: #991b1b !important;
+}
