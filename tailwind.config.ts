@@ -19,6 +19,7 @@ const config: Config = {
         "whatsapp-hover": "#1eab5e",
         footerBg: "#212529",
         primaryText: "#991b1b",
+        "primaryText-hover": "#700e0e",
         primary: "#991b1b !important",
       },
       boxShadow: {
