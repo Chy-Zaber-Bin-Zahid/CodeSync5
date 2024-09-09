@@ -7,7 +7,7 @@ function Intro() {
       <div className="w-full px-3 py-4">
         <div className='mx-auto max-w-big-screen w-full flex gap-4 justify-between items-center'>
           <div className='flex flex-col gap-3 justify-center items-start w-[60%]' >
-            <h1><span className='text-primaryText'>Accelerate</span> your Business Growth with <span className="text-primaryText">Rosetech Solutions Ltd.</span></h1>
+            <h1 className='font-bold' ><span className='text-primaryText'>Accelerate</span> your Business Growth with <span className="text-primaryText">Rosetech Solutions Ltd.</span></h1>
             <p className="text-gray-400" >Stay ahead of the competition with our cutting-edge software solutions designed for your unique business needs.</p>
             <button className='bg-gray-500 font-semibold hover:bg-gray-700 transition-all duration-300 text-white p-2 rounded animate-bounce' >BOOK US</button>
           </div>
