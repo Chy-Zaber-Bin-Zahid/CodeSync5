@@ -19,7 +19,12 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
     const baseLinkCommonClass = "transition-all duration-300 no-underline border-b-2 pr-[4px]";
     const baseLinkActiveClass = "text-nav-active border-nav-active hover:text-nav-active";
     const baseLinkDefaultClass = "hover:text-nav-hover text-nav-default border-b-white";
-
+    const checkPath =
+        currentPath === "/services" ? "/services" :
+            currentPath === "/web" ? "/web" :
+                currentPath === "/mobile" ? "/mobile" :
+                    currentPath === "/devops" ? "/devops" :
+                        false;
     const handleNav = () => {
         setToggleNav(false)
     }
@@ -43,15 +48,13 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
                 <Link onClick={() => handleNav()} href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>Home</Link>
                 <Link onClick={() => handleNav()} href="/about" className={`${baseLinkCommonClass} ${currentPath === "/about" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>About</Link>
                 <Dropdown as={ButtonGroup}>
-                    <Link onClick={() => handleNav()} href="/services" className={`${baseLinkCommonClass} ${currentPath === "/services" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default border-b-white"}`}>Services</Link>
-
-                    <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className={`dropdown-toggle ${currentPath === "/services" ? "dropdown-toggle-active" : ""
+                    <Link onClick={() => handleNav()} href="/services" className={`${baseLinkCommonClass} ${checkPath ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default border-b-white"}`}>Services</Link>
+                    <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className={`dropdown-toggle ${checkPath ? "dropdown-toggle-active" : ""
                         }`} />
-
                     <Dropdown.Menu className='dropdown-menu-mobile'>
-                        <Dropdown.Item onClick={() => handleNav()} href="#/action-1" className='drop-menu'>Web Application</Dropdown.Item>
-                        <Dropdown.Item onClick={() => handleNav()} href="#/action-2" className='drop-menu'>Mobile Application</Dropdown.Item>
-                        <Dropdown.Item onClick={() => handleNav()} href="#/action-3" className='drop-menu'>DevOps</Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleNav()} href="/web" className='drop-menu'>Web Application</Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleNav()} href="/mobile" className='drop-menu'>Mobile Application</Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleNav()} href="/devops" className='drop-menu'>DevOps</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <a

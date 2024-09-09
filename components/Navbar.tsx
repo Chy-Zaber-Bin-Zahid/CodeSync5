@@ -16,6 +16,13 @@ function Navbar() {
     const baseLinkActiveClass = "text-nav-active border-nav-active hover:text-nav-active";
     const baseLinkDefaultClass = "hover:text-nav-hover text-nav-default border-b-white";
     const [toggleNav, setToggleNav] = useState<boolean>(false)
+    const checkPath =
+        currentPath === "/services" ? "/services" :
+            currentPath === "/web" ? "/web" :
+                currentPath === "/mobile" ? "/mobile" :
+                    currentPath === "/devops" ? "/devops" :
+                        false;
+
     return (
         <div className='sticky top-0 shadow-nav-shadow min-mq-766:py-6 px-3 z-40 bg-white mq-765:py-2'>
             <div className="flex gap-2 justify-between items-center max-w-big-screen mx-auto" >
@@ -33,15 +40,13 @@ function Navbar() {
                     <Link href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass}`}>Home</Link>
                     <Link href="/about" className={`${baseLinkCommonClass} ${currentPath.startsWith("/about") ? baseLinkActiveClass : baseLinkDefaultClass}`}>About</Link>
                     <Dropdown as={ButtonGroup}>
-                        <Link href="/services" className={`${baseLinkCommonClass} ${currentPath === "/services" ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default p-0 border-b-white"}`}>Services</Link>
-
-                        <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className={`dropdown-toggle ${currentPath === "/services" ? "dropdown-toggle-active" : ""
+                        <Link href="/services" className={`${baseLinkCommonClass} ${checkPath ? baseLinkActiveClass : "hover:text-nav-hover text-nav-default p-0 border-b-white"}`}>Services</Link>
+                        <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className={`dropdown-toggle ${checkPath ? "dropdown-toggle-active" : ""
                             }`} />
-
                         <Dropdown.Menu className='dropdown-menu'>
-                            <Dropdown.Item href="#/action-1" className='drop-menu'>Web Application</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2" className='drop-menu'>Mobile Application</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3" className='drop-menu'>DevOps</Dropdown.Item>
+                            <Dropdown.Item href="/web" className='drop-menu'>Web Application</Dropdown.Item>
+                            <Dropdown.Item href="/mobile" className='drop-menu'>Mobile Application</Dropdown.Item>
+                            <Dropdown.Item href="/devops" className='drop-menu'>DevOps</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                     <a
