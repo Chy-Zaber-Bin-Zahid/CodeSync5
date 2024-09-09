@@ -1,10 +1,12 @@
 import React from 'react';
 import Intro from '@/components/Home/Intro';
+import AboutUs from '@/components/Home/AboutUs';
 
 export default function Home() {
   return (
-    <React.Fragment>
+    <div className="flex flex-col gap-4 w-full">
       <Intro/>
-    </React.Fragment>
+      <AboutUs/>
+    </div>
   );
 }
