@@ -9,14 +9,14 @@ function Intro() {
           <div className='flex flex-col gap-3 justify-center items-start w-[60%]' >
             <h1>Accelerate your Business Growth with Rosetech Solutions Ltd.</h1>
             <p>Stay ahead of the competition with our cutting-edge software solutions designed for your unique business needs.</p>
-            <button className='bg-black text-white' >BOOK US</button>
+            <button className='bg-gray-500 text-white p-2 rounded animate-bounce' >BOOK US</button>
           </div>
           <div className='w-[40%] pl-[21px]'>
             <Image
               src="home/intro.svg"
               width={450}
               height={400}
-              objectFit="contain"  // Ensure it scales properly
+              objectFit="contain"
               alt="Introduction of IT"
             />
           </div>
