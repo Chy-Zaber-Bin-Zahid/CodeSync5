@@ -4,8 +4,10 @@ import Image from 'next/image'
 import React from 'react'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { useMyContext } from '@/context/MyProvider';
 
 function Intro() {
+  const { setToggleModal } = useMyContext();
   useGSAP(() => {
     gsap.fromTo(
       "#intro-text",
@@ -26,7 +28,7 @@ function Intro() {
           <div id="intro-text" className='flex flex-col gap-3 justify-center items-start w-[60%]' >
             <h1 className='font-bold' ><span className='text-primaryText'>Accelerate</span> your Business Growth with <span className="text-primaryText">Rosetech Solutions Ltd.</span></h1>
             <p className="text-gray-400" >Stay ahead of the competition with our cutting-edge software solutions designed for your unique business needs.</p>
-            <button className='bg-gray-500 font-semibold hover:bg-gray-700 transition-all duration-300 text-white p-2 rounded animate-bounce' >BOOK US</button>
+            <button onClick={() => setToggleModal(true)} className='bg-gray-500 font-semibold hover:bg-gray-700 transition-all duration-300 text-white p-2 rounded animate-bounce' >BOOK US</button>
           </div>
           <div id="intro-img" className='w-[40%] pl-[21px]'>
             <Image
