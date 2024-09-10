@@ -24,6 +24,7 @@ const config: Config = {
       },
       boxShadow: {
         "nav-shadow": "0 2px 8px rgba(0, 0, 0, 0.1)",
+        'services-card': '0 4px 10px rgba(0, 0, 0, 0.15)'
       },
       maxWidth: {
         "big-screen": "1200px",
