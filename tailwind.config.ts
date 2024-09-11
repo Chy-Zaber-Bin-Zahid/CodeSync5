@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      scrollMargin: {
+        'scroll-1300': '90px',
+        'scroll-765': '62px',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
