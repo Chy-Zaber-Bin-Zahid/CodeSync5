@@ -23,7 +23,7 @@ function AboutUs() {
     });
 
     return (
-        <div className="w-full mq-1300:flex justify-center items-center bg-gray-100" >
+        <section id="about" className="w-full mq-1300:flex justify-center items-center bg-gray-100 scroll-mt-scroll-1300 mq-765:scroll-mt-scroll-765" >
             <div id="aboutUs-component" className="w-full px-3">
                 <div className='mx-auto max-w-big-screen w-full flex gap-4 justify-between items-center'>
                     <div className='flex flex-col gap-4 justify-center items-start w-[55%]' >
@@ -44,7 +44,7 @@ function AboutUs() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
