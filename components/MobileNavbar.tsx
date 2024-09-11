@@ -55,6 +55,7 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbarProps) {
             }
         });
     };
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, []);
 
 
