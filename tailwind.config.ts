@@ -28,7 +28,7 @@ const config: Config = {
       },
       boxShadow: {
         "nav-shadow": "0 2px 8px rgba(0, 0, 0, 0.1)",
-        'services-card': '0 4px 10px rgba(0, 0, 0, 0.15)'
+        'services-card': '0 4px 10px rgba(0, 0, 0, 0.15)',
       },
       maxWidth: {
         "big-screen": "1200px",
@@ -41,6 +41,15 @@ const config: Config = {
         "mq-1300": { max: "1300px" },
         "min-mq-1301": { min: "1301px" },
       },
+      animation: {
+        "loop-scroll": "loop-scroll 12s linear infinite"
+      },
+      keyframes: {
+        "loop-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        }
+      }
     },
   },
   plugins: [],
