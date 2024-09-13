@@ -6,11 +6,14 @@ function Tools() {
   const commonStyleIconParent = "flex-shrink-0 w-full flex justify-around animate-loop-scroll items-center group-hover:paused"
 
   return (
-    <section className="w-full mq-1300:flex justify-center items-center scroll-mt-scroll-1300 mq-765:scroll-mt-scroll-765 overflow-auto" >
+    <section className="w-full bg-gray-100 mq-1300:flex justify-center items-center scroll-mt-scroll-1300 mq-765:scroll-mt-scroll-765 overflow-auto" >
       <div className="w-full px-3 py-4">
         <div className='mx-auto max-w-big-screen w-full flex flex-col gap-4 justify-between items-center'>
           <div className="w-full flex flex-col gap-3 justify-center items-center" >
-            <h1 >Our <span className="text-primaryText" >Tools</span></h1>
+            <div className='flex flex-col justify-center items-center gap-1'>
+              <h1 className='m-0'>Our <span className="text-primaryText" >Tools</span></h1>
+              <p className='m-0'>Technologies we work with</p>
+            </div>
           </div>
           <div className='flex w-full overflow-hidden group h-20'>
             <div className={`${commonStyleIconParent}`}>
