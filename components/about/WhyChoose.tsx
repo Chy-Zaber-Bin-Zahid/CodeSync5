@@ -1,9 +1,31 @@
 "use client";
+import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { Check } from "phosphor-react";
 import React from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
 const WhyChoose = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.fromTo(
+      "#whychoose",
+      {
+        opacity: 0,
+        x: "-100%",
+      },
+      {
+        duration: 1.5,
+        opacity: 1,
+        x: 0,
+        delay: 0,
+        scrollTrigger: {
+          trigger: "#whychoose",
+        },
+      }
+    );
+  });
   interface WhyChooseInterface {
     title: string;
   }
@@ -28,12 +50,12 @@ const WhyChoose = () => {
     },
   ];
   return (
-    <div className="w-4/5 mx-auto  my-32">
-      <h1 className="text-5xl text-center">
+    <div id="whychoose" className=" w-full mx-auto  my-32">
+      <h1 className="text-5xl text-center mb-16">
         Why Choose <span className="text-red-800">XYZ</span> Solutions
       </h1>
       <div className="flex justify-between items-center">
-        <div className="flex-1 h-96 relative">
+        <div className="flex-1 h-96 relative rounded-lg">
           <Image
             src="assets/about/WhyChooseIllustration.jpg"
             alt="Team Illustration"
