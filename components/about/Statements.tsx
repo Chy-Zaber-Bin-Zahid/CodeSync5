@@ -1,19 +1,67 @@
 import Image from "next/image";
-import React from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 const Statements = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      "#mission-statement",
+      {
+        opacity: 0,
+        x: "-100%",
+        duration: 1,
+
+        scrollTrigger: {
+          trigger: "#mission-statement",
+        },
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+
+        scrollTrigger: {
+          trigger: "#mission-statement",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      "#vision-statement",
+      {
+        opacity: 0,
+        x: "100%",
+        duration: 1.5,
+
+        scrollTrigger: {
+          trigger: "#vision-statement",
+        },
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.5,
+
+        scrollTrigger: {
+          trigger: "#vision-statement",
+        },
+      }
+    );
+  }, []);
+
   return (
     <section>
-      <div className="w-4/5 mx-auto my-32">
-        <div className="flex justify-between items-center space-x-8">
-          {" "}
-          {/* Add spacing between the items */}
+      <div id="mission-statement" className=" w-full mx-auto my-32">
+        <div className="flex gap-8 justify-between items-center space-x-8">
           <div className="flex-1 h-96 relative">
             <Image
               src="assets/about/MissionIllustration.jpg"
-              alt="Team Illustration"
+              alt="Mission Illustration"
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
               className="rounded-lg absolute inset-0"
             />
           </div>
@@ -35,16 +83,14 @@ const Statements = () => {
         </div>
       </div>
 
-      <div className="w-4/5 mx-auto my-32">
-        <div className="flex flex-row-reverse justify-between items-center space-x-8">
-          {" "}
-          {/* Add spacing between the items */}
+      <div id="vision-statement" className=" w-full mx-auto my-32">
+        <div className="flex gap-8 flex-row-reverse justify-between items-center space-x-8">
           <div className="flex-1 h-96 relative">
             <Image
               src="assets/about/VisionIllustration.jpg"
-              alt="Team Illustration"
+              alt="Vision Illustration"
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
               className="rounded-lg absolute inset-0"
             />
           </div>
@@ -54,7 +100,7 @@ const Statements = () => {
             </h1>
             <p className="leading-relaxed text-2xl text-slate-700">
               At <span className="text-red-800 font-semibold">XYZ</span>{" "}
-              Solutions our vision is to be the leading provider of software
+              Solutions, our vision is to be the leading provider of software
               consultancy services in the industry. We aim to achieve this by
               constantly innovating and providing exceptional service to our
               clients. We strive to be recognized as the go-to partner for
