@@ -33,7 +33,7 @@ function Services() {
         );
     });
     return (
-        <section id="services" className="w-full mq-1300:flex justify-center items-center scroll-mt-scroll-1300 mq-765:scroll-mt-scroll-765 overflow-auto" >
+        <section id="services" className="w-full mq-1300:flex justify-center items-center scroll-mt-scroll-1300 mq-765:scroll-mt-scroll-765 overflow-hidden" >
             <div className="w-full px-3 py-6">
                 <div className='mx-auto max-w-big-screen w-full flex flex-col gap-4 justify-between items-center'>
                     <div id="services-heading" className="w-full flex flex-col gap-3 justify-center items-center" >
