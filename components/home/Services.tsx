@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { services } from '@/utils/service';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,7 +47,7 @@ function Services() {
                             <div key={item.name} className="service-card py-4 px-16 flex flex-col gap-2 justify-start items-center rounded-sm shadow-services-card">
                                 <h1 className="text-lg text-center m-0 font-bold" >{item.name}</h1>
                                 <p className="text-sm text-center m-0 flex-grow">{item.description}</p>
-                                <button className="mt-4 pb-2 pt-1 px-10 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">Read more</button>
+                                <Link href={`/${item.link}`} ><button className="mt-4 pb-2 pt-1 px-10 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">Read more</button></Link>
                             </div>
                         ))}
                     </div>
