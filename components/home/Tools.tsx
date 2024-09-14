@@ -2,7 +2,7 @@ import React from 'react'
 import { tools } from '@/utils/tools'
 
 function Tools() {
-  const commonStyleIcon = "bg-gray-400 p-3 rounded-full text-3xl text-white transition-all duration-300 hover:scale-125"
+  const commonStyleIcon = "bg-gray-400 p-[12px] mq-400:p-[6px] mq-565:p-[8px] mq-875:p-[10px] rounded-full text-3xl mq-875:text-xl mq-500:text-lg text-white transition-all duration-300 hover:scale-125"
   const commonStyleIconParent = "flex-shrink-0 w-full flex justify-around animate-loop-scroll items-center group-hover:paused"
 
   return (
