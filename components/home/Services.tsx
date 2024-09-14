@@ -44,7 +44,7 @@ function Services() {
                     </div>
                     <div className='w-full grid grid-cols-3 mq-875:grid-cols-2 mq-565:grid-cols-1 gap-4'>
                         {services.map((item) => (
-                            <div key={item.name} className="service-card py-4 px-16 mq-565:px-16  mq-950:px-8 flex flex-col gap-2 justify-start items-center rounded-sm shadow-services-card">
+                            <div key={item.name} className="service-card py-4 px-16 mq-565:px-16 mq-400:px-8 mq-950:px-8 flex flex-col gap-2 justify-start items-center rounded-sm shadow-services-card">
                                 <h1 className="text-lg text-center m-0 font-bold" >{item.name}</h1>
                                 <p className="text-sm text-center m-0 flex-grow">{item.description}</p>
                                 <Link href={`/${item.link}`} ><button className="mt-4 pb-2 pt-1 px-10 mq-875:px-6 mq-875:text-sm mq-950:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">Read more</button></Link>

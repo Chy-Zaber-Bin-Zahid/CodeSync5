@@ -40,8 +40,9 @@ const config: Config = {
         "min-mq-1301": { min: "1301px" },
         "mq-950": {max: "950px"},
         "mq-875": {max: "875px"},
-        "mq-565": {max: "565px"},
         "mq-765": { max: "765px" },
+        "mq-565": {max: "565px"},
+        "mq-500": {max: "500px"},
         "mq-400": { max: "400px" },
       },
       animation: {
