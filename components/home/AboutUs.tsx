@@ -33,7 +33,7 @@ function AboutUs() {
       id="about"
       className="w-full mq-1300:flex justify-center items-center bg-gray-100 scroll-mt-scroll-1300 mq-765:scroll-mt-scroll-765"
     >
-      <div id="aboutUs-component" className="w-full px-3">
+      <div id="aboutUs-component" className="w-full px-3 my-16">
         <div className="mx-auto max-w-big-screen w-full flex flex-col lg:flex-row gap-4 justify-between items-center">
           <div className="flex flex-col gap-4 mx-2 justify-center items-center lg:items-start w-full lg:w-[55%]">
             <h1 className="font-bold self-start  text-2xl lg:text-5xl">

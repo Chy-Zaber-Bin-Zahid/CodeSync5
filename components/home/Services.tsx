@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { services } from "@/utils/service";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,7 +40,6 @@ function Services() {
       }
     );
   });
-
   return (
     <section
       id="services"
@@ -60,14 +59,16 @@ function Services() {
               Our team of experts leverages the latest technologies to create
               innovative and scalable software solutions that help our clients
               improve their business processes, increase efficiency, and drive
-              growth.
+              growth. We are committed to delivering high-quality, reliable, and
+              secure software that meets the needs of our clients and their
+              customers. With a wide range of services including.
             </p>
           </div>
-          <div className="w-full grid grid-cols-3 gap-4">
+          <div className="w-full grid grid-cols-3 mq-875:grid-cols-2 mq-565:grid-cols-1 gap-4">
             {services.map((item) => (
               <div
                 key={item.slug}
-                className="service-card py-4 px-16 flex flex-col gap-2 justify-start items-center rounded-sm shadow-services-card"
+                className="service-card py-4 px-16 mq-565:px-16 mq-400:px-8 mq-950:px-8 flex flex-col gap-2 justify-start items-center rounded-sm shadow-services-card"
               >
                 <h1 className="text-lg text-center m-0 font-bold">
                   {item.name}
@@ -76,7 +77,7 @@ function Services() {
                   {item.description}
                 </p>
                 <Link href={`/service/${item.slug}`}>
-                  <button className="mt-4 pb-2 pt-1 px-10 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
+                  <button className="mt-4 pb-2 pt-1 px-10 mq-875:px-6 mq-875:text-sm mq-950:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
                     Read more
                   </button>
                 </Link>
