@@ -50,12 +50,12 @@ const WhyChoose = () => {
     },
   ];
   return (
-    <div id="whychoose" className=" w-full mx-auto  my-32">
-      <h1 className="text-5xl text-center mb-16">
+    <div id="whychoose" className=" w-full mx-auto  my-16 lg:my-32">
+      <h1 className="text-3xl lg:text-5xl text-center mb-16">
         Why Choose <span className="text-red-800">XYZ</span> Solutions
       </h1>
-      <div className="flex justify-between items-center">
-        <div className="flex-1 h-96 relative rounded-lg">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-0 md:justify-between items-center">
+        <div className="md:flex-1 w-full  h-64 lg:h-96 relative rounded-lg">
           <Image
             src="assets/about/WhyChooseIllustration.jpg"
             alt="Team Illustration"
@@ -66,7 +66,10 @@ const WhyChoose = () => {
         </div>
         <div className="flex-1">
           {whyChoose.map((item, index) => (
-            <div key={index} className="flex gap-2 text-2xl items-center">
+            <div
+              key={index}
+              className="flex gap-2 text-lg lg:text-2xl items-center"
+            >
               <p>
                 <Check size={32} color="#921c1c" weight="fill" />
               </p>

@@ -1,6 +1,11 @@
 import { VscRadioTower } from "react-icons/vsc";
-import { FaShoppingCart, FaHandHoldingHeart, FaDollarSign, FaHospitalAlt   } from "react-icons/fa";
-import { FaLaptopCode, FaBookOpen  } from "react-icons/fa6";
+import {
+  FaShoppingCart,
+  FaHandHoldingHeart,
+  FaDollarSign,
+  FaHospitalAlt,
+} from "react-icons/fa";
+import { FaLaptopCode, FaBookOpen } from "react-icons/fa6";
 import { IoHome, IoRocketSharp } from "react-icons/io5";
 import { GiSteeringWheel } from "react-icons/gi";
 import { AiOutlineGlobal } from "react-icons/ai";
