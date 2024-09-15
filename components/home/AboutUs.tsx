@@ -33,14 +33,15 @@ function AboutUs() {
       id="about"
       className="w-full mq-1300:flex justify-center items-center bg-gray-100 scroll-mt-scroll-1300 mq-765:scroll-mt-scroll-765"
     >
-      <div id="aboutUs-component" className="w-full px-3">
-        <div className="mx-auto max-w-big-screen w-full flex gap-4 justify-between items-center">
-          <div className="flex flex-col gap-4 justify-center items-start w-[55%]">
-            <h1 className="font-bold">
-              About<span className="text-primaryText"> Rosetech</span>
+      <div id="aboutUs-component" className="w-full px-3 my-16">
+        <div className="mx-auto max-w-big-screen w-full flex flex-col lg:flex-row gap-4 justify-between items-center">
+          <div className="flex flex-col gap-4 mx-2 justify-center items-center lg:items-start w-full lg:w-[55%]">
+            <h1 className="font-bold self-start  text-2xl lg:text-5xl">
+              About
+              <span className="text-primaryText "> Rosetech</span>
             </h1>
             <div className="flex flex-col gap-3 justify-center items-start w-full">
-              <p className="text-gray-400 m-0">
+              <p className="text-gray-400 m-0 text-lg lg:text-2xl">
                 <span className="text-black font-bold">
                   RoseTech Solutions Ltd
                 </span>{" "}
@@ -49,7 +50,7 @@ function AboutUs() {
                 agencies, corporations, and institutions, we aim to be the
                 technical wing for these organisations.
               </p>
-              <p className="text-gray-400 m-0">
+              <p className="text-gray-400 m-0 text-md lg:text-xl">
                 Our goal is to enable these businesses to focus solely on their
                 core operations, without worrying about the technical aspects of
                 their operations. Our vision is to be the premier provider of
@@ -58,13 +59,13 @@ function AboutUs() {
               </p>
             </div>
           </div>
-          <div className="w-[45%] pl-[81px]">
+          <div className="w-full h-64  md:h-96  lg:w-[45%]  lg:pl-[81px] relative">
             <Image
               src="assets/home/intro.svg"
-              width={450}
-              height={400}
-              objectFit="contain"
+              layout="fill"
+              objectFit="cover"
               alt="Introduction of IT"
+              className="absolute inset-0"
             />
           </div>
         </div>

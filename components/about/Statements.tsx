@@ -55,8 +55,8 @@ const Statements = () => {
   return (
     <section>
       <div id="mission-statement" className=" w-full mx-auto my-32">
-        <div className="flex gap-8 justify-between items-center space-x-8">
-          <div className="flex-1 h-96 relative">
+        <div className="flex flex-col gap-8 lg:flex-row  lg:justify-between items-center mx-2 lg:space-x-8">
+          <div className="lg:flex-1 w-full h-64 md:h-96 l relative">
             <Image
               src="assets/about/MissionIllustration.jpg"
               alt="Mission Illustration"
@@ -66,10 +66,10 @@ const Statements = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-5xl">
+            <h1 className="text-2xl lg:text-5xl lg:mb-8">
               <span className="text-red-800">Mission</span> Statement:
             </h1>
-            <p className="leading-relaxed text-2xl text-slate-700">
+            <p className="leading-relaxed text-lg  lg:text-2xl text-slate-700">
               Our mission at{" "}
               <span className="text-red-800 font-semibold">XYZ</span> Solutions
               is to provide customized, innovative software solutions that help
@@ -84,8 +84,8 @@ const Statements = () => {
       </div>
 
       <div id="vision-statement" className=" w-full mx-auto my-32">
-        <div className="flex gap-8 flex-row-reverse justify-between items-center space-x-8">
-          <div className="flex-1 h-96 relative">
+        <div className="flex  flex-col  gap-8 lg:flex-row-reverse justify-between items-center mx-2 lg:space-x-8">
+          <div className="lg:flex-1 w-full h-64  md:h-96 relative">
             <Image
               src="assets/about/VisionIllustration.jpg"
               alt="Vision Illustration"
@@ -95,10 +95,10 @@ const Statements = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-5xl">
+            <h1 className="text-2xl lg:text-5xl lg:mb-8">
               <span className="text-red-800">Vision</span> Statement:
             </h1>
-            <p className="leading-relaxed text-2xl text-slate-700">
+            <p className="leading-relaxed text-lg lg:text-2xl text-slate-700">
               At <span className="text-red-800 font-semibold">XYZ</span>{" "}
               Solutions, our vision is to be the leading provider of software
               consultancy services in the industry. We aim to achieve this by
