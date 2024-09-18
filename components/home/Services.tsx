@@ -3,7 +3,7 @@ import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { services } from "@/utils/service";
+import { services } from "@/utils/services";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -76,7 +76,7 @@ function Services() {
                 <p className="text-sm text-center m-0 flex-grow">
                   {item.description}
                 </p>
-                <Link href={`/service/${item.slug}`}>
+                <Link href={`/services/${item.slug}`}>
                   <button className="mt-4 pb-2 pt-1 px-10 mq-875:px-6 mq-875:text-sm mq-950:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
                     Read more
                   </button>
