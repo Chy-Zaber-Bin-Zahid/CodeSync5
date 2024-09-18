@@ -1,10 +1,9 @@
 import { services } from "@/utils/services";
 import { notFound } from "next/navigation";
 
-// 1. Add the generateStaticParams function
 export async function generateStaticParams() {
-  return services.map((services) => ({
-    services: services.slug,
+  return services.map((service) => ({
+    services: service.slug,
   }));
 }
 
@@ -15,17 +14,17 @@ interface ServicePageProps {
 }
 
 export default function ServicePage({ params }: ServicePageProps) {
-  const services = services.find((s) => s.slug === params.services);
+  const service = services.find((s) => s.slug === params.services);
 
-  if (!services) {
+  if (!service) {
     return notFound();
   }
 
   return (
     <section className="w-full flex flex-col items-center py-12 px-4">
       <div className="max-w-3xl text-center">
-        <h1 className="text-4xl font-bold mb-4">{services.name}</h1>
-        <p className="text-lg mb-6">{services.description}</p>
+        <h1 className="text-4xl font-bold mb-4">{service.name}</h1>
+        <p className="text-lg mb-6">{service.description}</p>
       </div>
     </section>
   );
