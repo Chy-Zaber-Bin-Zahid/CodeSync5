@@ -27,8 +27,8 @@ function Intro() {
       <div className="w-full px-3 pt-4">
         <div className='mx-auto max-w-big-screen w-full flex gap-4 justify-between items-center mq-765:flex-col-reverse'>
           <div id="intro-text" className='flex flex-col gap-3 justify-center items-start w-[60%] mq-765:w-full' >
-            <h1 className='font-bold mq-400:text-2xl mq-765:text-3xl mq-875:text-2xl' ><span className='text-primaryText'>Accelerate</span> your Business Growth with <span className="text-primaryText">Rosetech Solutions Ltd.</span></h1>
-            <p className="text-gray-400 mq-400:text-sm" >Stay ahead of the competition with our cutting-edge software solutions designed for your unique business needs.</p>
+            <h1 className='font-bold mq-400:text-2xl mq-765:text-3xl mq-875:text-2xl' ><span className='text-primaryText'>Drive</span> Business Innovation with <span className="text-primaryText">CodeSync5</span></h1>
+            <p className="text-gray-400 mq-400:text-sm" >We empower businesses to innovate and streamline operations, ensuring sustainable growth. Let us help you turn your ideas into reality with our expert-driven software services.</p>
             <button onClick={() => setToggleModal(true)} className='bg-gray-500 font-bold hover:bg-gray-700 transition-all duration-300 text-white p-2 rounded animate-bounce flex gap-2 justify-center items-center mq-875:text-sm' > <CalendarCheck size={18} weight="fill" />BOOK US</button>
           </div>
           <div id="intro-img" className='w-[40%] pl-[21px] mq-765:pl-0 mq-765:w-full mq-765:flex mq-765:justify-center mq-765:items-center'>
