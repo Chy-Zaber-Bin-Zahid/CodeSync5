@@ -1,21 +1,20 @@
-import { services } from "@/utils/service";
+import { services } from "@/utils/services";
 import { notFound } from "next/navigation";
 
-// 1. Add the generateStaticParams function
 export async function generateStaticParams() {
   return services.map((service) => ({
-    service: service.slug,
+    services: service.slug,
   }));
 }
 
 interface ServicePageProps {
   params: {
-    service: string;
+    services: string;
   };
 }
 
 export default function ServicePage({ params }: ServicePageProps) {
-  const service = services.find((s) => s.slug === params.service);
+  const service = services.find((s) => s.slug === params.services);
 
   if (!service) {
     return notFound();
