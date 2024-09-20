@@ -26,7 +26,7 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
             <div className="flex justify-between items-center gap-4 mb-6" >
                 <Link onClick={() => handleNav()} href="/" className="flex justify-end items-end gap-2 no-underline text-black">
                     <Image
-                        src="assets/nav-logo.png"
+                        src="/assets/nav-logo.png"
                         width={33}
                         height={33}
                         objectFit="contain"

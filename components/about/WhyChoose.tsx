@@ -1,10 +1,9 @@
 "use client";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { Check } from "phosphor-react";
-import React from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
 
 const WhyChoose = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -57,7 +56,7 @@ const WhyChoose = () => {
       <div className="flex flex-col md:flex-row gap-8 md:gap-0 md:justify-between items-center">
         <div className="md:flex-1 w-full  h-64 lg:h-96 relative rounded-lg">
           <Image
-            src="assets/about/WhyChooseIllustration.jpg"
+            src="/assets/about/WhyChooseIllustration.jpg"
             alt="Team Illustration"
             layout="fill"
             objectFit="contain"
