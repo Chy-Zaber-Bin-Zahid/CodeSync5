@@ -20,6 +20,8 @@ const AboutUs = () => {
           layout="fill"
           objectFit="contain"
           className="rounded-lg absolute inset-0"
+          blurDataURL="data:..."
+          placeholder="blur"
         />
       </div>
       <p className="text-2xl leading-relaxed text-slate-700">

@@ -63,6 +63,8 @@ const Statements = () => {
               layout="fill"
               objectFit="cover"
               className="rounded-lg absolute inset-0"
+              blurDataURL="data:..."
+              placeholder="blur"
             />
           </div>
           <div className="flex-1">
@@ -92,6 +94,8 @@ const Statements = () => {
               layout="fill"
               objectFit="cover"
               className="rounded-lg absolute inset-0"
+              blurDataURL="data:..."
+              placeholder="blur"
             />
           </div>
           <div className="flex-1">

@@ -24,6 +24,8 @@ function Intro({ service }: Service) {
                         objectFit="contain"
                         alt="Services Background Image"
                         className="absolute"
+                        blurDataURL="data:..."
+                        placeholder="blur"
                     />
                 </div>
                 <div className="w-full h-full flex flex-col justify-center gap-2 items-center">

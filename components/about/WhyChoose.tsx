@@ -61,6 +61,8 @@ const WhyChoose = () => {
             layout="fill"
             objectFit="contain"
             className="rounded-lg absolute inset-0"
+            blurDataURL="data:..."
+            placeholder="blur"
           />
         </div>
         <div className="flex-1">
