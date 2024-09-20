@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from "next/image";
 
 type Service = {
@@ -20,7 +19,7 @@ function Intro({ service }: Service) {
             <div className="mx-auto max-w-big-screen w-full flex flex-col gap-2 justify-center items-center ">
                 <div className="w-full relative h-96">
                     <Image
-                        src="assets/dynamicServices/services-bg.svg"
+                        src="/assets/dynamicServices/services-bg.svg"
                         layout="fill"
                         objectFit="contain"
                         alt="Services Background Image"

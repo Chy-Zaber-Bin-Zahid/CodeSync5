@@ -1,7 +1,7 @@
-import Image from "next/image";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 
 const Statements = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -58,7 +58,7 @@ const Statements = () => {
         <div className="flex flex-col gap-8 lg:flex-row  lg:justify-between items-center mx-2 lg:space-x-8">
           <div className="lg:flex-1 w-full h-64 md:h-96 l relative">
             <Image
-              src="assets/about/MissionIllustration.jpg"
+              src="/assets/about/MissionIllustration.jpg"
               alt="Mission Illustration"
               layout="fill"
               objectFit="cover"
@@ -87,7 +87,7 @@ const Statements = () => {
         <div className="flex  flex-col  gap-8 lg:flex-row-reverse justify-between items-center mx-2 lg:space-x-8">
           <div className="lg:flex-1 w-full h-64  md:h-96 relative">
             <Image
-              src="assets/about/VisionIllustration.jpg"
+              src="/assets/about/VisionIllustration.jpg"
               alt="Vision Illustration"
               layout="fill"
               objectFit="cover"
