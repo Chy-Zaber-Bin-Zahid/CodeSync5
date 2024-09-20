@@ -1,4 +1,6 @@
 import Intro from "@/components/dynamicServices/Intro";
+import WhyMatters from "@/components/dynamicServices/WhyMatters";
+import WhyUs from "@/components/dynamicServices/WhyUs";
 import { services } from "@/utils/services";
 import { notFound } from "next/navigation";
 
@@ -23,9 +25,11 @@ export default function ServicePage({ params }: ServicePageProps) {
 
   return (
     <section
-      className="w-full mq-1300:flex justify-center items-center"
+      className="w-full justify-center items-center"
     >
       <Intro service={service} />
+      <WhyUs service={service} />
+      <WhyMatters service={service} />
     </section>
   );
 }
