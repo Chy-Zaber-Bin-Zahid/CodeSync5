@@ -37,6 +37,8 @@ function Intro() {
               height={400}
               objectFit="contain"
               alt="Introduction of IT"
+              blurDataURL="data:..."
+              placeholder="blur"
             />
           </div>
         </div>

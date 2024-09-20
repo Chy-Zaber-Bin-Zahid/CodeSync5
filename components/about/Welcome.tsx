@@ -14,6 +14,8 @@ const Welcome = () => {
           layout="fill"
           objectFit="fill"
           className="rounded-lg"
+          blurDataURL="data:..."
+          placeholder="blur"
         />
       </div>
     </div>

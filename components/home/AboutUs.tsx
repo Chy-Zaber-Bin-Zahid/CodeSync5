@@ -65,6 +65,8 @@ function AboutUs() {
               objectFit="cover"
               alt="Introduction of IT"
               className="absolute inset-0"
+              blurDataURL="data:..."
+              placeholder="blur"
             />
           </div>
         </div>
