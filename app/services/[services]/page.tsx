@@ -1,3 +1,4 @@
+import Intro from "@/components/dynamicServices/Intro";
 import { services } from "@/utils/services";
 import { notFound } from "next/navigation";
 
@@ -21,11 +22,10 @@ export default function ServicePage({ params }: ServicePageProps) {
   }
 
   return (
-    <section className="w-full flex flex-col items-center py-12 px-4">
-      <div className="max-w-3xl text-center">
-        <h1 className="text-4xl font-bold mb-4">{service.name}</h1>
-        <p className="text-lg mb-6">{service.description}</p>
-      </div>
+    <section
+      className="w-full mq-1300:flex justify-center items-center"
+    >
+      <Intro service={service} />
     </section>
   );
 }
