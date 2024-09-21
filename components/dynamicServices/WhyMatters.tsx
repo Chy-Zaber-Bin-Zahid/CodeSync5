@@ -3,6 +3,7 @@ import React from 'react'
 type Service = {
   name: string;
   slug: string;
+  icon: string;
   image: string,
   paraFirst: string;
   paraMiddle: string;

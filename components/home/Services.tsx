@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { services } from "@/utils/services";
 import Link from "next/link";
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,6 +62,17 @@ function Services() {
                 key={item.slug}
                 className="service-card py-4 px-16 mq-565:px-16 mq-400:px-8 mq-950:px-8 flex flex-col gap-2 justify-start items-center rounded-sm shadow-services-card"
               >
+                <div className="mb-2">
+                  <Image
+                    src={item.icon}
+                    width={60}
+                    height={60}
+                    objectFit="contain"
+                    alt={item.name}
+                    blurDataURL="data:..."
+                    placeholder="blur"
+                  />
+                </div>
                 <h1 className="text-lg text-center m-0 font-bold">
                   {item.name}
                 </h1>
@@ -68,7 +80,7 @@ function Services() {
                   {item.description}
                 </p>
                 <Link href={`/services/${item.slug}`}>
-                  <button className="mt-4 pb-2 pt-1 font-semibold px-10 mq-875:px-6 mq-875:text-sm mq-950:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
+                  <button className="mt-16 pb-2 pt-1 font-semibold px-10 mq-875:px-6 mq-875:text-sm mq-950:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
                     Read more
                   </button>
                 </Link>
