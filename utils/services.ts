@@ -384,3 +384,44 @@ export const services = [
     ],
   },
 ];
+
+interface Service {
+  title: string;
+  image: string;
+  description: string;
+  whyBest: string;
+  need: string;
+  exampleWork: string;
+}
+
+export const AllServices: Service[] = [
+  {
+    title: "Web Development",
+    image: "/assets/about/TeamIllustration.jpg",
+    description:
+      "We build fast, responsive, and scalable websites tailored to your needs.",
+    whyBest:
+      "Our expertise spans multiple frameworks and platforms, ensuring top-notch performance.",
+    need: "Businesses need reliable web development to stay competitive in the digital landscape.",
+    exampleWork: "Project A, Project B",
+  },
+  {
+    title: "Mobile App Development",
+    image: "/assets/about/TeamIllustration.jpg",
+    description:
+      "Creating seamless mobile experiences on Android and iOS platforms.",
+    whyBest:
+      "Our team ensures smooth user experiences using the latest mobile technologies.",
+    need: "With the rise of mobile users, having an app is crucial for any business.",
+    exampleWork: "App X, App Y",
+  },
+  {
+    title: "Ecommerce Solutions",
+    image: "/assets/about/TeamIllustration.jpg",
+    description: "Developing user-friendly and secure eCommerce platforms.",
+    whyBest:
+      "We offer tailored eCommerce platforms with integrated payment gateways.",
+    need: "An effective eCommerce solution is essential for businesses looking to sell online.",
+    exampleWork: "Shop Z, MarketPlace Q",
+  },
+];
