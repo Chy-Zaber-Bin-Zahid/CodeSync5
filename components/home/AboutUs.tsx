@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 import Statements from "../about/Statements";
 import WhyChoose from "../about/WhyChoose";
@@ -61,11 +60,13 @@ function AboutUs() {
           </div>
           <div className="w-full h-64  md:h-96  lg:w-[45%]  lg:pl-[81px] relative">
             <Image
-              src="assets/home/intro.svg"
+              src="/assets/home/intro.svg"
               layout="fill"
               objectFit="cover"
               alt="Introduction of IT"
               className="absolute inset-0"
+              blurDataURL="data:..."
+              placeholder="blur"
             />
           </div>
         </div>

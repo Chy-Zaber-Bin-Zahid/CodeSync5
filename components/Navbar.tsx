@@ -20,11 +20,13 @@ function Navbar() {
             <div className="flex gap-2 justify-between items-center max-w-big-screen mx-auto" >
                 <Link onClick={() => setToggleNav(false)} href="/" className="flex justify-end items-end gap-2 no-underline text-black">
                     <Image
-                        src="assets/nav-logo.png"
+                        src="/assets/nav-logo.png"
                         width={33}
                         height={33}
                         objectFit="contain"
                         alt="Logo"
+                        blurDataURL="data:..."
+                        placeholder="blur"
                     />
                     <h1 className='text-lg font-semibold m-0'>Rose<span className="text-primaryText" >Tech</span></h1>
                 </Link>

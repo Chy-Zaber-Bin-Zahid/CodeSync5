@@ -9,11 +9,13 @@ const Welcome = () => {
       <div className=" h-96 relative flex-1">
         {" "}
         <Image
-          src="assets/about/HelloIllustration.jpg"
+          src="/assets/about/HelloIllustration.jpg"
           alt="Hello Illustration"
           layout="fill"
           objectFit="fill"
           className="rounded-lg"
+          blurDataURL="data:..."
+          placeholder="blur"
         />
       </div>
     </div>
