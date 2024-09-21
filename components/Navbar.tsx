@@ -68,6 +68,16 @@ function Navbar() {
           >
             Services
           </Link>
+          <Link
+            href="/contact"
+            className={`${baseLinkCommonClass} ${
+              currentPath.startsWith("/contact")
+                ? baseLinkActiveClass
+                : baseLinkDefaultClass
+            }`}
+          >
+            Contact Us
+          </Link>
           <a
             href="https://rosetech.dev/services/devops/"
             target="_blank"
