@@ -32,6 +32,8 @@ function Navbar() {
             height={33}
             objectFit="contain"
             alt="Logo"
+            blurDataURL="data:..."
+            placeholder="blur"
           />
           <h1 className="text-lg font-semibold m-0">
             Rose<span className="text-primaryText">Tech</span>

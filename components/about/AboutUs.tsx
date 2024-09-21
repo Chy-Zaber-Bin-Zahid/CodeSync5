@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const AboutUs = () => {
   return (
@@ -16,11 +15,13 @@ const AboutUs = () => {
       </p>
       <div className="w-3/5 mx-auto h-96 relative my-8">
         <Image
-          src="assets/about/TeamIllustration.jpg"
+          src="/assets/about/TeamIllustration.jpg"
           alt="Team Illustration"
           layout="fill"
           objectFit="contain"
           className="rounded-lg absolute inset-0"
+          blurDataURL="data:..."
+          placeholder="blur"
         />
       </div>
       <p className="text-2xl leading-relaxed text-slate-700">

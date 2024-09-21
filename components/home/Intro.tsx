@@ -1,10 +1,9 @@
 "use client"
 
-import Image from 'next/image'
-import React from 'react'
+import { useMyContext } from '@/context/MyProvider';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { useMyContext } from '@/context/MyProvider';
+import Image from 'next/image';
 import { CalendarCheck } from 'phosphor-react';
 
 function Intro() {
@@ -33,11 +32,13 @@ function Intro() {
           </div>
           <div id="intro-img" className='w-[40%] pl-[21px] mq-765:pl-0 mq-765:w-full mq-765:flex mq-765:justify-center mq-765:items-center'>
             <Image
-              src="assets/home/intro.svg"
+              src="/assets/home/intro.svg"
               width={450}
               height={400}
               objectFit="contain"
               alt="Introduction of IT"
+              blurDataURL="data:..."
+              placeholder="blur"
             />
           </div>
         </div>
