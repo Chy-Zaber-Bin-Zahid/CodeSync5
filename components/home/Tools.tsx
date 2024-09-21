@@ -1,8 +1,9 @@
 import React from 'react'
 import { tools } from '@/utils/tools'
+import Image from 'next/image';
 
 function Tools() {
-  const commonStyleIcon = "bg-gray-400 p-[12px] mq-400:p-[6px] mq-565:p-[8px] mq-875:p-[10px] rounded-full text-3xl mq-875:text-xl mq-500:text-lg text-white transition-all duration-300 hover:scale-125"
+  const commonStyleIcon = "p-[12px] mq-400:p-[6px] mq-565:p-[8px] mq-875:p-[10px] transition-all duration-300 hover:scale-125"
   const commonStyleIconParent = "flex-shrink-0 w-full flex justify-around animate-loop-scroll items-center group-hover:paused"
 
   return (
@@ -11,19 +12,39 @@ function Tools() {
         <div className='mx-auto max-w-big-screen w-full flex flex-col gap-4 justify-between items-center'>
           <div className="w-full flex flex-col gap-3 justify-center items-center" >
             <div className='flex flex-col justify-center items-center gap-1'>
-              <h1 className='m-0'>Our <span className="text-primaryText" >Tools</span></h1>
-              <p className='m-0'>Technologies we work with</p>
+              <h1 className='m-0 text-4xl font-bold'>Our <span className="text-primaryText" >Tools</span></h1>
+              <p className='m-0 text-lg'>Technologies we work with</p>
             </div>
           </div>
           <div className='flex w-full overflow-hidden group h-20'>
             <div className={`${commonStyleIconParent}`}>
               {tools.map((tool) => (
-                <div className={`${commonStyleIcon}`} key={tool.name}>{tool.icon}</div>
+                <div key={tool.name} className={`${commonStyleIcon}`}>
+                  <Image
+                    src={tool.image}
+                    width={50}
+                    height={50}
+                    objectFit="contain"
+                    alt={tool.name}
+                    blurDataURL="data:..."
+                    placeholder="blur"
+                  />
+                </div>
               ))}
             </div>
             <div className={`${commonStyleIconParent}`}>
               {tools.map((tool) => (
-                <div className={`${commonStyleIcon}`} key={tool.name}>{tool.icon}</div>
+                <div key={tool.name} className={`${commonStyleIcon}`}>
+                  <Image
+                    src={tool.image}
+                    width={50}
+                    height={50}
+                    objectFit="contain"
+                    alt={tool.name}
+                    blurDataURL="data:..."
+                    placeholder="blur"
+                  />
+                </div>
               ))}
             </div>
           </div>
