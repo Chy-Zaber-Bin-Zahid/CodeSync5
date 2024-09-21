@@ -25,7 +25,7 @@ export default function ServicePage({ params }: ServicePageProps) {
 
   return (
     <section
-      className="w-full justify-center items-center"
+      className="w-full flex flex-col gap-14 justify-center items-center"
     >
       <Intro service={service} />
       <WhyUs service={service} />
