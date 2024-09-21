@@ -1,7 +1,7 @@
 export const services = [
   {
     name: "Web Development",
-    slug: "wev-development",
+    slug: "web-development",
     description:
       "Our web development services leverage modern technologies to create dynamic, high-performance websites with comprehensive support and maintenance.",
   },
