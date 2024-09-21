@@ -51,7 +51,7 @@ function Services() {
             id="services-heading"
             className="w-full flex justify-center items-center"
           >
-            <h1>
+            <h1 className="text-4xl font-bold">
               Our <span className="text-primaryText">Services</span>
             </h1>
           </div>
@@ -68,7 +68,7 @@ function Services() {
                   {item.description}
                 </p>
                 <Link href={`/services/${item.slug}`}>
-                  <button className="mt-4 pb-2 pt-1 px-10 mq-875:px-6 mq-875:text-sm mq-950:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
+                  <button className="mt-4 pb-2 pt-1 font-semibold px-10 mq-875:px-6 mq-875:text-sm mq-950:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
                     Read more
                   </button>
                 </Link>

@@ -23,7 +23,7 @@ function Intro({ service }: Service) {
                         src={service.image}
                         layout="fill"
                         objectFit="contain"
-                        alt="Services Background Image"
+                        alt={service.name}
                         className="absolute"
                         blurDataURL="data:..."
                         placeholder="blur"
