@@ -42,6 +42,7 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
                 <Link onClick={() => handleNav()} href="/" className={`${baseLinkCommonClass} ${currentPath === "/" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>Home</Link>
                 <Link onClick={() => handleNav()} href="/about" className={`${baseLinkCommonClass} ${currentPath === "/about" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>About</Link>
                 <Link onClick={() => handleNav()} href="/services" className={`${baseLinkCommonClass} ${currentPath.startsWith("/services") ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>Services</Link>
+                <Link onClick={() => handleNav()} href="/contact" className={`${baseLinkCommonClass} ${currentPath.startsWith("/contact") ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>Contact Us</Link>
                 <a
                     href="https://rosetech.dev/services/devops/"
                     target="_blank"
