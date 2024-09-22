@@ -90,7 +90,7 @@ function Modal() {
   return (
     <div
       onClick={handleClose}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-3"
     >
       <div
         onClick={handleContentClick}
@@ -151,7 +151,7 @@ function Modal() {
             />
             <Button 
               type="submit" 
-              className="w-full bg-primaryText hover:bg-primaryText-hover transition-all duration-300"
+              className="w-full bg-primaryText hover:bg-primaryText-hover transition-all duration-300 font-semibold"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Send'}
