@@ -41,11 +41,11 @@ const WhatWeOffer: React.FC = () => {
     <div className="py-16 px-8 bg-gray-100">
       <h2 className="text-4xl font-bold text-center mb-12">What We Offer</h2>
       <div className="max-w-big-screen mx-auto text-xl">
-        <p className="mb-8">
+        <p className="mb-8 text-center">
           Our service portfolio encompasses a wide array of IT solutions that
           are designed to drive your business forward.
         </p>
-        <ul className="list-disc list-inside space-y-4">
+        <ul className="lg:w-4/5 lg:mx-auto list-disc list-inside space-y-4">
           {services.map((service, index) => (
             <li key={index}>
               <strong>{service.title}</strong> – {service.description}

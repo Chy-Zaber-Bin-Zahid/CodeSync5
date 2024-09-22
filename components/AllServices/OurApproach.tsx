@@ -38,11 +38,11 @@ const OurApproach: React.FC = () => {
     <div className="py-16 px-8 bg-white">
       <h2 className="text-4xl font-bold text-center mb-12">Our Approach</h2>
       <div className="max-w-big-screen mx-auto text-xl">
-        <p className="mb-8">
+        <p className="mb-8 text-center">
           We follow a client-first approach, where every solution is customized
           to meet the unique needs of your business.
         </p>
-        <ul className="list-disc list-inside space-y-4">
+        <ul className="list-disc lg:w-4/5 lg:mx-auto list-inside space-y-4">
           {approachSteps.map((step, index) => (
             <li key={index}>
               <strong>{step.title}</strong> – {step.description}

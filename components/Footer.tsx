@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="mt-8 flex-1 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-4 lg:gap-y-16">
             {/* Services Section */}
             <div className="col-span-2 sm:col-span-1">
-              <p className="text-lg font-medium text-gray-900 dark:text-white">
+              <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Services
               </p>
               <ul className="pl-0 mt-6 space-y-4 text-md">
@@ -58,7 +58,7 @@ const Footer = () => {
                   <li key={service.name}>
                     <a
                       href={service.href}
-                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="underline-offset-2 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {service.name}
                     </a>
@@ -69,7 +69,7 @@ const Footer = () => {
 
             {/* Company Section */}
             <div className="col-span-2 sm:col-span-1">
-              <p className="font-medium text-gray-900 dark:text-white">
+              <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Company
               </p>
               <ul className="pl-0 mt-6 space-y-4 text-sm">
@@ -77,7 +77,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="underline-offset-2 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {link.name}
                     </a>
@@ -88,7 +88,7 @@ const Footer = () => {
 
             {/* Helpful Links Section */}
             <div className="col-span-2 sm:col-span-1">
-              <p className="font-medium text-gray-900 dark:text-white">
+              <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Helpful Links
               </p>
               <ul className="pl-0 mt-6 space-y-4 text-sm">
@@ -96,7 +96,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="underline-offset-2 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {link.name}
                     </a>
@@ -107,13 +107,15 @@ const Footer = () => {
 
             {/* Legal Section */}
             <div className="col-span-2 sm:col-span-1">
-              <p className="font-medium text-gray-900 dark:text-white">Legal</p>
+              <p className="text-xl font-medium text-gray-900 dark:text-white">
+                Legal
+              </p>
               <ul className="pl-0 mt-6 space-y-4 text-sm">
                 {legalLinks.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="underline-offset-2 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {link.name}
                     </a>
@@ -130,7 +132,7 @@ const Footer = () => {
                     href={social.href}
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="underline-offset-2 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">{social.name}</span>
                     <social.icon size={24} />
