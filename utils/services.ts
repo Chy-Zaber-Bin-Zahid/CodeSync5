@@ -2,6 +2,8 @@ export const services = [
   {
     name: "Web Development",
     slug: "web-development",
+    icon: "/assets/home/website.png",
+    image:"/assets/dynamicServices/dynamic-web.svg",
     paraFirst:
       "In today's digital age, a website is your business's front door. It's essential to create an online presence that not only attracts but retains customers.",
     paraMiddle:
@@ -66,6 +68,8 @@ export const services = [
   {
     name: "Mobile Application Development",
     slug: "mobile-app-development",
+    icon: "/assets/home/mobile.png",
+    image:"/assets/dynamicServices/dynamic-mobile.svg",
     paraFirst:
       "With more people accessing the internet via mobile devices than ever before, having a strong mobile presence is critical.",
     paraMiddle:
@@ -130,6 +134,8 @@ export const services = [
   {
     name: "E-commerce",
     slug: "e-commerce",
+    icon: "/assets/home/ecommerce.png",
+    image:"/assets/dynamicServices/dynamic-e-commerce.svg",
     paraFirst:
       "E-commerce is more than just a sales channel—it's the heart of modern retail.",
     paraMiddle:
@@ -194,6 +200,8 @@ export const services = [
   {
     name: "AI Integration",
     slug: "ai-integration",
+    icon: "/assets/home/ai.png",
+    image:"/assets/dynamicServices/dynamic-ai.svg",
     paraFirst:
       "Artificial Intelligence is revolutionizing the way businesses operate, providing unprecedented opportunities for automation and data-driven decision-making.",
     paraMiddle:
@@ -256,8 +264,10 @@ export const services = [
     ],
   },
   {
-    name: "Graphics",
+    name: "Graphics Design",
     slug: "graphics",
+    icon: "/assets/home/graphics.png",
+    image:"/assets/dynamicServices/dynamic-graphics.jpg",
     paraFirst:
       "Visual communication is key in today's fast-paced digital landscape, where first impressions matter more than ever.",
     paraMiddle:
@@ -322,6 +332,8 @@ export const services = [
   {
     name: "UI/UX",
     slug: "ui-ux",
+    icon: "/assets/home/ui.png",
+    image:"/assets/dynamicServices/dynamic-uiux.svg",
     paraFirst:
       "User experience is at the core of successful digital products—it's what keeps users coming back.",
     paraMiddle:
