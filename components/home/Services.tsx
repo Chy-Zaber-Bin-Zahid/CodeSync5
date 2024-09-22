@@ -54,7 +54,7 @@ function Services() {
             id="services-heading"
             className="w-full flex justify-center items-center"
           >
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold">
               Our <span className="text-primaryText">Services</span>
             </h1>
           </div>
