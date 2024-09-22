@@ -57,10 +57,10 @@ function Services() {
               Our <span className="text-primaryText">Services</span>
             </h1>
           </div>
-          <div className="w-full grid grid-cols-3 mq-875:grid-cols-2 mq-565:grid-cols-1 gap-4">
+          <div className="w-full grid grid-cols-3 mq-875:grid-cols-2 mq-565:grid-cols-1 gap-4 auto-rows-fr">
             {services.map((item) => (
               <Tilt key={item.slug}>
-                <div className="service-card py-4 px-16 mq-565:px-16 mq-400:px-8 mq-950:px-8 flex flex-col gap-2 justify-start items-center rounded-sm shadow-services-card">
+                <div className="service-card py-4 px-16 mq-565:px-16 mq-400:px-8 mq-950:px-8 flex flex-col h-full gap-2 justify-start items-center rounded-sm shadow-services-card">
                   <div className="mb-2">
                     <Image
                       src={item.icon}
