@@ -7,6 +7,7 @@ import { services } from "@/utils/services";
 import Link from "next/link";
 import Image from 'next/image';
 import Tilt from "react-parallax-tilt";
+import { CaretDoubleRight } from "phosphor-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,9 +79,9 @@ function Services() {
                   <p className="text-sm text-center m-0 flex-grow">
                     {item.description}
                   </p>
-                  <Link href={`/services/${item.slug}`}>
-                    <button className="mt-16 pb-2 pt-1 font-semibold px-10 mq-875:px-6 mq-875:text-sm mq-950:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
-                      Read more
+                  <Link href={`/services/${item.slug}`} className="no-underline">
+                    <button className="mt-16 py-1 font-semibold flex justify-center items-center gap-2 px-10 mq-875:px-6 mq-875:text-sm mq-950:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
+                      <span>Read more</span> <CaretDoubleRight size={14} weight="bold" />
                     </button>
                   </Link>
                 </div>
