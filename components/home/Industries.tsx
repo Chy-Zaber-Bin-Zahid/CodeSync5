@@ -27,8 +27,8 @@ function Industries() {
                 <div className='mx-auto max-w-big-screen w-full flex flex-col gap-4 justify-between items-center'>
                     <div className="w-full flex flex-col gap-5 justify-center items-center" >
                         <div className='flex flex-col justify-center items-center gap-1'>
-                            <h1 className='m-0 text-4xl font-bold'>Industries we are</h1>
-                            <h1 className='m-0 text-primaryText text-4xl font-bold'>Serving</h1>
+                            <h1 className='m-0 text-4xl mq-400:text-2xl mq-875:text-3xl font-bold'>Industries we are</h1>
+                            <h1 className='m-0 text-primaryText text-4xl mq-400:text-2xl mq-875:text-3xl font-bold'>Serving</h1>
                         </div>
                         <div className='grid gap-y-16 gap-x-2 mq-875:gap-x-4 grid-cols-6 mq-875:grid-cols-3 w-full' >
                             {industries.map((item) => (
