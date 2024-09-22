@@ -76,10 +76,10 @@ export default function ContactForm() {
     }
 
     return (
-        <section className="w-full flex justify-center items-center">
+        <section className="w-full flex justify-center items-center h-full">
             <div className="w-full px-3 pb-6 pt-12">
-                <div className="mx-auto max-w-big-screen w-full flex gap-4 justify-between items-center">
-                    <div className="w-[55%]">
+                <div className="mx-auto max-w-big-screen w-full flex gap-4 justify-between mq-875:justify-center items-center">
+                    <div className="w-[55%] mq-875:w-full">
                         <Card className="w-full max-w-lg mx-auto">
                             <CardHeader>
                                 <CardTitle>Contact Us</CardTitle>
@@ -158,7 +158,7 @@ export default function ContactForm() {
                             </CardContent>
                         </Card>
                     </div>
-                    <div className="relative h-[500px] scale-x-[-1] w-[45%]">
+                    <div className="relative h-[500px] scale-x-[-1] w-[45%] mq-875:hidden">
                         <Image
                             src="/assets/contact/contactus.svg"
                             layout="fill"
