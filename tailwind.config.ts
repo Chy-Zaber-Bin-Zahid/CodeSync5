@@ -17,6 +17,8 @@ const config: Config = {
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				darkBgPrimary: '#181A1B',
+				darkBgSecondary: '#1E2022',
 				'nav-default': '#808080',
 				'nav-hover': '#000000',
 				'nav-active': '#991b1b',
