@@ -39,7 +39,7 @@ function Navbar() {
             Rose<span className="text-primaryText">Tech</span>
           </h1>
         </Link>
-        <div className="flex justify-between items-center gap-3 mq-765:hidden">
+        <div className="flex justify-between items-center gap-3 mq-875:hidden">
           <Link
             href="/"
             className={`${baseLinkCommonClass} ${
@@ -90,7 +90,7 @@ function Navbar() {
         </div>
         <div
           onClick={() => setToggleNav(true)}
-          className="p-2 hover:cursor-pointer hidden mq-765:block"
+          className="p-2 hover:cursor-pointer hidden mq-875:block"
         >
           <List size={30} />
         </div>
