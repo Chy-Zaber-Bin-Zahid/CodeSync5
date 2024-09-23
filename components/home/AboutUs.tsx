@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
 import Statements from "../about/Statements";
-import WhyChoose from "../about/WhyChoose";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,21 +40,11 @@ function AboutUs() {
             </h1>
             <div className="flex flex-col gap-3 justify-center items-start w-full">
               <p className="text-gray-500 m-0 text-lg lg:text-2xl">
-                <span className="text-black font-bold">
-                  RoseTech Solutions Ltd
-                </span>{" "}
-                aspires to provide comprehensive software solutions to
-                businesses of all sizes. From enterprises to startups, SMEs,
-                agencies, corporations, and institutions, we aim to be the
-                technical wing for these organisations.
+                <span className="text-black font-bold">CodeSync</span> develops
+                innovative software solutions that streamline business workflows
+                and boost productivity. By leveraging AI and cloud technologies,
+                CodeSync helps businesses achieve greater efficiency.
               </p>
-              {/* <p className="text-gray-500 m-0 text-md lg:text-2xl">
-                Our goal is to enable these businesses to focus solely on their
-                core operations, without worrying about the technical aspects of
-                their operations. Our vision is to be the premier provider of
-                innovative, end-to-end software solutions, empowering businesses
-                to achieve their full potential.
-              </p> */}
             </div>
           </div>
           <div className="w-full h-64  md:h-96  lg:w-[45%]  lg:pl-[81px] relative">
@@ -74,9 +63,6 @@ function AboutUs() {
           <div className="statement">
             <Statements />
           </div>
-          {/* <div className="whychoose">
-            <WhyChoose />
-          </div> */}
         </div>
       </div>
     </section>
