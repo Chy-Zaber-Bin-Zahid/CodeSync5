@@ -6,8 +6,6 @@ export const services = [
     image:"/assets/dynamicServices/dynamic-web.svg",
     paraFirst:
       "In today's digital age, a website is your business's front door. It's essential to create an online presence that not only attracts but retains customers.",
-    paraMiddle:
-      "Our web development services ensure that your website is responsive, fast, and scalable, providing a seamless user experience across all devices.",
     description:
       "Our web development services leverage modern technologies to create dynamic, high-performance websites with comprehensive support and maintenance.",
     whyUs: [
@@ -72,8 +70,6 @@ export const services = [
     image:"/assets/dynamicServices/dynamic-mobile.svg",
     paraFirst:
       "With more people accessing the internet via mobile devices than ever before, having a strong mobile presence is critical.",
-    paraMiddle:
-      "Our mobile app development services are designed to create high-performance, cross-platform apps that provide an excellent user experience on both iOS and Android devices.",
     description:
       "Our mobile application development services utilize the latest frameworks and technologies to deliver high-quality, cross-platform apps with expert support.",
     whyUs: [
@@ -138,8 +134,6 @@ export const services = [
     image:"/assets/dynamicServices/dynamic-e-commerce.svg",
     paraFirst:
       "E-commerce is more than just a sales channel—it's the heart of modern retail.",
-    paraMiddle:
-      "Our e-commerce solutions are designed to build powerful online stores that are easy to manage and scale, ensuring your business stays competitive.",
     description:
       "Our e-commerce solutions utilize top platforms to build versatile and effective online stores that drive business growth.",
     whyUs: [
@@ -204,8 +198,6 @@ export const services = [
     image:"/assets/dynamicServices/dynamic-ai.svg",
     paraFirst:
       "Artificial Intelligence is revolutionizing the way businesses operate, providing unprecedented opportunities for automation and data-driven decision-making.",
-    paraMiddle:
-      "Our AI integration services help you leverage advanced technology to streamline operations, improve customer experiences, and gain a competitive edge.",
     description:
       "Our AI integration services bring intelligent automation to your business, enhancing efficiency and decision-making with advanced technology.",
     whyUs: [
@@ -270,8 +262,6 @@ export const services = [
     image:"/assets/dynamicServices/dynamic-graphics.jpg",
     paraFirst:
       "Visual communication is key in today's fast-paced digital landscape, where first impressions matter more than ever.",
-    paraMiddle:
-      "Our graphic design services ensure your brand's visuals are not only eye-catching but also effectively communicate your message to your target audience.",
     description:
       "Our graphic design services deliver visually compelling and impactful designs that capture your brand's essence and engage your audience.",
     whyUs: [
@@ -336,8 +326,6 @@ export const services = [
     image:"/assets/dynamicServices/dynamic-uiux.svg",
     paraFirst:
       "User experience is at the core of successful digital products—it's what keeps users coming back.",
-    paraMiddle:
-      "Our UI/UX design services focus on creating intuitive and engaging interfaces that enhance user satisfaction and drive business results.",
     description:
       "Our UI/UX design services ensure intuitive, engaging, and user-centered experiences that enhance interaction and satisfaction.",
     whyUs: [

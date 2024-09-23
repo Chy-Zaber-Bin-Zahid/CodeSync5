@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-muted-foreground{
+.parent-class .text-muted-foreground {
   width: 25px !important;
   height: 25px !important;
   margin-left: 20px !important;
 }
 
 @media (max-width: 875px) {
-  .text-muted-foreground {
+  .parent-class .text-muted-foreground {
     width: 20px !important;
     height: 20px !important;
   }
