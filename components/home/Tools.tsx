@@ -13,7 +13,7 @@ function Tools() {
           <div className="w-full flex flex-col gap-3 justify-center items-center" >
             <div className='flex flex-col justify-center items-center gap-1'>
               <h1 className='m-0 text-4xl mq-400:text-2xl mq-875:text-3xl font-bold'>Our <span className="text-primaryText" >Tools</span></h1>
-              <p className='m-0 text-lg text-gray-500 font-semibold'>Technologies we work with</p>
+              <p className='m-0 text-xl mq-875:text-lg mq-400:text-sm text-gray-500 font-semibold'>Technologies we work with</p>
             </div>
           </div>
           <div className='flex w-full overflow-hidden group h-20 mq-500:h-14 mq-400:h-10'>
