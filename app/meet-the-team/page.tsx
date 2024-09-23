@@ -11,7 +11,7 @@ function page() {
                     </h1>
                 </div>
                 <div className="w-full flex mq-500:flex-col justify-center items-center mb-12">
-                    <div className="relative w-fit group overflow-hidden">
+                    <div className="relative w-fit group overflow-hidden rounded-tl-3xl">
                         <Image
                             src="https://media.licdn.com/dms/image/v2/D5603AQFxSOYnlvHylw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727032482264?e=1732752000&v=beta&t=m481D5h2Hp3hQ57RHIN-b1zni06wFEEMhfNyt2Pch_k"
                             width={370}
@@ -28,7 +28,7 @@ function page() {
                             <p className="mq-565:text-[14px] mq-500:text-[16px]">Co-Founder & CTO</p>
                         </div>
                     </div>
-                    <div className="relative w-fit group overflow-hidden">
+                    <div className="relative w-fit group overflow-hidden rounded-br-3xl">
                         <Image
                             src="https://media.licdn.com/dms/image/v2/D5635AQGxlahN9j3IXQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1708025613605?e=1727636400&v=beta&t=UNCH82Jne9YSmCcvl3tYvDGuOlyLvME0EM0evn07ZzQ"
                             width={370}
