@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
 import Statements from "../about/Statements";
-import WhyChoose from "../about/WhyChoose";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,13 +48,6 @@ function AboutUs() {
                 agencies, corporations, and institutions, we aim to be the
                 technical wing for these organisations.
               </p>
-              {/* <p className="text-gray-500 m-0 text-md lg:text-2xl">
-                Our goal is to enable these businesses to focus solely on their
-                core operations, without worrying about the technical aspects of
-                their operations. Our vision is to be the premier provider of
-                innovative, end-to-end software solutions, empowering businesses
-                to achieve their full potential.
-              </p> */}
             </div>
           </div>
           <div className="w-full h-64  md:h-96  lg:w-[45%]  lg:pl-[81px] relative">
@@ -74,9 +66,6 @@ function AboutUs() {
           <div className="statement">
             <Statements />
           </div>
-          {/* <div className="whychoose">
-            <WhyChoose />
-          </div> */}
         </div>
       </div>
     </section>
