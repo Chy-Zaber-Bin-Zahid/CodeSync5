@@ -10,7 +10,7 @@ function page() {
                         Meet The <span className="text-primaryText">Team</span>
                     </h1>
                 </div>
-                <div className="w-full flex justify-center items-center mb-12">
+                <div className="w-full flex mq-500:flex-col justify-center items-center mb-12">
                     <div className="relative w-fit group overflow-hidden">
                         <Image
                             src="https://media.licdn.com/dms/image/v2/D5603AQFxSOYnlvHylw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727032482264?e=1732752000&v=beta&t=m481D5h2Hp3hQ57RHIN-b1zni06wFEEMhfNyt2Pch_k"
@@ -22,10 +22,10 @@ function page() {
                             placeholder="blur"
                             className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
                         />
-                        <div className="absolute bottom-0 left-0 -translate-x-full group-hover:translate-x-0 bg-black opacity-30 w-full h-full transition-transform duration-500 z-10"></div>
-                        <div className="absolute bottom-0 left-0 -translate-x-full group-hover:translate-x-0 w-full h-full transition-all duration-500 z-20 flex flex-col justify-center items-center text-white">
-                            <h1 className="text-lg font-semibold">Chowdhury Zaber Bin Zahid</h1>
-                            <p>Co-Founder & CTO</p>
+                        <div className="absolute bottom-0 left-0 min-mq-501:-translate-x-full mq-500:-translate-y-full min-mq-501:group-hover:translate-x-0 mq-500:group-hover:translate-y-0 bg-black opacity-30 w-full h-full transition-transform duration-500 z-10"></div>
+                        <div className="absolute bottom-0 left-0 min-mq-501:-translate-x-full mq-500:-translate-y-full min-mq-501:group-hover:translate-x-0 mq-500:group-hover:translate-y-0 w-full h-full transition-all duration-500 z-20 flex flex-col justify-center items-center text-white">
+                            <h1 className="m-0 text-[18px] mq-565:text-[16px] mq-500:text-lg font-semibold">Chowdhury Zaber Bin Zahid</h1>
+                            <p className="mq-565:text-[14px] mq-500:text-[16px]">Co-Founder & CTO</p>
                         </div>
                     </div>
                     <div className="relative w-fit group overflow-hidden">
@@ -39,10 +39,10 @@ function page() {
                             placeholder="blur"
                             className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
                         />
-                        <div className="absolute bottom-0 left-0 translate-x-full group-hover:translate-x-0 bg-black opacity-30 w-full h-full transition-transform duration-500 z-10"></div>
-                        <div className="absolute bottom-0 left-0 translate-x-full group-hover:translate-x-0 w-full h-full transition-all duration-500 z-20 flex flex-col justify-center items-center text-white">
-                            <h1 className="text-lg font-semibold">Walid Ibne Hasan</h1>
-                            <p>Co-Founder & COO</p>
+                        <div className="absolute bottom-0 left-0 min-mq-501:translate-x-full mq-500:translate-y-full min-mq-501:group-hover:translate-x-0 mq-500:group-hover:translate-y-0 bg-black opacity-30 w-full h-full transition-transform duration-500 z-10"></div>
+                        <div className="absolute bottom-0 left-0 min-mq-501:translate-x-full mq-500:translate-y-full min-mq-501:group-hover:translate-x-0 mq-500:group-hover:translate-y-0 w-full h-full transition-all duration-500 z-20 flex flex-col justify-center items-center text-white">
+                            <h1 className="m-0 text-[18px] mq-565:text-[16px] mq-500:text-lg font-semibold">Walid Ibne Hasan</h1>
+                            <p className="mq-565:text-[14px] mq-500:text-[16px]">Co-Founder & COO</p>
                         </div>
                     </div>
                 </div>

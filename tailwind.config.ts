@@ -9,123 +9,144 @@ const config: Config = {
 		"./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {
-			scrollMargin: {
-				'scroll-1300': '90px',
-				'scroll-765': '62px'
-			},
-			colors: {
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
-				darkBgPrimary: '#181A1B',
-				darkBgSecondary: '#1E2022',
-				'nav-default': '#808080',
-				'nav-hover': '#000000',
-				'nav-active': '#991b1b',
-				'whatsapp-default': '#25d366',
-				'whatsapp-hover': '#1eab5e',
-				footerBg: '#212529',
-				primaryText: '#991b1b',
-				'primaryText-hover': '#700e0e',
-				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
-				},
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
-				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
-				},
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
-				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
-				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
-				},
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-				chart: {
-					'1': 'hsl(var(--chart-1))',
-					'2': 'hsl(var(--chart-2))',
-					'3': 'hsl(var(--chart-3))',
-					'4': 'hsl(var(--chart-4))',
-					'5': 'hsl(var(--chart-5))'
-				}
-			},
-			boxShadow: {
-				'nav-shadow': '0 2px 8px rgba(0, 0, 0, 0.1)',
-				'services-card': '0 4px 10px rgba(0, 0, 0, 0.15)'
-			},
-			maxWidth: {
-				'big-screen': '1200px',
-				'small-screen': '570px'
-			},
-			screens: {
-				'min-mq-766': {
-					min: '766px'
-				},
-				'mq-1300': {
-					max: '1300px'
-				},
-				'min-mq-1301': {
-					min: '1301px'
-				},
-				'mq-1010': {
-					max: '1010px'
-				},
-				'mq-950': {
-					max: '950px'
-				},
-				'mq-875': {
-					max: '875px'
-				},
-				'mq-765': {
-					max: '765px'
-				},
-				'mq-565': {
-					max: '565px'
-				},
-				'mq-500': {
-					max: '500px'
-				},
-				'mq-400': {
-					max: '400px'
-				}
-			},
-			animation: {
-				'loop-scroll': 'loop-scroll 15s linear infinite'
-			},
-			keyframes: {
-				'loop-scroll': {
-					from: {
-						transform: 'translateX(0)'
-					},
-					to: {
-						transform: 'translateX(-100%)'
-					}
-				}
-			},
-			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
-			}
-		}
-	},
+    	extend: {
+    		scrollMargin: {
+    			'scroll-1300': '90px',
+    			'scroll-765': '62px'
+    		},
+    		colors: {
+    			background: 'hsl(var(--background))',
+    			foreground: 'hsl(var(--foreground))',
+    			darkBgPrimary: '#181A1B',
+    			darkBgSecondary: '#1E2022',
+    			'nav-default': '#808080',
+    			'nav-hover': '#000000',
+    			'nav-active': '#991b1b',
+    			'whatsapp-default': '#25d366',
+    			'whatsapp-hover': '#1eab5e',
+    			footerBg: '#212529',
+    			primaryText: '#991b1b',
+    			'primaryText-hover': '#700e0e',
+    			primary: {
+    				DEFAULT: 'hsl(var(--primary))',
+    				foreground: 'hsl(var(--primary-foreground))'
+    			},
+    			card: {
+    				DEFAULT: 'hsl(var(--card))',
+    				foreground: 'hsl(var(--card-foreground))'
+    			},
+    			popover: {
+    				DEFAULT: 'hsl(var(--popover))',
+    				foreground: 'hsl(var(--popover-foreground))'
+    			},
+    			secondary: {
+    				DEFAULT: 'hsl(var(--secondary))',
+    				foreground: 'hsl(var(--secondary-foreground))'
+    			},
+    			muted: {
+    				DEFAULT: 'hsl(var(--muted))',
+    				foreground: 'hsl(var(--muted-foreground))'
+    			},
+    			accent: {
+    				DEFAULT: 'hsl(var(--accent))',
+    				foreground: 'hsl(var(--accent-foreground))'
+    			},
+    			destructive: {
+    				DEFAULT: 'hsl(var(--destructive))',
+    				foreground: 'hsl(var(--destructive-foreground))'
+    			},
+    			border: 'hsl(var(--border))',
+    			input: 'hsl(var(--input))',
+    			ring: 'hsl(var(--ring))',
+    			chart: {
+    				'1': 'hsl(var(--chart-1))',
+    				'2': 'hsl(var(--chart-2))',
+    				'3': 'hsl(var(--chart-3))',
+    				'4': 'hsl(var(--chart-4))',
+    				'5': 'hsl(var(--chart-5))'
+    			}
+    		},
+    		boxShadow: {
+    			'nav-shadow': '0 2px 8px rgba(0, 0, 0, 0.1)',
+    			'services-card': '0 4px 10px rgba(0, 0, 0, 0.15)'
+    		},
+    		maxWidth: {
+    			'big-screen': '1200px',
+    			'small-screen': '570px'
+    		},
+    		screens: {
+    			'min-mq-766': {
+    				min: '766px'
+    			},
+    			'min-mq-501': {
+    				min: '501px'
+    			},
+    			'mq-1300': {
+    				max: '1300px'
+    			},
+    			'min-mq-1301': {
+    				min: '1301px'
+    			},
+    			'mq-1010': {
+    				max: '1010px'
+    			},
+    			'mq-950': {
+    				max: '950px'
+    			},
+    			'mq-875': {
+    				max: '875px'
+    			},
+    			'mq-765': {
+    				max: '765px'
+    			},
+    			'mq-565': {
+    				max: '565px'
+    			},
+    			'mq-500': {
+    				max: '500px'
+    			},
+    			'mq-400': {
+    				max: '400px'
+    			}
+    		},
+    		animation: {
+    			'loop-scroll': 'loop-scroll 15s linear infinite',
+    			'accordion-down': 'accordion-down 0.2s ease-out',
+    			'accordion-up': 'accordion-up 0.2s ease-out'
+    		},
+    		keyframes: {
+    			'loop-scroll': {
+    				from: {
+    					transform: 'translateX(0)'
+    				},
+    				to: {
+    					transform: 'translateX(-100%)'
+    				}
+    			},
+    			'accordion-down': {
+    				from: {
+    					height: '0'
+    				},
+    				to: {
+    					height: 'var(--radix-accordion-content-height)'
+    				}
+    			},
+    			'accordion-up': {
+    				from: {
+    					height: 'var(--radix-accordion-content-height)'
+    				},
+    				to: {
+    					height: '0'
+    				}
+    			}
+    		},
+    		borderRadius: {
+    			lg: 'var(--radius)',
+    			md: 'calc(var(--radius) - 2px)',
+    			sm: 'calc(var(--radius) - 4px)'
+    		}
+    	}
+    },
 	plugins: [require("tailwindcss-animate")],
 };
 export default config;
