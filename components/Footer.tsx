@@ -1,5 +1,5 @@
 "use client";
-import { LinkedinLogo, FacebookLogo } from "phosphor-react";
+import { LinkedinLogo, FacebookLogo, EnvelopeSimple } from "phosphor-react";
 import React from "react";
 
 const Footer = () => {
@@ -34,12 +34,17 @@ const Footer = () => {
     {
       name: "Facebook",
       icon: FacebookLogo,
-      href: "#",
+      href: "/facebook",
     },
     {
       name: "LinkedIn",
       icon: LinkedinLogo,
       href: "/linkedin",
+    },
+    {
+      name: "Gmail",
+      icon: EnvelopeSimple,
+      href: "/gmail",
     },
   ];
 
@@ -72,7 +77,7 @@ const Footer = () => {
               <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Company
               </p>
-              <ul className="pl-0 mt-6 space-y-4 text-sm">
+              <ul className="pl-0 mt-6 space-y-4 text-md">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
                     <a
@@ -91,7 +96,7 @@ const Footer = () => {
               <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Helpful Links
               </p>
-              <ul className="pl-0 mt-6 space-y-4 text-sm">
+              <ul className="pl-0 mt-6 space-y-4 text-md">
                 {helpfulLinks.map((link) => (
                   <li key={link.name}>
                     <a
@@ -110,7 +115,7 @@ const Footer = () => {
               <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Legal
               </p>
-              <ul className="pl-0 mt-6 space-y-4 text-sm">
+              <ul className="pl-0 mt-6 space-y-4 text-md">
                 {legalLinks.map((link) => (
                   <li key={link.name}>
                     <a
@@ -125,7 +130,7 @@ const Footer = () => {
             </div>
 
             {/* Social Media Section */}
-            <ul className="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
+            <ul className="pl-0 col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
               {socialLinks.map((social) => (
                 <li key={social.name}>
                   <a
