@@ -78,6 +78,9 @@ const config: Config = {
 				'min-mq-766': {
 					min: '766px'
 				},
+				'min-mq-501': {
+					min: '501px'
+				},
 				'mq-1300': {
 					max: '1300px'
 				},
