@@ -108,7 +108,7 @@ function Services() {
                 {row.map((item) => (
                   <Tilt key={item.slug}>
                     <div
-                      className="service-card py-4 px-16 mq-565:px-16 mq-400:px-8 mq-1010:px-8 flex flex-col h-full gap-2 justify-start items-center rounded-sm shadow-services-card"
+                      className="service-card py-8 px-16 mq-565:px-16 mq-400:px-8 mq-1010:px-8 flex flex-col h-full gap-2 justify-start items-center rounded-sm shadow-services-card"
                     >
                       <div className="mb-2">
                         <Image
@@ -127,7 +127,7 @@ function Services() {
                         {item.description}
                       </p>
                       <Link href={`/services/${item.slug}`} className="no-underline">
-                        <button className="mt-16 py-[4px] mq-875:py-2 font-semibold flex justify-center items-center gap-2 px-10 mq-875:px-8 mq-875:text-sm mq-1010:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
+                        <button className="mt-20 py-[4px] mq-875:py-2 font-semibold flex justify-center items-center gap-2 px-10 mq-875:px-8 mq-875:text-sm mq-1010:px-8 bg-primaryText transition-all from-neutral-300 hover:bg-primaryText-hover rounded text-white">
                           <span>Read more</span> <CaretDoubleRight size={14} weight="bold" />
                         </button>
                       </Link>

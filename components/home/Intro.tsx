@@ -37,7 +37,7 @@ function Intro() {
               Innovation with{" "}
               <span className="text-primaryText">CodeSync5</span>
             </h1>
-            <p className="text-gray-500 mq-400:text-sm text-xl mq-875:text-lg">
+            <p className="text-gray-500 mq-400:text-sm text-2xl mq-875:text-lg">
               We empower businesses to innovate and streamline operations,
               ensuring sustainable growth. Let us help you turn your ideas into
               reality with our expert-driven software services.

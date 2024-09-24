@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useMyContext } from "@/context/MyProvider";
 import React, { useState, useEffect } from 'react';
@@ -31,13 +31,15 @@ const formSchema = z.object({
   }),
 });
 
-function Modal() {
+export default function Modal() {
   const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID ?? "";
   const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "";
   const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY ?? "";
   const { toggleModal, setToggleModal } = useMyContext();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isVisible, setIsVisible] = useState(false);
+  const [isRendered, setIsRendered] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -50,8 +52,17 @@ function Modal() {
 
   useEffect(() => {
     if (toggleModal) {
+      setIsRendered(true);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsVisible(true);
+        });
+      });
       form.reset();
       setSubmitStatus('idle');
+    } else {
+      setIsVisible(false);
+      setTimeout(() => setIsRendered(false), 300);
     }
   }, [toggleModal, form]);
 
@@ -75,7 +86,7 @@ function Modal() {
       setSubmitStatus('success');
       form.reset();
       setTimeout(() => {
-        setToggleModal(false);
+        handleClose();
       }, 2000);
     } catch (error) {
       console.error('FAILED...', error);
@@ -85,88 +96,92 @@ function Modal() {
     }
   };
 
-  if (!toggleModal) return null;
-
   return (
-    <div
-      onClick={handleClose}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-3"
-    >
-      <div
-        onClick={handleContentClick}
-        className="relative bg-white rounded-lg p-6 w-full max-w-[500px] mx-auto"
-      >
-        <button
+    <>
+      {isRendered && (
+        <div
           onClick={handleClose}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-          aria-label="Close modal"
+          className={`fixed inset-0 px-3 z-50 flex items-center justify-center transition-all duration-300 ease-in-out ${
+            isVisible ? 'bg-black bg-opacity-50' : 'bg-transparent'
+          }`}
         >
-          <X size={24} />
-        </button>
-        <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Your name" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input type="email" placeholder="Your email" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Message</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Your message"
-                      className="resize-none h-[100px]"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button 
-              type="submit" 
-              className="w-full bg-primaryText hover:bg-primaryText-hover transition-all duration-300 font-semibold"
-              disabled={isSubmitting}
+          <div
+            onClick={handleContentClick}
+            className={`relative bg-white rounded-lg p-6 w-full max-w-[500px] mx-auto transition-all duration-300 ease-in-out ${
+              isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`}
+          >
+            <button
+              onClick={handleClose}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              aria-label="Close modal"
             >
-              {isSubmitting ? 'Sending...' : 'Send'}
-            </Button>
-          </form>
-        </Form>
-        {submitStatus === 'success' && (
-          <p className="mt-4 text-green-600 text-center">Message sent successfully!</p>
-        )}
-        {submitStatus === 'error' && (
-          <p className="mt-4 text-red-600 text-center">Failed to send message. Please try again.</p>
-        )}
-      </div>
-    </div>
+              <X size={24} />
+            </button>
+            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="Your email" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Your message"
+                          className="resize-none h-[100px]"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primaryText hover:bg-primaryText-hover transition-all duration-300 font-semibold"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send'}
+                </Button>
+              </form>
+            </Form>
+            {submitStatus === 'success' && (
+              <p className="mt-4 text-green-600 text-center">Message sent successfully!</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="mt-4 text-red-600 text-center">Failed to send message. Please try again.</p>
+            )}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
-
-export default Modal;
