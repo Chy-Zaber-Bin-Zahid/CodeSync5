@@ -1,17 +1,18 @@
 "use client";
 import { LinkedinLogo, FacebookLogo, EnvelopeSimple } from "phosphor-react";
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
     { name: "Web Development", href: "/services/web-development" },
-    { name: "Mobile Application", href: "/services/mobile-application" },
+    { name: "Mobile Application", href: "/services/mobile-app-development" },
     { name: "E-Commerce", href: "/services/e-commerce" },
     { name: "AI Integration", href: "/services/ai-integration" },
     { name: "UI/UX Design", href: "/services/ui-ux" },
-    { name: "Graphics Design", href: "/services/graphics-design" },
+    { name: "Graphics Design", href: "/services/graphics" },
   ];
 
   const companyLinks = [
@@ -61,12 +62,12 @@ const Footer = () => {
               <ul className="pl-0 mt-6 space-y-4 text-md">
                 {services.map((service) => (
                   <li key={service.name}>
-                    <a
+                    <Link
                       href={service.href}
                       className="underline-offset-2 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {service.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -80,12 +81,12 @@ const Footer = () => {
               <ul className="pl-0 mt-6 space-y-4 text-md">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
-                    <a
+                    <Link
                       href={link.href}
                       className="underline-offset-2 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -99,12 +100,12 @@ const Footer = () => {
               <ul className="pl-0 mt-6 space-y-4 text-md">
                 {helpfulLinks.map((link) => (
                   <li key={link.name}>
-                    <a
+                    <Link
                       href={link.href}
                       className="underline-offset-2 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -118,12 +119,12 @@ const Footer = () => {
               <ul className="pl-0 mt-6 space-y-4 text-md">
                 {legalLinks.map((link) => (
                   <li key={link.name}>
-                    <a
+                    <Link
                       href={link.href}
                       className="underline-offset-2 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -133,7 +134,7 @@ const Footer = () => {
             <ul className="pl-0 col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
               {socialLinks.map((social) => (
                 <li key={social.name}>
-                  <a
+                  <Link
                     href={social.href}
                     rel="noreferrer"
                     target="_blank"
@@ -141,7 +142,7 @@ const Footer = () => {
                   >
                     <span className="sr-only">{social.name}</span>
                     <social.icon size={24} />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -155,12 +156,12 @@ const Footer = () => {
             </p>
 
             <p>
-              <a
+              <Link
                 href="/privacy-policy"
                 className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
               >
                 Privacy Policy
-              </a>
+              </Link>
             </p>
           </div>
         </div>

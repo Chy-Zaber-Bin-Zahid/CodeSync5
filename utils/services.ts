@@ -256,70 +256,6 @@ export const services = [
     ],
   },
   {
-    name: "Graphics Design",
-    slug: "graphics",
-    icon: "/assets/home/graphics.png",
-    image:"/assets/dynamicServices/dynamic-graphics.jpg",
-    paraFirst:
-      "Visual communication is key in today's fast-paced digital landscape, where first impressions matter more than ever.",
-    description:
-      "Our graphic design services deliver visually compelling and impactful designs that capture your brand's essence and engage your audience.",
-    whyUs: [
-      {
-        point: "Creative Excellence",
-        description:
-          "Our team of designers brings creativity and innovation to every project, ensuring your brand stands out with stunning visuals.",
-      },
-      {
-        point: "Tailored Designs",
-        description:
-          "We create customized designs that reflect your brand's identity and resonate with your target audience.",
-      },
-      {
-        point: "Versatile Skill Set",
-        description:
-          "Our designers are skilled in a variety of styles and formats, from digital graphics to print materials, ensuring comprehensive service.",
-      },
-      {
-        point: "Quick Turnaround",
-        description:
-          "We understand the importance of deadlines and deliver high-quality designs efficiently without compromising on quality.",
-      },
-      {
-        point: "Collaboration and Feedback",
-        description:
-          "We involve you in the design process, encouraging feedback to ensure the final product aligns with your vision.",
-      },
-    ],
-    whyMatters: [
-      {
-        point: "Brand Identity",
-        description:
-          "Strong graphic design reinforces your brand identity, making it easily recognizable and memorable to your audience.",
-      },
-      {
-        point: "Effective Communication",
-        description:
-          "Visuals can communicate complex messages quickly and effectively, enhancing audience understanding and engagement.",
-      },
-      {
-        point: "Professionalism",
-        description:
-          "High-quality design reflects professionalism, helping build trust with your audience and enhancing your brand's credibility.",
-      },
-      {
-        point: "Increased Engagement",
-        description:
-          "Engaging visuals capture attention and encourage interaction, driving higher engagement rates across all platforms.",
-      },
-      {
-        point: "Competitive Edge",
-        description:
-          "Distinctive graphic design sets your brand apart in a crowded market, giving you an advantage over competitors.",
-      },
-    ],
-  },
-  {
     name: "UI/UX",
     slug: "ui-ux",
     icon: "/assets/home/ui.png",
@@ -380,6 +316,70 @@ export const services = [
         point: "Competitive Advantage",
         description:
           "A well-designed product sets you apart from competitors, providing a unique value proposition that attracts and retains users.",
+      },
+    ],
+  },
+  {
+    name: "Graphics Design",
+    slug: "graphics",
+    icon: "/assets/home/graphics.png",
+    image:"/assets/dynamicServices/dynamic-graphics.jpg",
+    paraFirst:
+      "Visual communication is key in today's fast-paced digital landscape, where first impressions matter more than ever.",
+    description:
+      "Our graphic design services deliver visually compelling and impactful designs that capture your brand's essence and engage your audience.",
+    whyUs: [
+      {
+        point: "Creative Excellence",
+        description:
+          "Our team of designers brings creativity and innovation to every project, ensuring your brand stands out with stunning visuals.",
+      },
+      {
+        point: "Tailored Designs",
+        description:
+          "We create customized designs that reflect your brand's identity and resonate with your target audience.",
+      },
+      {
+        point: "Versatile Skill Set",
+        description:
+          "Our designers are skilled in a variety of styles and formats, from digital graphics to print materials, ensuring comprehensive service.",
+      },
+      {
+        point: "Quick Turnaround",
+        description:
+          "We understand the importance of deadlines and deliver high-quality designs efficiently without compromising on quality.",
+      },
+      {
+        point: "Collaboration and Feedback",
+        description:
+          "We involve you in the design process, encouraging feedback to ensure the final product aligns with your vision.",
+      },
+    ],
+    whyMatters: [
+      {
+        point: "Brand Identity",
+        description:
+          "Strong graphic design reinforces your brand identity, making it easily recognizable and memorable to your audience.",
+      },
+      {
+        point: "Effective Communication",
+        description:
+          "Visuals can communicate complex messages quickly and effectively, enhancing audience understanding and engagement.",
+      },
+      {
+        point: "Professionalism",
+        description:
+          "High-quality design reflects professionalism, helping build trust with your audience and enhancing your brand's credibility.",
+      },
+      {
+        point: "Increased Engagement",
+        description:
+          "Engaging visuals capture attention and encourage interaction, driving higher engagement rates across all platforms.",
+      },
+      {
+        point: "Competitive Edge",
+        description:
+          "Distinctive graphic design sets your brand apart in a crowded market, giving you an advantage over competitors.",
       },
     ],
   },
