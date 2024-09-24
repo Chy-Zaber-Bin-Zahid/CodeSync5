@@ -101,7 +101,7 @@ export default function Modal() {
       {isRendered && (
         <div
           onClick={handleClose}
-          className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-300 ease-in-out ${
+          className={`fixed inset-0 px-3 z-50 flex items-center justify-center transition-all duration-300 ease-in-out ${
             isVisible ? 'bg-black bg-opacity-50' : 'bg-transparent'
           }`}
         >

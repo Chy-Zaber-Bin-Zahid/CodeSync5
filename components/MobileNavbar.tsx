@@ -56,7 +56,7 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
                         </a>
                     </div>
                </div>
-               <div className="absolute top-0 w-full h-full bg-white opacity-90 z-40"></div>
+               <div className="absolute top-0 w-full h-full bg-white opacity-95 z-40"></div>
            </div>
         </div>
     )
