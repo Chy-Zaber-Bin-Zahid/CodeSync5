@@ -5,15 +5,15 @@ const AllServicesHero = () => {
   return (
     <div className="relative w-full h-[60vh] flex items-center justify-center bg-gray-800">
       <Image
-        src="/assets/AllServices/AllServicesHero.svg"
+        src="/assets/AllServices/Hero.svg"
         alt="Services Hero"
         layout="fill"
         objectFit="contain"
-        className="opacity-30 lg:opacity-50 "
+        className=" bg-[#012340] bg-opacity-50 opacity-60 lg:bg-opacity-100 "
       />
       <div className="absolute z-10  text-center text-slate-200 ">
-        <h1 className="text-5xl font-bold">Our Services</h1>
-        <p className="text-2xl mt-4">
+        <h1 className="text-4xl font-bold">Our Services</h1>
+        <p className="text-xl mt-2">
           Empowering businesses with cutting-edge IT solutions
         </p>
       </div>

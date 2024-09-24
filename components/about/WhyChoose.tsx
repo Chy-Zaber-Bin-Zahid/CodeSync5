@@ -24,6 +24,19 @@ const WhyChoose = () => {
         },
       }
     );
+    gsap.fromTo(
+      "#why-choose-img-list",
+      { opacity: 0, x: "100%" },
+      {
+        duration: 1.5,
+        opacity: 1,
+        x: 0,
+        delay: 0,
+        scrollTrigger: {
+          trigger: "#why-choose-img-list",
+        },
+      }
+    );
   });
   interface WhyChooseInterface {
     title: string;
@@ -49,14 +62,17 @@ const WhyChoose = () => {
     },
   ];
   return (
-    <div id="whychoose" className=" w-full mx-auto  my-16 lg:my-32">
-      <h1 className="text-3xl lg:text-5xl text-center mb-16">
+    <div className=" max-w-big-screen mx-auto  my-16 lg:my-32">
+      <h1 id="whychoose" className="text-3xl lg:text-5xl text-center mb-16">
         Why Choose <span className="text-red-800">XYZ</span> Solutions
       </h1>
-      <div className="flex flex-col md:flex-row gap-8 md:gap-0 md:justify-between items-center">
+      <div
+        id="why-choose-img-list"
+        className="flex flex-col md:flex-row gap-8 md:gap-0 md:justify-between items-center"
+      >
         <div className="md:flex-1 w-full  h-64 lg:h-96 relative rounded-lg">
           <Image
-            src="/assets/about/WhyChooseIllustration.jpg"
+            src="/assets/about/WhyChoose.svg"
             alt="Team Illustration"
             layout="fill"
             objectFit="contain"
