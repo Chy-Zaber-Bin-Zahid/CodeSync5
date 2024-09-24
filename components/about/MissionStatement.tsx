@@ -31,7 +31,7 @@ const MissionStatement = () => {
   }, []);
   return (
     <section className="max-w-big-screen mx-auto bg-white">
-      <div id="mission-statement" className=" w-full mx-auto my-32">
+      <div id="mission-statement" className=" w-full mx-auto my-16">
         <div className="flex flex-col gap-8 lg:flex-row  lg:justify-between items-center mx-2 lg:space-x-8">
           <div className="lg:flex-1 w-full h-64 md:h-96 l relative">
             <Image
@@ -45,10 +45,10 @@ const MissionStatement = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-2xl lg:text-4xl lg:mb-8">
+            <h1 className="text-2xl font-bold lg:text-4xl lg:mb-8">
               <span className="text-red-800">Mission</span> Statement:
             </h1>
-            <p className="leading-relaxed text-2xl  lg:text-2xl text-slate-700">
+            <p className="leading-relaxed text-sm  lg:text-2xl text-slate-700">
               Our mission at{" "}
               <span className="text-red-800 font-semibold">XYZ</span> Solutions
               is to provide customized, innovative software solutions that help

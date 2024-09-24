@@ -27,7 +27,7 @@ const Welcome = () => {
   return (
     <div
       id="welcome"
-      className="flex justify-between max-w-big-screen mx-auto items-center"
+      className="flex flex-col lg:flex-row lg:justify-between max-w-big-screen mx-auto items-center py-16 px-3"
     >
       <div className="text-slate-700 flex-1">
         <h1>
@@ -39,7 +39,7 @@ const Welcome = () => {
           the best services to our clients.
         </p>
       </div>
-      <div className=" h-96 relative flex-1">
+      <div className=" h-96 w-full relative lg:flex-1">
         {" "}
         <Image
           src="/assets/about/Welcome.svg"

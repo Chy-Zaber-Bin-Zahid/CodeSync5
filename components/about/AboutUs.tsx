@@ -73,7 +73,7 @@ const AboutUs = () => {
     );
   });
   return (
-    <div className="max-w-big-screen mx-auto flex flex-col gap-2  my-32">
+    <div className="max-w-big-screen px-3 mx-auto flex flex-col gap-2  my-16">
       <h1 className="text-4xl" id="about-us">
         About <span className="text-red-800">US</span>{" "}
       </h1>
