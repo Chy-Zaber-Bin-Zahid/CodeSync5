@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,7 +18,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { AccessibilityIcon, CheckIcon, ArrowRightIcon } from "lucide-react";
+import { CheckIcon, ArrowRightIcon } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,7 +39,9 @@ export default function AccessibilityStatement() {
   const containerRef = useRef(null);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -75,23 +77,28 @@ export default function AccessibilityStatement() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
     try {
       const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID ?? "";
       const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "";
       const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY ?? "";
 
-      await emailjs.send(serviceId, templateId, {
-        form_name: values.name,
-        form_email: values.email,
-        message: values.message,
-      }, publicKey);
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          form_name: values.name,
+          form_email: values.email,
+          message: values.message,
+        },
+        publicKey
+      );
 
-      setSubmitStatus('success');
+      setSubmitStatus("success");
       form.reset();
     } catch (error) {
-      console.error('Failed to send email:', error);
-      setSubmitStatus('error');
+      console.error("Failed to send email:", error);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -105,7 +112,6 @@ export default function AccessibilityStatement() {
       <div className="max-w-4xl mx-auto space-y-12">
         <header className="text-center">
           <h1 className="text-4xl font-bold text-teal-800 mb-4 flex items-center justify-center">
-            <AccessibilityIcon className="w-10 h-10 mr-4" />
             Accessibility Statement
           </h1>
           <p className="text-teal-600">Last updated: {lastUpdated}</p>
@@ -120,7 +126,7 @@ export default function AccessibilityStatement() {
               }}
               className={`p-8 ${index % 2 === 0 ? "bg-teal-50" : "bg-white"}`}
             >
-              <h2 className="text-2xl font-semibold text-teal-800 mb-4 flex items-center">
+              <h2 className="text-2xl font-semibold text-teal-800 mb-4 flex  items-center">
                 <CheckIcon className="w-6 h-6 mr-2 text-green-500" />
                 {point.title}
               </h2>
@@ -159,7 +165,11 @@ export default function AccessibilityStatement() {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="your.email@example.com" {...field} />
+                      <Input
+                        type="email"
+                        placeholder="your.email@example.com"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -186,15 +196,20 @@ export default function AccessibilityStatement() {
                 className="w-full bg-teal-600 hover:bg-teal-700 text-white"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Feedback'} <ArrowRightIcon className="ml-2 h-4 w-4" />
+                {isSubmitting ? "Submitting..." : "Submit Feedback"}{" "}
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
               </Button>
             </form>
           </Form>
-          {submitStatus === 'success' && (
-            <p className="mt-4 text-green-600 text-center">Feedback submitted successfully!</p>
+          {submitStatus === "success" && (
+            <p className="mt-4 text-green-600 text-center">
+              Feedback submitted successfully!
+            </p>
           )}
-          {submitStatus === 'error' && (
-            <p className="mt-4 text-red-600 text-center">Failed to submit feedback. Please try again.</p>
+          {submitStatus === "error" && (
+            <p className="mt-4 text-red-600 text-center">
+              Failed to submit feedback. Please try again.
+            </p>
           )}
         </section>
       </div>

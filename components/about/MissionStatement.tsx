@@ -45,10 +45,10 @@ const MissionStatement = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-2xl lg:text-4xl lg:mb-8">
+            <h1 className="text-2xl font-bold lg:text-4xl lg:mb-8">
               <span className="text-red-800">Mission</span> Statement:
             </h1>
-            <p className="leading-relaxed text-2xl  lg:text-2xl text-slate-700">
+            <p className="leading-relaxed text-sm  lg:text-2xl text-slate-700">
               Our mission at{" "}
               <span className="text-red-800 font-semibold">XYZ</span> Solutions
               is to provide customized, innovative software solutions that help

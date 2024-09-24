@@ -37,7 +37,7 @@ function AboutUs() {
               <span className="text-primaryText "> Rosetech</span>
             </h1>
             <div className="flex flex-col gap-3 justify-center items-start w-full">
-              <p className="text-gray-500 m-0 text-lg lg:text-2xl">
+              <p className="text-gray-500 m-0 text-sm lg:text-2xl">
                 <span className="text-black font-bold">CodeSync</span> develops
                 innovative software solutions that streamline business workflows
                 and boost productivity. By leveraging AI and cloud technologies,
