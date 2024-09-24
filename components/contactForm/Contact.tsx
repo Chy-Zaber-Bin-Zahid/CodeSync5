@@ -1,203 +1,174 @@
-"use client";
+'use client'
 
-import { useState, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import emailjs from '@emailjs/browser';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
+import { Button } from "@/components/ui/button"
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { AccessibilityIcon, CheckIcon, ArrowRightIcon } from "lucide-react";
-
-gsap.registerPlugin(ScrollTrigger);
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import {
+    Card,
+    CardContent,
+} from "@/components/ui/card"
+import Image from 'next/image'
+import emailjs from '@emailjs/browser'
+import { useState } from 'react'
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  message: z.string().min(10, {
-    message: "Feedback must be at least 10 characters.",
-  }),
-});
+    name: z.string().min(2, {
+        message: "Name must be at least 2 characters.",
+    }),
+    email: z.string().email({
+        message: "Please enter a valid email address.",
+    }),
+    message: z.string().min(10, {
+        message: "Message must be at least 10 characters.",
+    }),
+})
 
-export default function AccessibilityStatement() {
-  const [lastUpdated] = useState("September 23, 2024");
-  const containerRef = useRef(null);
-  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+export default function ContactForm() {
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-  });
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            name: "",
+            email: "",
+            message: "",
+        },
+    })
 
-  const accessibilityPoints = [
-    {
-      title: "Our Commitment",
-      content:
-        "TechInnovate Solutions is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.",
-    },
-    {
-      title: "Conformance Status",
-      content:
-        "The Web Content Accessibility Guidelines (WCAG) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. Our website is partially conformant with WCAG 2.1 level AA.",
-    },
-    {
-      title: "Accessibility Features",
-      content:
-        "Our website incorporates the following accessibility features: semantic HTML, ARIA attributes, keyboard navigation support, color contrast compliance, resizable text without loss of functionality, and alternative text for images.",
-    },
-    {
-      title: "Limitations",
-      content:
-        "Despite our efforts to ensure accessibility of our website, there may be some limitations. We are working to address these issues and achieve full compliance. If you encounter any issues, please contact us.",
-    },
-  ];
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        setIsSubmitting(true)
+        setSubmitStatus('idle')
+        try {
+            const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID ?? ""
+            const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID ?? ""
+            const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY ?? ""
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-    try {
-      const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID ?? "";
-      const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "";
-      const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY ?? "";
+            await emailjs.send(serviceId, templateId, {
+                form_name: values.name,
+                form_email: values.email,
+                message: values.message,
+            }, publicKey)
 
-      await emailjs.send(serviceId, templateId, {
-        form_name: values.name,
-        form_email: values.email,
-        message: values.message,
-      }, publicKey);
-
-      setSubmitStatus('success');
-      form.reset();
-    } catch (error) {
-      console.error('Failed to send email:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
+            setSubmitStatus('success')
+            form.reset()
+        } catch (error) {
+            console.error('Failed to send email:', error)
+            setSubmitStatus('error')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
-  }
 
-  return (
-    <div
-      className="min-h-screen w-full bg-gradient-to-br from-teal-50 to-blue-100 py-12 px-4 sm:px-6 lg:px-8"
-      ref={containerRef}
-    >
-      <div className="max-w-4xl mx-auto space-y-12">
-        <header className="text-center">
-          <h1 className="text-4xl font-bold text-teal-800 mb-4 flex items-center justify-center">
-            <AccessibilityIcon className="w-10 h-10 mr-4" />
-            Accessibility Statement
-          </h1>
-          <p className="text-teal-600">Last updated: {lastUpdated}</p>
-        </header>
-
-        <main className="bg-white shadow-xl rounded-2xl overflow-hidden">
-          {accessibilityPoints.map((point, index) => (
-            <section
-              key={index}
-              ref={(el) => {
-                sectionRefs.current[index] = el;
-              }}
-              className={`p-8 ${index % 2 === 0 ? "bg-teal-50" : "bg-white"}`}
-            >
-              <h2 className="text-2xl font-semibold text-teal-800 mb-4 flex items-center">
-                <CheckIcon className="w-6 h-6 mr-2 text-green-500" />
-                {point.title}
-              </h2>
-              <p className="text-gray-700">{point.content}</p>
-            </section>
-          ))}
-        </main>
-
-        <section className="bg-white shadow-xl rounded-2xl p-8">
-          <h2 className="text-2xl font-semibold text-teal-800 mb-6">
-            Feedback
-          </h2>
-          <p className="mb-4 text-gray-700">
-            We welcome your feedback on the accessibility of our website. Please
-            let us know if you encounter accessibility barriers:
-          </p>
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your name" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input type="email" placeholder="your.email@example.com" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Feedback</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Please describe the accessibility issue you encountered"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button
-                type="submit"
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Submitting...' : 'Submit Feedback'} <ArrowRightIcon className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
-          </Form>
-          {submitStatus === 'success' && (
-            <p className="mt-4 text-green-600 text-center">Feedback submitted successfully!</p>
-          )}
-          {submitStatus === 'error' && (
-            <p className="mt-4 text-red-600 text-center">Failed to submit feedback. Please try again.</p>
-          )}
+    return (
+        <section className="w-full flex justify-center items-center h-full bg-gradient-to-b from-gray-100 to-gray-200">
+            <div className="w-full px-3 py-9">
+                <div className="w-full flex flex-col gap-1 justify-center items-center mb-4 text-center">
+                    <h1 className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold m-0">
+                        Contact <span className="text-primaryText">Us</span>
+                    </h1>
+                    <p className='m-0 text-xl mq-875:text-lg mq-400:text-sm text-gray-500 font-semibold'>Send us a message and we&apos;ll get back to you as soon as possible.</p>
+                </div>
+                <div className="mx-auto max-w-big-screen w-full flex gap-4 justify-between mq-875:justify-center items-center flex-row-reverse">
+                    <div className="w-[45%] mq-875:w-full">
+                        <Card className="w-full max-w-lg mx-auto">
+                            <CardContent className="p-6">
+                                <Form {...form}>
+                                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                                        <FormField
+                                            control={form.control}
+                                            name="name"
+                                            render={({ field }) => (
+                                                <FormItem>
+                                                    <FormLabel className="text-md">Name</FormLabel>
+                                                    <FormControl>
+                                                        <Input placeholder="Your name" {...field} />
+                                                    </FormControl>
+                                                    <FormDescription>
+                                                        Please enter your full name.
+                                                    </FormDescription>
+                                                    <FormMessage />
+                                                </FormItem>
+                                            )}
+                                        />
+                                        <FormField
+                                            control={form.control}
+                                            name="email"
+                                            render={({ field }) => (
+                                                <FormItem>
+                                                    <FormLabel className="text-md">Email</FormLabel>
+                                                    <FormControl>
+                                                        <Input type="email" placeholder="Your email" {...field} />
+                                                    </FormControl>
+                                                    <FormDescription>
+                                                        We&apos;ll never share your email with anyone else.
+                                                    </FormDescription>
+                                                    <FormMessage />
+                                                </FormItem>
+                                            )}
+                                        />
+                                        <FormField
+                                            control={form.control}
+                                            name="message"
+                                            render={({ field }) => (
+                                                <FormItem>
+                                                    <FormLabel className="text-md">Message</FormLabel>
+                                                    <FormControl>
+                                                        <Textarea
+                                                            placeholder="Your message"
+                                                            {...field}
+                                                        />
+                                                    </FormControl>
+                                                    <FormDescription>
+                                                        Please provide details about your inquiry.
+                                                    </FormDescription>
+                                                    <FormMessage />
+                                                </FormItem>
+                                            )}
+                                        />
+                                        <Button
+                                            className="w-full bg-primaryText text-md font-semibold"
+                                            type="submit"
+                                            disabled={isSubmitting}
+                                        >
+                                            {isSubmitting ? 'Sending...' : 'Send Message'}
+                                        </Button>
+                                    </form>
+                                </Form>
+                                {submitStatus === 'success' && (
+                                    <p className="mt-4 text-green-600 text-center">Message sent successfully!</p>
+                                )}
+                                {submitStatus === 'error' && (
+                                    <p className="mt-4 text-red-600 text-center">Failed to send message. Please try again.</p>
+                                )}
+                            </CardContent>
+                        </Card>
+                    </div>
+                    <div className="relative h-[500px] w-[55%] mq-875:hidden">
+                        <Image
+                            src="/assets/contact/contactus.png"
+                            layout="fill"
+                            objectFit="contain"
+                            alt="Contact us"
+                            className="absolute"
+                            blurDataURL="data:..."
+                            placeholder="blur"
+                        />
+                    </div>
+                </div>
+            </div>
         </section>
-      </div>
-    </div>
-  );
+    )
 }
