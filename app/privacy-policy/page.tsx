@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
-
+import { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import {
   Accordion,
   AccordionContent,
@@ -20,12 +20,39 @@ import {
 
 export default function PrivacyPolicy() {
   const [lastUpdated] = useState("September 23, 2024");
-  const [showContact, setShowContact] = useState(true);
+  const [showContact, setShowContact] = useState(false);
   const cardRef = useRef(null);
   const contactRef = useRef(null);
 
+  useEffect(() => {
+    if (contactRef.current) {
+      gsap.set(contactRef.current, { height: 0, opacity: 0 });
+    }
+  }, []);
+
+  const toggleContact = () => {
+    setShowContact(!showContact);
+    if (contactRef.current) {
+      if (!showContact) {
+        gsap.to(contactRef.current, {
+          height: "auto",
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      } else {
+        gsap.to(contactRef.current, {
+          height: 0,
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.in",
+        });
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b  from-gray-100 to-gray-200 py-12 px-4 sm:px-6 lg:px-8 w-full">
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 py-12 px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-4xl mx-auto" ref={cardRef}>
         <Card className="shadow-xl">
           <CardHeader>
@@ -83,23 +110,21 @@ export default function PrivacyPolicy() {
           </CardContent>
           <CardFooter className="flex flex-col items-center">
             <Button
-              onClick={() => setShowContact(!showContact)}
+              onClick={toggleContact}
               className="mb-4 bg-primaryText hover:bg-primaryText-hover"
             >
               {showContact ? "Hide Contact Info" : "Show Contact Info"}
             </Button>
-            {showContact && (
-              <div
-                ref={contactRef}
-                className="text-center text-gray-700 overflow-hidden"
-              >
-                <p>For privacy-related inquiries, please contact:</p>
-                <p className="font-semibold">
-                  privacy@techinnovatesolutions.com
-                </p>
-                <p>123 Tech Street, Innovation City, 12345</p>
-              </div>
-            )}
+            <div
+              ref={contactRef}
+              className="text-center text-gray-700 overflow-hidden"
+            >
+              <p>For privacy-related inquiries, please contact:</p>
+              <p className="font-semibold">
+                privacy@techinnovatesolutions.com
+              </p>
+              <p>123 Tech Street, Innovation City, 12345</p>
+            </div>
           </CardFooter>
         </Card>
       </div>
