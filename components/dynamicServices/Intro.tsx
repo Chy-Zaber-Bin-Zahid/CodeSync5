@@ -28,7 +28,7 @@ function Intro({ service }: Service) {
                         placeholder="blur"
                     />
                 </div>
-                <div className="w-full h-full flex flex-col justify-center gap-2 items-center">
+                <div className="w-full h-full flex flex-col justify-center gap-2 items-center text-center">
                     <h1 className='m-0 font-bold text-4xl mq-400:text-2xl mq-875:text-3xl' >{service.name}</h1>
                     <p className='m-0 mq-400:text-sm text-xl mq-875:text-lg text-gray-500'>{service.paraFirst}</p>
                 </div>
