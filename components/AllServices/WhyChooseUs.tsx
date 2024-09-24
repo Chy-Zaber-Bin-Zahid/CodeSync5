@@ -16,14 +16,14 @@ const AllServicesWhyChooseUs: React.FC = () => {
       <h2 className="text-4xl font-bold text-center mb-12">Why Choose Us?</h2>
       <div className="mx-auto max-w-big-screen">
         <div className="flex flex-col items-center justify-center">
-          <p className="mb-4 text-2xl ">
+          <p className="mb-4 text-xl ">
             We are a premier IT firm offering a range of services from web
             development to AI integration. Our experienced team focuses on
             delivering results that make a difference. Here’s why we’re the best
             choice for your business:
           </p>
         </div>
-        <ul className="lg:w-4/5 mx-auto list-disc list-inside my-4 text-2xl">
+        <ul className="lg:w-4/5 mx-auto list-disc list-inside my-4 text-xl">
           {reasons.map((reason, index) => (
             <li key={index}>{reason.text}</li>
           ))}
