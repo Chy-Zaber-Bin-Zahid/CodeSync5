@@ -27,7 +27,7 @@ const Welcome = () => {
   return (
     <div
       id="welcome"
-      className="flex justify-between max-w-big-screen mx-auto items-center"
+      className="flex flex-col gap-4 lg:flex-row justify-between max-w-big-screen mx-auto items-center py-16 px-3"
     >
       <div className="text-slate-700 flex-1">
         <h1>
@@ -39,14 +39,14 @@ const Welcome = () => {
           the best services to our clients.
         </p>
       </div>
-      <div className=" h-96 relative flex-1">
+      <div className=" h-96  relative flex-1 w-full">
         {" "}
         <Image
           src="/assets/about/Welcome.svg"
-          alt="Hello Illustration"
+          alt="Welcome Illustration"
           layout="fill"
           objectFit="fill"
-          className="rounded-lg"
+          className="rounded-lg absolute inset-0 "
           blurDataURL="data:..."
           placeholder="blur"
         />

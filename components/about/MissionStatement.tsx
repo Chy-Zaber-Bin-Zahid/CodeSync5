@@ -31,7 +31,7 @@ const MissionStatement = () => {
   }, []);
   return (
     <section className="max-w-big-screen mx-auto bg-white">
-      <div id="mission-statement" className=" w-full mx-auto my-32">
+      <div id="mission-statement" className=" w-full mx-auto my-16">
         <div className="flex flex-col gap-8 lg:flex-row  lg:justify-between items-center mx-2 lg:space-x-8">
           <div className="lg:flex-1 w-full h-64 md:h-96 l relative">
             <Image

@@ -33,7 +33,7 @@ const VisionStatement = () => {
     <section className=" w-full bg-gray-100">
       <div
         id="vision-statement"
-        className="max-w-big-screen w-full mx-auto my-32"
+        className="max-w-big-screen w-full mx-auto my-16"
       >
         <div className="flex  flex-col  gap-8 lg:flex-row-reverse justify-between items-center mx-2 lg:space-x-8">
           <div className="lg:flex-1 w-full h-64  md:h-96 relative">

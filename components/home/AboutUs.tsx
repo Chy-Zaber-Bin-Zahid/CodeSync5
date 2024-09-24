@@ -49,7 +49,7 @@ function AboutUs() {
             <Image
               src="/assets/home/about.svg"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               alt="Introduction of IT"
               className="absolute inset-0"
               blurDataURL="data:..."
