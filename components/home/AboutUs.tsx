@@ -47,7 +47,7 @@ function AboutUs() {
           </div>
           <div className="w-full h-64  md:h-96  lg:w-[45%]  lg:pl-[81px] relative">
             <Image
-              src="/assets/home/about.svg"
+              src="/assets/home/About.svg"
               layout="fill"
               objectFit="cover"
               alt="Introduction of IT"
