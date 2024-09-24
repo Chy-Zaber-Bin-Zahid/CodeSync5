@@ -3,18 +3,52 @@
 import { useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { AccessibilityIcon, CheckIcon, ArrowRightIcon } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const formSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
+  email: z.string().email({
+    message: "Please enter a valid email address.",
+  }),
+  message: z.string().min(10, {
+    message: "Feedback must be at least 10 characters.",
+  }),
+});
 
 export default function AccessibilityStatement() {
   const [lastUpdated] = useState("September 23, 2024");
   const containerRef = useRef(null);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
 
   const accessibilityPoints = [
     {
@@ -38,6 +72,30 @@ export default function AccessibilityStatement() {
         "Despite our efforts to ensure accessibility of our website, there may be some limitations. We are working to address these issues and achieve full compliance. If you encounter any issues, please contact us.",
     },
   ];
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    try {
+      const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID ?? "";
+      const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "";
+      const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY ?? "";
+
+      await emailjs.send(serviceId, templateId, {
+        form_name: values.name,
+        form_email: values.email,
+        message: values.message,
+      }, publicKey);
+
+      setSubmitStatus('success');
+      form.reset();
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <div
@@ -79,33 +137,65 @@ export default function AccessibilityStatement() {
             We welcome your feedback on the accessibility of our website. Please
             let us know if you encounter accessibility barriers:
           </p>
-          <form className="space-y-4">
-            <div>
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Your name" />
-            </div>
-            <div>
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="your.email@example.com"
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Your name" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-            <div>
-              <Label htmlFor="message">Feedback</Label>
-              <Textarea
-                id="message"
-                placeholder="Please describe the accessibility issue you encountered"
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input type="email" placeholder="your.email@example.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-            <Button
-              type="submit"
-              className="w-full bg-teal-600 hover:bg-teal-700 text-white"
-            >
-              Submit Feedback <ArrowRightIcon className="ml-2 h-4 w-4" />
-            </Button>
-          </form>
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Feedback</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        placeholder="Please describe the accessibility issue you encountered"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button
+                type="submit"
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Submitting...' : 'Submit Feedback'} <ArrowRightIcon className="ml-2 h-4 w-4" />
+              </Button>
+            </form>
+          </Form>
+          {submitStatus === 'success' && (
+            <p className="mt-4 text-green-600 text-center">Feedback submitted successfully!</p>
+          )}
+          {submitStatus === 'error' && (
+            <p className="mt-4 text-red-600 text-center">Failed to submit feedback. Please try again.</p>
+          )}
         </section>
       </div>
     </div>
