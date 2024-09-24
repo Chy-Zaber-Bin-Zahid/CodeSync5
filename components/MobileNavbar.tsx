@@ -22,9 +22,9 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
     }
 
     return (
-        <div className={`absolute top-0 right-0 z-50 h-screen w-3/4 border-l border-gray-300 pt-3 transition-all duration-500 min-mq-766:hidden mq-875:block ${toggleNav ? "translate-x-0" : "translate-x-full"} mq-400:w-full`}>
+        <div className={`absolute top-0 right-0 z-50 h-screen w-3/4 border-l border-gray-300 transition-all duration-500 min-mq-766:hidden mq-875:block ${toggleNav ? "translate-x-0" : "translate-x-full"} mq-400:w-full`}>
            <div className='relative h-full'>
-               <div className="relative z-50 flex flex-col justify-between h-full">
+               <div className="relative z-50 flex flex-col justify-between h-full pt-3">
                     <div className="flex justify-between items-center gap-4 mb-6 px-4">
                         <Link onClick={() => handleNav()} href="/" className="flex justify-end items-end gap-2 no-underline text-black">
                             <Image
