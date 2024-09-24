@@ -75,7 +75,7 @@ export default function ContactForm() {
     return (
         <section className="w-full flex justify-center items-center h-full bg-gradient-to-b from-gray-100 to-gray-200">
             <div className="w-full px-3 pb-6 pt-9">
-                <div className="w-full flex flex-col gap-1 justify-center items-center mb-4">
+                <div className="w-full flex flex-col gap-1 justify-center items-center mb-4 text-center">
                     <h1 className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold m-0">
                         Contact <span className="text-primaryText">Us</span>
                     </h1>
@@ -128,7 +128,6 @@ export default function ContactForm() {
                                                     <FormControl>
                                                         <Textarea
                                                             placeholder="Your message"
-                                                            className="resize-none"
                                                             {...field}
                                                         />
                                                     </FormControl>
