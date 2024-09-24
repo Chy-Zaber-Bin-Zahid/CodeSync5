@@ -6,10 +6,9 @@ import React from "react";
 
 const Page = () => {
   return (
-    <section>
+    <section className="w-full">
       <Welcome />
       <AboutUs />
-      {/* <Statements/> */}
       <WhyChoose />
     </section>
   );

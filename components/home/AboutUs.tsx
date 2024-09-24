@@ -5,8 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
-import Statements from "../about/Statements";
-
 gsap.registerPlugin(ScrollTrigger);
 
 function AboutUs() {
@@ -49,7 +47,7 @@ function AboutUs() {
           </div>
           <div className="w-full h-64  md:h-96  lg:w-[45%]  lg:pl-[81px] relative">
             <Image
-              src="/assets/home/intro.svg"
+              src="/assets/home/about.svg"
               layout="fill"
               objectFit="cover"
               alt="Introduction of IT"
@@ -59,11 +57,11 @@ function AboutUs() {
             />
           </div>
         </div>
-        <div className="max-w-big-screen mx-auto">
+        {/* <div className="max-w-big-screen mx-auto">
           <div className="statement">
             <Statements />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
