@@ -19,6 +19,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { CheckIcon, ArrowRightIcon } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Accessibility | CodeSync5 LTD",
+  description: "CodeSync LTD Accessibility Page",
+};
 
 gsap.registerPlugin(ScrollTrigger);
 

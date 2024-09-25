@@ -4,6 +4,12 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import React from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Meet The Team | CodeSync5 LTD",
+  description: "CodeSync LTD Meet The Team Page",
+};
 
 function MeetTheTeam() {
     gsap.registerPlugin(ScrollTrigger);
