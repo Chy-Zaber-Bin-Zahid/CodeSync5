@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface ApproachStep {
   title: string;
@@ -34,15 +37,66 @@ const approachSteps: ApproachStep[] = [
 ];
 
 const OurApproach: React.FC = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.fromTo(
+      "#heading-approach",
+      {
+        duration: 1,
+        x: -100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: "#heading-approach",
+        },
+      }
+    );
+    gsap.fromTo(
+      "#para-approach",
+      {
+        duration: 1.2,
+        x: 100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: "#para-approach",
+        },
+      }
+    );
+    gsap.from("#list-approach li", {
+      duration: 1,
+      x: -100,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "#list-approach",
+      },
+    });
+  });
+
   return (
     <div className="py-16 px-8 bg-white">
-      <h2 className="text-4xl font-bold text-center mb-12">Our Approach</h2>
+      <h2
+        id="heading-approach"
+        className="text-4xl font-bold text-center mb-12"
+      >
+        Our Approach
+      </h2>
       <div className="max-w-big-screen mx-auto text-xl">
-        <p className="mb-8 text-center">
+        <p id="para-approach" className="mb-8 text-center">
           We follow a client-first approach, where every solution is customized
           to meet the unique needs of your business.
         </p>
-        <ul className="list-disc lg:w-4/5 lg:mx-auto  space-y-4">
+        <ul
+          id="list-approach"
+          className="list-disc lg:w-4/5 lg:mx-auto  space-y-4"
+        >
           {approachSteps.map((step, index) => (
             <li key={index}>
               <strong>{step.title}</strong> – {step.description}
