@@ -41,16 +41,16 @@ const AllServicesHero = () => {
     );
   });
   return (
-    <div className="relative w-full h-[60vh] flex items-center justify-center bg-gray-800">
+    <div className="relative w-full h-[60vh] flex items-center justify-center mt-6">
       <Image
-        src="/assets/AllServices/Hero.svg"
+        src="/assets/AllServices/service.png"
         alt="Services Hero"
         style={{ objectFit: "contain" }}
         fill
         id="image"
-        className=" bg-[#012340] bg-opacity-50 opacity-60 lg:bg-opacity-100 "
+        className="bg-white"
       />
-      <div className="absolute z-10  text-center text-slate-200 ">
+      <div className="absolute z-10  text-center bg-gray-200 bg-opacity-70 w-fit px-6">
         <h1 id="heading" className="text-4xl font-bold">
           Our Services
         </h1>
