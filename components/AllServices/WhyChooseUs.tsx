@@ -19,11 +19,11 @@ const AllServicesWhyChooseUs: React.FC = () => {
           <p className="mb-4 text-xl ">
             We are a premier IT firm offering a range of services from web
             development to AI integration. Our experienced team focuses on
-            delivering results that make a difference. Here’s why we’re the best
-            choice for your business:
+            delivering results that make a difference. Here&apos;s why we’re the
+            best choice for your business:
           </p>
         </div>
-        <ul className="lg:w-4/5 mx-auto list-disc list-inside my-4 text-xl">
+        <ul className="lg:w-4/5 mx-auto list-disc  my-4 text-xl">
           {reasons.map((reason, index) => (
             <li key={index}>{reason.text}</li>
           ))}

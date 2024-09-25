@@ -45,7 +45,7 @@ const WhatWeOffer: React.FC = () => {
           Our service portfolio encompasses a wide array of IT solutions that
           are designed to drive your business forward.
         </p>
-        <ul className="lg:w-4/5 lg:mx-auto list-disc list-inside space-y-4">
+        <ul className="lg:w-4/5 lg:mx-auto list-disc space-y-4">
           {services.map((service, index) => (
             <li key={index}>
               <strong>{service.title}</strong> – {service.description}
