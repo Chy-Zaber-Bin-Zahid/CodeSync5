@@ -152,7 +152,7 @@ const Footer = () => {
         <div className="mt-8 border-t border-gray-700 pt-8 dark:border-gray-800">
           <div className="sm:flex sm:justify-between">
             <p className="text-md text-gray-500 dark:text-gray-400">
-              &copy; {currentYear}. XYZ. All rights reserved.
+              &copy; {currentYear}. CodeSync5. All rights reserved.
             </p>
 
             <p>

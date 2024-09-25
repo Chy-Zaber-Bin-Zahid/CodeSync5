@@ -4,6 +4,12 @@ import OurApproach from "@/components/AllServices/OurApproach";
 import Technologies from "@/components/AllServices/Technologies";
 import WhatWeOffer from "@/components/AllServices/WhatWeOffer";
 import AllServicesWhyChooseUs from "@/components/AllServices/WhyChooseUs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services | CodeSync5 LTD",
+  description: "CodeSync LTD Services Page",
+};
 
 const Services: React.FC = () => {
   return (

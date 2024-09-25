@@ -20,6 +20,12 @@ import {
 } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms And Conditions | CodeSync5 LTD",
+  description: "CodeSync LTD Terms And Conditions Page",
+};
 
 export default function TermsAndConditions() {
   const [lastUpdated] = useState("September 23, 2024");

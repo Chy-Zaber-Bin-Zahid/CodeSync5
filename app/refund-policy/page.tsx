@@ -19,6 +19,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { ArrowRightIcon, CheckIcon } from "@radix-ui/react-icons";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Refund Policy | CodeSync5 LTD",
+  description: "CodeSync LTD Refund Policy Page",
+};
 
 gsap.registerPlugin(ScrollTrigger);
 

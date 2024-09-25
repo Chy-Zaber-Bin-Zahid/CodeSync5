@@ -17,6 +17,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | CodeSync5 LTD",
+  description: "CodeSync LTD Privacy Policy Page",
+};
 
 export default function PrivacyPolicy() {
   const [lastUpdated] = useState("September 23, 2024");
