@@ -46,7 +46,7 @@ const AllServicesCTO = () => {
       <Link
         href="/contact"
         id="button-cto"
-        className=" px-4 py-2 no-underline bg-primaryText hover:bg-primaryText-hover text-white font-bold text-lg rounded-lg shadow-lg "
+        className=" px-4 py-2 no-underline bg-primaryText transition-all duration-300 hover:bg-primaryText-hover text-white font-bold text-lg rounded-lg shadow-lg "
       >
         Contact Us
       </Link>

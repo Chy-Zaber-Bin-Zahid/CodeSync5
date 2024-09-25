@@ -6,6 +6,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { faqs } from "@/utils/faqs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FQAs | CodeSync5 LTD",
+  description: "CodeSync LTD FQAs Page",
+};
 
 function page() {
   return (
