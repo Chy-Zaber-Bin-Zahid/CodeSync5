@@ -7,8 +7,8 @@ const AllServicesHero = () => {
       <Image
         src="/assets/AllServices/Hero.svg"
         alt="Services Hero"
-        layout="fill"
-        objectFit="contain"
+        style={{ objectFit: "contain" }}
+        fill
         className=" bg-[#012340] bg-opacity-50 opacity-60 lg:bg-opacity-100 "
       />
       <div className="absolute z-10  text-center text-slate-200 ">

@@ -44,11 +44,11 @@ const Welcome = () => {
         <Image
           src="/assets/about/Welcome.svg"
           alt="Hello Illustration"
-          layout="fill"
-          objectFit="fill"
           className="rounded-lg"
           blurDataURL="data:..."
           placeholder="blur"
+          style={{ objectFit: "contain" }}
+          fill
         />
       </div>
     </div>

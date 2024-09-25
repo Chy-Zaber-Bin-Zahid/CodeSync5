@@ -74,11 +74,11 @@ const WhyChoose = () => {
           <Image
             src="/assets/about/WhyChoose.svg"
             alt="Team Illustration"
-            layout="fill"
-            objectFit="contain"
             className="rounded-lg absolute inset-0"
             blurDataURL="data:..."
             placeholder="blur"
+            style={{ objectFit: "contain" }}
+            fill
           />
         </div>
         <div className="flex-1">
