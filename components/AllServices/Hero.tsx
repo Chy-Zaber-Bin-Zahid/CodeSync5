@@ -41,7 +41,7 @@ const AllServicesHero = () => {
     );
   });
   return (
-    <div className="relative w-full h-[60vh] flex items-center justify-center mt-6">
+    <div className="relative w-full h-[60vh] flex items-center justify-center">
       <Image
         src="/assets/AllServices/service.png"
         alt="Services Hero"
