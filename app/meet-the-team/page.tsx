@@ -2,8 +2,8 @@ import Meet from "@/components/meetTheTeam/Meet";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Meet The Team | CodeSync5 LTD",
-  description: "CodeSync LTD Meet The Team Page",
+  title: "Meet The Team | CodeSync5 ",
+  description: "CodeSync  Meet The Team Page",
 };
 
 function MeetTheTeam() {

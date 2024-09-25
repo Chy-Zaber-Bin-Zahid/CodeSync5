@@ -47,7 +47,7 @@ function Meet() {
                     Meet The <span className="text-primaryText">Team</span>
                 </h1>
             </div>
-            <div className="w-full flex mq-500:flex-col justify-center items-center mb-12">
+            <div className="w-full flex mq-500:flex-col justify-center items-center gap-4 mb-12">
                 <div id="image1" className="relative w-fit group overflow-hidden rounded-tl-3xl">
                     <Image
                         src="https://media.licdn.com/dms/image/v2/D5603AQFxSOYnlvHylw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727032482264?e=1732752000&v=beta&t=m481D5h2Hp3hQ57RHIN-b1zni06wFEEMhfNyt2Pch_k"

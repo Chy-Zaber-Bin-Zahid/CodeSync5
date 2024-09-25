@@ -73,7 +73,7 @@ const WhyChoose = () => {
   ];
   return (
     <div className=" max-w-big-screen mx-auto  my-16 ">
-      <h1 id="whychoose" className="text-2xl lg:text-4xl text-center mb-16">
+      <h1 id="whychoose" className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold text-center mb-14">
         Why Choose <span className="text-red-800">{companyName}</span>
       </h1>
       <div
@@ -82,10 +82,10 @@ const WhyChoose = () => {
       >
         <div
           id="whychoose-img"
-          className="md:flex-1 w-full  h-64 lg:h-96 relative rounded-lg"
+          className="md:flex-1 w-[60%]  h-64 lg:h-96 relative rounded-lg"
         >
           <Image
-            src="/assets/about/WhyChoose.svg"
+            src="/assets/about/whychoose.png"
             alt="Team Illustration"
             className="rounded-lg absolute inset-0"
             blurDataURL="data:..."
@@ -94,7 +94,7 @@ const WhyChoose = () => {
             fill
           />
         </div>
-        <div className="flex-1">
+        <div className="w-[40%]">
           {whyChoose.map((item, index) => (
             <div
               id="list-whychoose"

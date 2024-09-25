@@ -2,8 +2,8 @@ import Refund from "@/components/refundPolicy/Refund";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Refund Policy | CodeSync5 LTD",
-  description: "CodeSync LTD Refund Policy Page",
+  title: "Refund Policy | CodeSync5 ",
+  description: "CodeSync  Refund Policy Page",
 };
 
 export default function RefundPolicy() {

@@ -36,7 +36,7 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
                                 blurDataURL="data:..."
                                 placeholder="blur"
                             />
-                            <h1 className='text-lg font-semibold m-0'>Rose<span className="text-primaryText" >Tech</span></h1>
+                            <h1 className='text-lg font-bold m-0'>Code<span className="text-primaryText" >Sync5</span></h1>
                         </Link>
                         <div onClick={() => handleNav()} className="hover:cursor-pointer hover:scale-125 transition-all duration-300"><X size={26} /></div>
                     </div>

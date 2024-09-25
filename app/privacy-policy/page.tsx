@@ -2,8 +2,8 @@ import Privacy from "@/components/privacyPolicy/Privacy";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | CodeSync5 LTD",
-  description: "CodeSync LTD Privacy Policy Page",
+  title: "Privacy Policy | CodeSync5 ",
+  description: "CodeSync  Privacy Policy Page",
 };
 
 export default function PrivacyPolicy() {
