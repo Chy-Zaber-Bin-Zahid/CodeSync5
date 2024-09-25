@@ -37,11 +37,11 @@ const MissionStatement = () => {
             <Image
               src="/assets/about/Mission.svg"
               alt="Mission Illustration"
-              layout="fill"
-              objectFit="contain"
+              fill
               className="rounded-lg absolute inset-0"
               blurDataURL="data:..."
               placeholder="blur"
+              style={{ objectFit: "contain" }}
             />
           </div>
           <div className="flex-1">

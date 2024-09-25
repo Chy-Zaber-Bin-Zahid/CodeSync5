@@ -90,11 +90,11 @@ const AboutUs = () => {
         <Image
           src="/assets/home/About.svg"
           alt="Team Illustration"
-          layout="fill"
-          objectFit="contain"
           className="rounded-lg absolute inset-0"
           blurDataURL="data:..."
           placeholder="blur"
+          style={{ objectFit: "contain" }}
+          fill
         />
       </div>
       <p id="below-para" className="text-2xl leading-relaxed text-slate-700">

@@ -48,20 +48,15 @@ function AboutUs() {
           <div className="w-full h-64  md:h-96  lg:w-[45%]  lg:pl-[81px] relative">
             <Image
               src="/assets/home/About.svg"
-              layout="fill"
-              objectFit="contain"
               alt="Introduction of IT"
               className="absolute inset-0"
               blurDataURL="data:..."
               placeholder="blur"
+              fill
+              style={{ objectFit: "contain" }}
             />
           </div>
         </div>
-        {/* <div className="max-w-big-screen mx-auto">
-          <div className="statement">
-            <Statements />
-          </div>
-        </div> */}
       </div>
     </section>
   );
