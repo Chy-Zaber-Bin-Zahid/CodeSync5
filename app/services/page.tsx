@@ -7,8 +7,8 @@ import AllServicesWhyChooseUs from "@/components/AllServices/WhyChooseUs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | CodeSync5 LTD",
-  description: "CodeSync LTD Services Page",
+  title: "Services | CodeSync5 ",
+  description: "CodeSync  Services Page",
 };
 
 const Services: React.FC = () => {

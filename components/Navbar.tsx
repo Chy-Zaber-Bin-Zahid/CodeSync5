@@ -1,7 +1,6 @@
 "use client";
 
 import MobileNavbar from "@/components/MobileNavbar";
-import { companyName } from "@/constant/CompanyName";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -36,9 +35,7 @@ function Navbar() {
             blurDataURL="data:..."
             placeholder="blur"
           />
-          <h1 className="text-lg font-semibold m-0">
-            <span className="text-primaryText">{companyName}</span>
-          </h1>
+          <h1 className='text-xl font-bold m-0'>Code<span className="text-primaryText" >Sync5</span></h1>
         </Link>
         <div className="flex justify-between items-center gap-3 mq-875:hidden">
           <Link

@@ -1,13 +1,13 @@
+import Footer from "@/components/Footer";
+import Modal from "@/components/Modal";
+import Navbar from "@/components/Navbar";
+import { MyProvider } from "@/context/MyProvider";
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Modal from "@/components/Modal";
-import { MyProvider } from "@/context/MyProvider";
 
 export const metadata: Metadata = {
-  title: "CodeSync5 LTD",
-  description: "CodeSync LTD Home Page",
+  title: "CodeSync5 ",
+  description: "CodeSync  Home Page",
 };
 
 export default function RootLayout({

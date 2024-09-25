@@ -36,7 +36,7 @@ const MissionStatement = () => {
         <div className="flex flex-col gap-8 lg:flex-row  lg:justify-between items-center mx-2 lg:space-x-8">
           <div className="lg:flex-1 w-full h-64 md:h-96 l relative">
             <Image
-              src="/assets/about/Mission.svg"
+              src="/assets/home/mission.png"
               alt="Mission Illustration"
               fill
               className="rounded-lg absolute inset-0"
