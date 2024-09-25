@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface Reason {
   text: string;
@@ -11,19 +14,55 @@ const reasons: Reason[] = [
 ];
 
 const AllServicesWhyChooseUs: React.FC = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.from("#heading-whychoose", {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#heading-whychoose",
+      },
+    });
+    gsap.from("#para-whychoose", {
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#para-whychoose",
+      },
+    });
+    gsap.from("#list-whychoose li", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "#list-whychoose",
+      },
+    });
+  });
   return (
     <div className="py-16 px-8 bg-white">
-      <h2 className="text-4xl font-bold text-center mb-12">Why Choose Us?</h2>
+      <h2
+        id="heading-whychoose"
+        className="text-4xl font-bold text-center mb-12"
+      >
+        Why Choose Us?
+      </h2>
       <div className="mx-auto max-w-big-screen">
         <div className="flex flex-col items-center justify-center">
-          <p className="mb-4 text-2xl ">
+          <p id="para-whychoose" className="mb-4 text-xl ">
             We are a premier IT firm offering a range of services from web
             development to AI integration. Our experienced team focuses on
-            delivering results that make a difference. Here’s why we’re the best
-            choice for your business:
+            delivering results that make a difference. Here&apos;s why we’re the
+            best choice for your business:
           </p>
         </div>
-        <ul className="lg:w-4/5 mx-auto list-disc list-inside my-4 text-2xl">
+        <ul
+          id="list-whychoose"
+          className="lg:w-4/5 mx-auto list-disc  my-4 text-xl"
+        >
           {reasons.map((reason, index) => (
             <li key={index}>{reason.text}</li>
           ))}

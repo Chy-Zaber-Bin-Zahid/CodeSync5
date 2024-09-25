@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface Service {
   title: string;
@@ -37,15 +40,51 @@ const services: Service[] = [
 ];
 
 const WhatWeOffer: React.FC = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.from("#heading-whatweoffer", {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#heading-whatweoffer",
+      },
+    });
+    gsap.from("#para-whatweoffer", {
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#para-whatweoffer",
+      },
+    });
+    gsap.from("#list-whatweoffer li", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "#list-whatweoffer",
+      },
+    });
+  });
   return (
     <div className="py-16 px-8 bg-gray-100">
-      <h2 className="text-4xl font-bold text-center mb-12">What We Offer</h2>
+      <h2
+        id="heading-whatweoffer"
+        className="text-4xl font-bold text-center mb-12"
+      >
+        What We Offer
+      </h2>
       <div className="max-w-big-screen mx-auto text-xl">
-        <p className="mb-8 text-center">
+        <p id="para-whatweoffer" className="mb-8 text-center">
           Our service portfolio encompasses a wide array of IT solutions that
           are designed to drive your business forward.
         </p>
-        <ul className="lg:w-4/5 lg:mx-auto list-disc list-inside space-y-4">
+        <ul
+          id="list-whatweoffer"
+          className="lg:w-4/5 lg:mx-auto list-disc space-y-4"
+        >
           {services.map((service, index) => (
             <li key={index}>
               <strong>{service.title}</strong> – {service.description}

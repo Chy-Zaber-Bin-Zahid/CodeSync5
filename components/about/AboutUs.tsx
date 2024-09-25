@@ -1,4 +1,5 @@
 "use client";
+import { companyName } from "@/constant/CompanyName";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -73,7 +74,7 @@ const AboutUs = () => {
     );
   });
   return (
-    <div className="max-w-big-screen mx-auto flex flex-col gap-2  my-32">
+    <div className="max-w-big-screen px-3 mx-auto flex flex-col gap-2  my-16">
       <h1 className="text-4xl" id="about-us">
         About <span className="text-red-800">US</span>{" "}
       </h1>
@@ -90,15 +91,15 @@ const AboutUs = () => {
         <Image
           src="/assets/home/About.svg"
           alt="Team Illustration"
-          layout="fill"
-          objectFit="contain"
           className="rounded-lg absolute inset-0"
           blurDataURL="data:..."
           placeholder="blur"
+          style={{ objectFit: "contain" }}
+          fill
         />
       </div>
       <p id="below-para" className="text-2xl leading-relaxed text-slate-700">
-        At <span className="text-red-800">XYZ Solutions</span> , we believe that
+        At <span className="text-red-800">{companyName}</span> , we believe that
         technology can transform businesses, and our goal is to help our clients
         harness the power of technology to achieve their strategic objectives.
         We have a passion for innovation and a dedication to excellence, and we

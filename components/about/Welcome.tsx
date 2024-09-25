@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { companyName } from "@/constant/CompanyName";
 
 const Welcome = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -27,11 +28,11 @@ const Welcome = () => {
   return (
     <div
       id="welcome"
-      className="flex justify-between max-w-big-screen mx-auto items-center"
+      className="flex flex-col lg:flex-row lg:justify-between max-w-big-screen mx-auto items-center py-16 px-3"
     >
       <div className="text-slate-700 flex-1">
         <h1>
-          Welcome to <span className="text-red-800">XYZ</span> Limited
+          Welcome to <span className="text-red-800">{companyName}</span> Limited
         </h1>
         <p className="text-xl text-gray-500 tracking-wider leading-relaxed">
           Your go to it-firm for making creative web solutions in the shortest
@@ -39,16 +40,16 @@ const Welcome = () => {
           the best services to our clients.
         </p>
       </div>
-      <div className=" h-96 relative flex-1">
+      <div className=" h-96 w-full relative lg:flex-1">
         {" "}
         <Image
           src="/assets/about/Welcome.svg"
           alt="Hello Illustration"
-          layout="fill"
-          objectFit="fill"
           className="rounded-lg"
           blurDataURL="data:..."
           placeholder="blur"
+          style={{ objectFit: "contain" }}
+          fill
         />
       </div>
     </div>
