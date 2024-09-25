@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { companyName } from "@/constant/CompanyName";
 
 const Welcome = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -31,7 +32,7 @@ const Welcome = () => {
     >
       <div className="text-slate-700 flex-1">
         <h1>
-          Welcome to <span className="text-red-800">XYZ</span> Limited
+          Welcome to <span className="text-red-800">{companyName}</span> Limited
         </h1>
         <p className="text-xl text-gray-500 tracking-wider leading-relaxed">
           Your go to it-firm for making creative web solutions in the shortest
