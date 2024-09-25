@@ -1,17 +1,55 @@
-import React from 'react'
+"use client";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 import Image from "next/image";
+import React from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-function page() {
+function MeetTheTeam() {
+    gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        gsap.fromTo(
+            "#heading",
+            { opacity: 0, y: "-100%" },
+            {
+                duration: 1, opacity: 1, y: 0, delay: 0,
+                scrollTrigger: {
+                    trigger: "#heading",
+                }
+            }
+        );
+        gsap.fromTo(
+            "#image1",
+            { opacity: 0, x: "-100%" },
+            {
+                duration: 1, opacity: 1, x: 0, delay: 0,
+                scrollTrigger: {
+                    trigger: "#image1",
+                }
+            }
+        );
+        gsap.fromTo(
+            "#image2",
+            { opacity: 0, x: "100%" },
+            {
+                duration: 1, opacity: 1, x: 0, delay: 0,
+                scrollTrigger: {
+                    trigger: "#image2",
+                }
+            }
+        );
+    });
+
     return (
-        <div id="servicesIntro-component" className="w-full px-3">
+        <div id="servicesIntro-component" className="w-full px-3 overflow-hidden bg-gradient-to-br from-teal-50 to-sky-100">
             <div className="mx-auto max-w-big-screen w-full">
                 <div className="w-full text-center pb-4 pt-8">
-                    <h1 className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold">
+                    <h1 id="heading" className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold">
                         Meet The <span className="text-primaryText">Team</span>
                     </h1>
                 </div>
                 <div className="w-full flex mq-500:flex-col justify-center items-center mb-12">
-                    <div className="relative w-fit group overflow-hidden rounded-tl-3xl">
+                    <div id="image1" className="relative w-fit group overflow-hidden rounded-tl-3xl">
                         <Image
                             src="https://media.licdn.com/dms/image/v2/D5603AQFxSOYnlvHylw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727032482264?e=1732752000&v=beta&t=m481D5h2Hp3hQ57RHIN-b1zni06wFEEMhfNyt2Pch_k"
                             width={370}
@@ -28,7 +66,7 @@ function page() {
                             <p className="mq-565:text-[14px] mq-500:text-[16px]">Co-Founder & CTO</p>
                         </div>
                     </div>
-                    <div className="relative w-fit group overflow-hidden rounded-br-3xl">
+                    <div id="image2" className="relative w-fit group overflow-hidden rounded-br-3xl">
                         <Image
                             src="https://media.licdn.com/dms/image/v2/D5635AQGxlahN9j3IXQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1708025613605?e=1727636400&v=beta&t=UNCH82Jne9YSmCcvl3tYvDGuOlyLvME0EM0evn07ZzQ"
                             width={370}
@@ -51,4 +89,4 @@ function page() {
     )
 }
 
-export default page
+export default MeetTheTeam

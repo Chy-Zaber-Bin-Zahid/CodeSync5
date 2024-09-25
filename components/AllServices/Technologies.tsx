@@ -82,7 +82,7 @@ const Technologies: React.FC = () => {
       >
         {technologies.map((tech, index) => (
           <Tilt key={index}>
-            <div className=" flex items-center flex-col bg-[#1F2937] hover:bg-primaryText-hover bg-opacity-90 gap-4 text-white p-6 rounded-lg shadow-lg">
+            <div className=" flex items-center flex-col bg-[#1F2937] transition-all duration-300 hover:bg-primaryText-hover bg-opacity-90 gap-4 text-white p-6 rounded-lg shadow-lg">
               <Image
                 src={tech.image}
                 alt="Tech Images"
