@@ -1,10 +1,9 @@
-import ContactForm from '@/components/contactForm/Contact'
-import React from 'react'
+import ContactForm from '@/components/contactForm/Contact';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | CodeSync5 LTD",
-  description: "CodeSync LTD Contact Us Page",
+  title: "Contact Us | CodeSync5 ",
+  description: "CodeSync  Contact Us Page",
 };
 
 function page() {
