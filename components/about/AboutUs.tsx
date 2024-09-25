@@ -1,4 +1,5 @@
 "use client";
+import { companyName } from "@/constant/CompanyName";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -98,7 +99,7 @@ const AboutUs = () => {
         />
       </div>
       <p id="below-para" className="text-2xl leading-relaxed text-slate-700">
-        At <span className="text-red-800">XYZ Solutions</span> , we believe that
+        At <span className="text-red-800">{companyName}</span> , we believe that
         technology can transform businesses, and our goal is to help our clients
         harness the power of technology to achieve their strategic objectives.
         We have a passion for innovation and a dedication to excellence, and we

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { companyName } from "@/constant/CompanyName";
 const VisionStatement = () => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -52,9 +53,10 @@ const VisionStatement = () => {
               <span className="text-red-800">Vision</span> Statement:
             </h1>
             <p className="leading-relaxed  text-sm lg:text-2xl text-slate-700">
-              At <span className="text-red-800 font-semibold">XYZ</span>{" "}
-              Solutions, our vision is to be the leading provider of software
-              consultancy services in the industry.
+              At{" "}
+              <span className="text-red-800 font-semibold">{companyName}</span>{" "}
+              , our vision is to be the leading provider of software consultancy
+              services in the industry.
             </p>
           </div>
         </div>

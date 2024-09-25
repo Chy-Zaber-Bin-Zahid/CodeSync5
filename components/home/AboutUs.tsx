@@ -1,5 +1,6 @@
 "use client";
 
+import { companyName } from "@/constant/CompanyName";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -34,14 +35,15 @@ function AboutUs() {
           <div className="flex flex-col gap-4 mx-2 justify-center items-center lg:items-start w-full lg:w-[55%]">
             <h1 className="font-bold self-start  text-2xl lg:text-4xl">
               About
-              <span className="text-primaryText "> Rosetech</span>
+              <span className="text-primaryText "> {companyName}</span>
             </h1>
             <div className="flex flex-col gap-3 justify-center items-start w-full">
               <p className="text-gray-500 m-0 text-sm lg:text-2xl">
-                <span className="text-black font-bold">CodeSync</span> develops
-                innovative software solutions that streamline business workflows
-                and boost productivity. By leveraging AI and cloud technologies,
-                CodeSync helps businesses achieve greater efficiency.
+                <span className="text-black font-bold">{companyName}</span>{" "}
+                develops innovative software solutions that streamline business
+                workflows and boost productivity. By leveraging AI and cloud
+                technologies, CodeSync helps businesses achieve greater
+                efficiency.
               </p>
             </div>
           </div>

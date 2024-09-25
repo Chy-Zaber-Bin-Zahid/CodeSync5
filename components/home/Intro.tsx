@@ -1,5 +1,6 @@
 "use client";
 
+import { companyName } from "@/constant/CompanyName";
 import { useMyContext } from "@/context/MyProvider";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -35,7 +36,7 @@ function Intro() {
             <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl">
               <span className="text-primaryText">Drive</span> Business
               Innovation with{" "}
-              <span className="text-primaryText">CodeSync5</span>
+              <span className="text-primaryText">{companyName}</span>
             </h1>
             <p className="text-gray-500 mq-400:text-sm text-2xl mq-875:text-lg">
               We empower businesses to innovate and streamline operations,

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { companyName } from "@/constant/CompanyName";
 
 const MissionStatement = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -50,7 +51,7 @@ const MissionStatement = () => {
             </h1>
             <p className="leading-relaxed text-sm  lg:text-2xl text-slate-700">
               Our mission at{" "}
-              <span className="text-red-800 font-semibold">XYZ</span> Solutions
+              <span className="text-red-800 font-semibold">{companyName} </span>
               is to provide customized, innovative software solutions that help
               our clients achieve their business goals.
             </p>

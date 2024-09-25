@@ -1,6 +1,7 @@
 "use client";
 
 import MobileNavbar from "@/components/MobileNavbar";
+import { companyName } from "@/constant/CompanyName";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -36,7 +37,7 @@ function Navbar() {
             placeholder="blur"
           />
           <h1 className="text-lg font-semibold m-0">
-            Rose<span className="text-primaryText">Tech</span>
+            <span className="text-primaryText">{companyName}</span>
           </h1>
         </Link>
         <div className="flex justify-between items-center gap-3 mq-875:hidden">
