@@ -42,7 +42,7 @@ const OurApproach: React.FC = () => {
           We follow a client-first approach, where every solution is customized
           to meet the unique needs of your business.
         </p>
-        <ul className="list-disc lg:w-4/5 lg:mx-auto list-inside space-y-4">
+        <ul className="list-disc lg:w-4/5 lg:mx-auto  space-y-4">
           {approachSteps.map((step, index) => (
             <li key={index}>
               <strong>{step.title}</strong> – {step.description}
