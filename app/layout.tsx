@@ -6,22 +6,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CodeSync5 ",
+  title: "CodeSync5",
   description: "CodeSync  Home Page",
-  icons: {
-    icon: [
-      {
-        media: '(prefers-color-scheme: light)',
-        url: '/images/favicon-dark.png',
-        href: '/images/favicon-dark.png',
-      },
-      {
-        media: '(prefers-color-scheme: dark)',
-        url: '/images/favicon-dark.png',
-        href: '/images/favicon-dark.png',
-      },
-    ]
-  }
 };
 
 export default function RootLayout({

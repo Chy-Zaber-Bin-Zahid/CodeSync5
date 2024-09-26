@@ -1,5 +1,4 @@
-import React from 'react'
-import { tools } from '@/utils/tools'
+import { tools } from '@/utils/tools';
 import Image from 'next/image';
 
 function Tools() {
@@ -24,7 +23,7 @@ function Tools() {
                     src={tool.image}
                     width={50}
                     height={50}
-                    objectFit="contain"
+                    style={{ objectFit: "contain" }}
                     alt={tool.name}
                     blurDataURL="data:..."
                     placeholder="blur"
@@ -40,7 +39,7 @@ function Tools() {
                     src={tool.image}
                     width={50}
                     height={50}
-                    objectFit="contain"
+                    style={{ objectFit: "contain" }}
                     alt={tool.name}
                     blurDataURL="data:..."
                     placeholder="blur"
