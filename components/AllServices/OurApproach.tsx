@@ -84,18 +84,18 @@ const OurApproach: React.FC = () => {
     <div className="py-16 px-8 bg-white">
       <h2
         id="heading-approach"
-        className="text-4xl font-bold text-center mb-12"
+        className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl mb-10 text-center"
       >
         Our Approach
       </h2>
       <div className="max-w-big-screen mx-auto text-xl">
-        <p id="para-approach" className="mb-8 text-center">
+        <p id="para-approach" className="mb-8 text-center text-gray-500 mq-400:text-sm text-xl mq-875:text-lg">
           We follow a client-first approach, where every solution is customized
           to meet the unique needs of your business.
         </p>
         <ul
           id="list-approach"
-          className="list-disc lg:w-4/5 lg:mx-auto  space-y-4"
+          className="list-disc lg:w-4/5 lg:mx-auto space-y-4 text-lg mq-875:text-[16px] mq-500:text-sm"
         >
           {approachSteps.map((step, index) => (
             <li key={index}>

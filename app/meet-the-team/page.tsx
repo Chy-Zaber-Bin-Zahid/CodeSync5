@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 function MeetTheTeam() {
     return (
-        <div id="MeetTheTeam-component" className="w-full px-3 overflow-hidden bg-gradient-to-br from-teal-50 to-sky-100">
+        <div id="MeetTheTeam-component" className="w-full px-3 overflow-hidden bg-gradient-to-br from-teal-50 to-white">
             <Meet/>
         </div>
     )

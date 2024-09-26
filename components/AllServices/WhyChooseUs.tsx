@@ -43,16 +43,16 @@ const AllServicesWhyChooseUs: React.FC = () => {
     });
   });
   return (
-    <div className="py-16 px-8 bg-white">
+    <div className="py-16 px-3 bg-white">
       <h2
         id="heading-whychoose"
-        className="text-4xl font-bold text-center mb-12"
+        className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl mb-10"
       >
         Why Choose Us?
       </h2>
       <div className="mx-auto max-w-big-screen">
         <div className="flex flex-col items-center justify-center">
-          <p id="para-whychoose" className="mb-4 text-xl ">
+          <p id="para-whychoose" className="mb-4 text-gray-500 mq-400:text-sm text-xl mq-875:text-lg ">
             We are a premier IT firm offering a range of services from web
             development to AI integration. Our experienced team focuses on
             delivering results that make a difference. Here&apos;s why we’re the
@@ -61,7 +61,7 @@ const AllServicesWhyChooseUs: React.FC = () => {
         </div>
         <ul
           id="list-whychoose"
-          className="lg:w-4/5 mx-auto list-disc  my-4 text-xl"
+          className="lg:w-4/5 mx-auto list-disc my-4 text-lg mq-875:text-[16px] mq-500:text-sm"
         >
           {reasons.map((reason, index) => (
             <li key={index}>{reason.text}</li>
