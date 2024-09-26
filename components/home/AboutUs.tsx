@@ -49,7 +49,7 @@ function AboutUs() {
           </div>
           <div className="w-full h-64  md:h-96  lg:w-[45%]  lg:pl-[81px] relative">
             <Image
-              src="/assets/home/aboutus.png"
+              src="/assets/home/aboutus.svg"
               alt="Introduction of IT"
               className="absolute inset-0"
               blurDataURL="data:..."
