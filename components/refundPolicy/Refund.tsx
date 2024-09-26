@@ -99,7 +99,7 @@ export default function Refund() {
 
   return (
     <div
-      className="min-h-screen w-full bg-gradient-to-br from-purple-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen w-full bg-gradient-to-br from-purple-50 to-indigo-100 py-12 px-3 sm:px-6 lg:px-8"
       ref={containerRef}
     >
       <div className="max-w-4xl mx-auto space-y-12">

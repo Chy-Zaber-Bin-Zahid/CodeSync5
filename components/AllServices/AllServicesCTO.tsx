@@ -36,10 +36,10 @@ const AllServicesCTO = () => {
 
   return (
     <div className="py-16 px-8 bg-white text-center">
-      <h2 id="heading-cto" className="text-4xl font-bold mb-8">
+      <h2 id="heading-cto" className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl mb-8">
         Ready to Transform Your Business?
       </h2>
-      <p id="para-cto" className="text-2xl mb-8">
+      <p id="para-cto" className="mq-400:text-sm text-xl mq-875:text-lg mb-8">
         Get in touch with us to start building solutions that will help your
         business grow.
       </p>

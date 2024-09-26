@@ -28,14 +28,13 @@ function Navbar() {
         >
           <Image
             src="/assets/nav-logo.png"
-            width={33}
-            height={33}
+            width={140}
+            height={140}
             objectFit="contain"
             alt="Logo"
             blurDataURL="data:..."
             placeholder="blur"
           />
-          <h1 className='text-xl font-bold m-0'>Code<span className="text-primaryText" >Sync5</span></h1>
         </Link>
         <div className="flex justify-between items-center gap-3 mq-875:hidden">
           <Link
