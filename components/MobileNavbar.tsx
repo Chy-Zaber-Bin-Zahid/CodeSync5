@@ -31,7 +31,7 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
                                 src="/assets/nav-logo.png"
                                 width={120}
                                 height={120}
-                                objectFit="contain"
+                                style={{ objectFit: "contain" }}
                                 alt="Logo"
                                 blurDataURL="data:..."
                                 placeholder="blur"

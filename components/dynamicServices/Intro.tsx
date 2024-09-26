@@ -1,9 +1,8 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import Image from "next/image";
-import React from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 type Service = {
   service: {
@@ -60,7 +59,7 @@ function Intro({ service }: Service) {
             id="image"
             src={service.image}
             layout="fill"
-            objectFit="contain"
+            style={{ objectFit: "contain" }}
             alt={service.name}
             className="absolute"
             blurDataURL="data:..."
