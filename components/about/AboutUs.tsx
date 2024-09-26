@@ -80,7 +80,7 @@ const AboutUs = () => {
       </h1>
       <p
         id="about-para"
-        className="text-xl leading-relaxed tracking-wide text-gray-500 m-0"
+        className="leading-relaxed text-gray-500 mq-400:text-sm text-xl mq-875:text-lg m-0"
       >
         We are a leading software consultancy firm that specializes in providing
         cutting-edge solutions to businesses of all sizes. Our team of expert
@@ -98,8 +98,8 @@ const AboutUs = () => {
           fill
         />
       </div>
-      <p id="below-para" className="text-2xl leading-relaxed text-slate-700">
-        At <span className="text-red-800">{companyName}</span> , we believe that
+      <p id="below-para" className="leading-relaxed text-gray-500 mq-400:text-sm text-xl mq-875:text-lg">
+        At <span className="text-primaryText">{companyName}</span> , we believe that
         technology can transform businesses, and our goal is to help our clients
         harness the power of technology to achieve their strategic objectives.
         We have a passion for innovation and a dedication to excellence, and we

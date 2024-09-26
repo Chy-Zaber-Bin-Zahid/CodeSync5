@@ -31,10 +31,10 @@ const Welcome = () => {
       className="flex flex-col lg:flex-row lg:justify-between max-w-big-screen mx-auto items-center py-12 px-3"
     >
       <div className=" flex-1">
-        <h1 className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold">
-          Welcome to <span className="text-red-800">{companyName}</span> Limited
+        <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl">
+          Welcome to <span className="text-primaryText">{companyName}</span>
         </h1>
-        <p className="text-xl text-gray-500 tracking-wider leading-relaxed">
+        <p className="text-gray-500 mq-400:text-sm text-xl mq-875:text-lg leading-relaxed">
           Your go to it-firm for making creative web solutions in the shortest
           time possible. We are a team of experts who are dedicated to providing
           the best services to our clients.

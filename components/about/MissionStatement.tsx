@@ -32,8 +32,8 @@ const MissionStatement = () => {
   }, []);
   return (
     <section className="max-w-big-screen mx-auto bg-white">
-      <div id="mission-statement" className=" w-full mx-auto my-16">
-        <div className="flex flex-col gap-8 lg:flex-row  lg:justify-between items-center mx-2 lg:space-x-8">
+      <div id="mission-statement" className=" w-full mx-auto my-12">
+        <div className="flex flex-col gap-8 lg:flex-row  lg:justify-between items-center mx-3 lg:space-x-8">
           <div className="lg:flex-1 w-full h-64 md:h-96 l relative">
             <Image
               src="/assets/home/mission.png"
@@ -46,12 +46,12 @@ const MissionStatement = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-2xl font-bold lg:text-4xl lg:mb-8">
-              <span className="text-red-800">Mission</span> Statement:
+            <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl">
+              <span className="text-primaryText">Mission</span> Statement:
             </h1>
-            <p className="leading-relaxed text-sm  lg:text-2xl text-slate-700">
+            <p className="leading-relaxed text-gray-500 mq-400:text-sm text-2xl mq-875:text-lg">
               Our mission at{" "}
-              <span className="text-red-800 font-semibold">{companyName} </span>
+              <span className="text-primaryText font-semibold">{companyName} </span>
               is to provide customized, innovative software solutions that help
               our clients achieve their business goals.
             </p>

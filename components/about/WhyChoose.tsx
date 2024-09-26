@@ -73,7 +73,7 @@ const WhyChoose = () => {
   ];
   return (
     <div className=" max-w-big-screen mx-auto  my-16 ">
-      <h1 id="whychoose" className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold text-center mb-14">
+      <h1 id="whychoose" className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold text-center mb-10">
         Why Choose <span className="text-red-800">{companyName}</span>
       </h1>
       <div
