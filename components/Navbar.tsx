@@ -29,7 +29,7 @@ function Navbar() {
           <Image
             src="/assets/nav-logo.png"
             width={140}
-            height={140}
+            height={35}
             style={{ objectFit: "contain" }}
             alt="Logo"
             blurDataURL="data:..."

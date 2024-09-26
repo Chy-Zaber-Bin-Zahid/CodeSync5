@@ -39,7 +39,7 @@ const VisionStatement = () => {
         <div className="flex  flex-col  gap-8 lg:flex-row-reverse justify-between items-center mx-3 lg:space-x-8">
           <div className="lg:flex-1 w-full h-64  md:h-96 relative">
             <Image
-              src="/assets/home/vision.png"
+              src="/assets/home/vision.svg"
               alt="Vision Illustration"
               className="rounded-lg absolute inset-0"
               blurDataURL="data:..."
