@@ -1,9 +1,10 @@
 'use client'
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
 import { Button } from "@/components/ui/button"
+import {
+    Card,
+    CardContent,
+} from "@/components/ui/card"
 import {
     Form,
     FormControl,
@@ -15,13 +16,12 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import {
-    Card,
-    CardContent,
-} from "@/components/ui/card"
-import Image from 'next/image'
 import emailjs from '@emailjs/browser'
+import { zodResolver } from "@hookform/resolvers/zod"
+import Image from 'next/image'
 import { useState } from 'react'
+import { useForm } from "react-hook-form"
+import * as z from "zod"
 
 const formSchema = z.object({
     name: z.string().min(2, {
@@ -160,7 +160,7 @@ export default function ContactForm() {
                         <Image
                             src="/assets/contact/contactus.png"
                             layout="fill"
-                            objectFit="contain"
+                            style={{ objectFit: "contain" }}
                             alt="Contact us"
                             className="absolute"
                             blurDataURL="data:..."

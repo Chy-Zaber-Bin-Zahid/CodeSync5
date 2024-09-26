@@ -36,10 +36,10 @@ const VisionStatement = () => {
         id="vision-statement"
         className="max-w-big-screen w-full mx-auto my-16"
       >
-        <div className="flex  flex-col  gap-8 lg:flex-row-reverse justify-between items-center mx-2 lg:space-x-8">
+        <div className="flex  flex-col  gap-8 lg:flex-row-reverse justify-between items-center mx-3 lg:space-x-8">
           <div className="lg:flex-1 w-full h-64  md:h-96 relative">
             <Image
-              src="/assets/about/Vision.svg"
+              src="/assets/home/vision.png"
               alt="Vision Illustration"
               className="rounded-lg absolute inset-0"
               blurDataURL="data:..."
@@ -49,12 +49,12 @@ const VisionStatement = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-2xl font-bold lg:text-4xl lg:mb-8">
-              <span className="text-red-800">Vision</span> Statement:
+            <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl">
+              <span className="text-primaryText">Vision</span> Statement:
             </h1>
-            <p className="leading-relaxed  text-sm lg:text-2xl text-slate-700">
+            <p className="leading-relaxed text-gray-500 mq-400:text-sm text-2xl mq-875:text-lg">
               At{" "}
-              <span className="text-red-800 font-semibold">{companyName}</span>{" "}
+              <span className="text-primaryText font-semibold">{companyName}</span>{" "}
               , our vision is to be the leading provider of software consultancy
               services in the industry.
             </p>

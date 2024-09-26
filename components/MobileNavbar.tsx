@@ -29,14 +29,13 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
                         <Link onClick={() => handleNav()} href="/" className="flex justify-end items-end gap-2 no-underline text-black">
                             <Image
                                 src="/assets/nav-logo.png"
-                                width={33}
-                                height={33}
-                                objectFit="contain"
+                                width={120}
+                                height={120}
+                                style={{ objectFit: "contain" }}
                                 alt="Logo"
                                 blurDataURL="data:..."
                                 placeholder="blur"
                             />
-                            <h1 className='text-lg font-semibold m-0'>Rose<span className="text-primaryText" >Tech</span></h1>
                         </Link>
                         <div onClick={() => handleNav()} className="hover:cursor-pointer hover:scale-125 transition-all duration-300"><X size={26} /></div>
                     </div>

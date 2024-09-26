@@ -72,18 +72,18 @@ const WhatWeOffer: React.FC = () => {
     <div className="py-16 px-8 bg-gray-100">
       <h2
         id="heading-whatweoffer"
-        className="text-4xl font-bold text-center mb-12"
+        className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl mb-10 text-center"
       >
         What We Offer
       </h2>
       <div className="max-w-big-screen mx-auto text-xl">
-        <p id="para-whatweoffer" className="mb-8 text-center">
+        <p id="para-whatweoffer" className="mb-8 text-center text-gray-500 mq-400:text-sm text-xl mq-875:text-lg">
           Our service portfolio encompasses a wide array of IT solutions that
           are designed to drive your business forward.
         </p>
         <ul
           id="list-whatweoffer"
-          className="lg:w-4/5 lg:mx-auto list-disc space-y-4"
+          className="lg:w-4/5 lg:mx-auto text-lg mq-875:text-[16px] mq-500:text-sm list-disc space-y-4"
         >
           {services.map((service, index) => (
             <li key={index}>

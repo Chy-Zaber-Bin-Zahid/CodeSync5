@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -9,8 +8,8 @@ import { faqs } from "@/utils/faqs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FQAs | CodeSync5 LTD",
-  description: "CodeSync LTD FQAs Page",
+  title: "FQAs | CodeSync5 ",
+  description: "CodeSync  FQAs Page",
 };
 
 function page() {

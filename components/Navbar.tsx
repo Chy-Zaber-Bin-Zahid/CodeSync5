@@ -1,7 +1,6 @@
 "use client";
 
 import MobileNavbar from "@/components/MobileNavbar";
-import { companyName } from "@/constant/CompanyName";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,16 +28,13 @@ function Navbar() {
         >
           <Image
             src="/assets/nav-logo.png"
-            width={33}
-            height={33}
-            objectFit="contain"
+            width={140}
+            height={140}
+            style={{ objectFit: "contain" }}
             alt="Logo"
             blurDataURL="data:..."
             placeholder="blur"
           />
-          <h1 className="text-lg font-semibold m-0">
-            <span className="text-primaryText">{companyName}</span>
-          </h1>
         </Link>
         <div className="flex justify-between items-center gap-3 mq-875:hidden">
           <Link

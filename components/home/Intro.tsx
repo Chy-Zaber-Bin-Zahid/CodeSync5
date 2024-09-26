@@ -60,7 +60,7 @@ function Intro() {
               src="/assets/home/home-intro.svg"
               width={450}
               height={400}
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
               alt="Introduction of IT"
               blurDataURL="data:..."
               placeholder="blur"

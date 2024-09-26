@@ -51,7 +51,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#f0f4f8] dark:bg-gray-900">
-      <div className="mx-auto max-w-big-screen px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-big-screen px-3 py-16 sm:px-6 lg:px-8">
         <div className="lg:flex lg:gap-8">
           <div className="mt-8 flex-1 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-4 lg:gap-y-16">
             {/* Services Section */}

@@ -28,13 +28,13 @@ const Welcome = () => {
   return (
     <div
       id="welcome"
-      className="flex flex-col lg:flex-row lg:justify-between max-w-big-screen mx-auto items-center py-16 px-3"
+      className="flex flex-col lg:flex-row lg:justify-between max-w-big-screen mx-auto items-center py-12 px-3"
     >
-      <div className="text-slate-700 flex-1">
-        <h1>
-          Welcome to <span className="text-red-800">{companyName}</span> Limited
+      <div className=" flex-1">
+        <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl">
+          Welcome to <span className="text-primaryText">{companyName}</span>
         </h1>
-        <p className="text-xl text-gray-500 tracking-wider leading-relaxed">
+        <p className="text-gray-500 mq-400:text-sm text-xl mq-875:text-lg leading-relaxed">
           Your go to it-firm for making creative web solutions in the shortest
           time possible. We are a team of experts who are dedicated to providing
           the best services to our clients.
@@ -43,7 +43,7 @@ const Welcome = () => {
       <div className=" h-96 w-full relative lg:flex-1">
         {" "}
         <Image
-          src="/assets/about/Welcome.svg"
+          src="/assets/about/welcome.png"
           alt="Hello Illustration"
           className="rounded-lg"
           blurDataURL="data:..."

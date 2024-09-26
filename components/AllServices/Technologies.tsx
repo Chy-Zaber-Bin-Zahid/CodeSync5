@@ -73,7 +73,7 @@ const Technologies: React.FC = () => {
   });
   return (
     <div className="py-16 px-8 bg-gray-100">
-      <h2 id="heading-tech" className="text-4xl font-bold text-center mb-12">
+      <h2 id="heading-tech" className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl text-center mb-10">
         Technologies We Use
       </h2>
       <div
