@@ -35,7 +35,7 @@ const Footer = () => {
     {
       name: "Facebook",
       icon: FacebookLogo,
-      href: "/facebook",
+      href: "https://www.facebook.com/CodeSync5",
     },
     {
       name: "LinkedIn",
@@ -64,7 +64,7 @@ const Footer = () => {
                   <li key={service.name}>
                     <Link
                       href={service.href}
-                      className="underline-offset-2 duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="no-underline duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {service.name}
                     </Link>
@@ -83,7 +83,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="underline-offset-2 duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="no-underline duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {link.name}
                     </Link>
@@ -102,7 +102,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="underline-offset-2 duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="no-underline duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {link.name}
                     </Link>
@@ -121,7 +121,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="underline-offset-2 duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="no-underline duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                     >
                       {link.name}
                     </Link>
@@ -138,7 +138,7 @@ const Footer = () => {
                     href={social.name === "Gmail" ? `mailto:${social.href}` : social.href}
                     rel="noreferrer"
                     target="_blank"
-                    className="underline-offset-2 text-gray-700 transition duration-300 hover:opacity-75 dark:text-gray-200"
+                    className="no-underline text-gray-700 transition duration-300 hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">{social.name}</span>
                     <social.icon size={24} />
