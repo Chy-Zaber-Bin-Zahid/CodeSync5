@@ -58,7 +58,7 @@ function Intro({ service }: Service) {
           <Image
             id="image"
             src={service.image}
-            layout="fill"
+            fill
             style={{ objectFit: "contain" }}
             alt={service.name}
             className="absolute"

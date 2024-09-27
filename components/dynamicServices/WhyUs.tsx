@@ -47,7 +47,7 @@ function WhyUs({ service }: WhyUsProps) {
         <h2 id="heading-whybetter" className="text-2xl mq-875:text-xl mq-500:text-lg font-bold">
           Why We&apos;re Better
         </h2>
-        <ul id="list-whybetter" className="list-disc  space-y-3">
+        <ul id="list-whybetter" className="list-disc space-y-3">
           {service.whyUs.map((item, index) => (
             <li
               key={index}
