@@ -40,12 +40,12 @@ const Footer = () => {
     {
       name: "LinkedIn",
       icon: LinkedinLogo,
-      href: "/linkedin",
+      href: "https://www.linkedin.com/company/codesync5/",
     },
     {
       name: "Gmail",
       icon: EnvelopeSimple,
-      href: "/gmail",
+      href: "codesyncfive@gmail.com",
     },
   ];
 
@@ -134,15 +134,15 @@ const Footer = () => {
             <ul className="pl-0 col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
               {socialLinks.map((social) => (
                 <li key={social.name}>
-                  <Link
-                    href={social.href}
+                  <a
+                    href={social.name === "Gmail" ? `mailto:${social.href}` : social.href}
                     rel="noreferrer"
                     target="_blank"
                     className="underline-offset-2 text-gray-700 transition duration-300 hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">{social.name}</span>
                     <social.icon size={24} />
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
