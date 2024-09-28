@@ -53,10 +53,15 @@ const VisionStatement = () => {
               <span className="text-primaryText">Vision</span> Statement:
             </h1>
             <p className="leading-relaxed text-gray-500 mq-400:text-sm text-2xl mq-875:text-lg">
-              At{" "}
-              <span className="text-primaryText font-semibold">{companyName}</span>{" "}
-              , our vision is to be the leading provider of software consultancy
-              services in the industry.
+              Our vision at{" "}
+              <span className="text-primaryText font-semibold">
+                {companyName}
+              </span>{" "}
+              is to transform the way businesses approach technology by
+              providing innovative and cost-effective solutions. We aim to set
+              the standard for excellence by empowering businesses with
+              cutting-edge tools and rapid execution, ensuring their success in
+              the digital age.
             </p>
           </div>
         </div>
