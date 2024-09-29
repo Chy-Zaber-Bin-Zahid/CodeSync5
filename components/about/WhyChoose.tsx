@@ -85,7 +85,7 @@ const WhyChoose = () => {
           className="md:flex-1 w-[60%]  h-64 lg:h-96 relative rounded-lg"
         >
           <Image
-            src="/assets/about/whychoose.png"
+            src="/assets/about/whychoose.svg"
             alt="Team Illustration"
             className="rounded-lg absolute inset-0"
             blurDataURL="data:..."

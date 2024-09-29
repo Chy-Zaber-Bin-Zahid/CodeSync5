@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -39,7 +39,9 @@ export default function Refund() {
   const containerRef = useRef(null);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -52,46 +54,51 @@ export default function Refund() {
 
   const policyPoints = [
     {
-      title: "30-Day Money-Back Guarantee",
+      title: "30-Day Satisfaction Guarantee",
       content:
-        "We offer a 30-day money-back guarantee on all our software products. If you're not satisfied with your purchase, you can request a full refund within 30 days of the purchase date.",
+        "At CodeSync, we stand by the quality of our software products and offer a 30-day satisfaction guarantee. If you’re not completely happy with your purchase, you can request a full refund within 30 days from the date of purchase.",
     },
     {
-      title: "Eligibility for Refund",
+      title: "Refund Eligibility",
       content:
-        "To be eligible for a refund, you must have purchased the software directly from our website. Refunds are not available for products purchased through third-party retailers or app stores.",
+        "To qualify for a refund, your purchase must be made directly through our website. Please note that we cannot offer refunds for products acquired through third-party vendors or app stores.",
     },
     {
-      title: "Refund Process",
+      title: "How to Request a Refund",
       content:
-        "To initiate a refund, please contact our customer support team with your order number and reason for the refund. We aim to process all refund requests within 5-7 business days.",
+        "To begin the refund process, please reach out to our customer support team with your order number and a brief explanation of your request. We aim to process refund requests within 5-7 business days.",
     },
     {
-      title: "Exceptions",
+      title: "Non-Refundable Items",
       content:
-        "Custom development services, consultation fees, and subscription-based services that have been used for more than 14 days are not eligible for refunds.",
+        "Please be aware that custom development services, consultation fees, and subscription-based services that have been accessed for more than 14 days are not eligible for refunds.",
     },
   ];
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
     try {
       const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID ?? "";
       const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "";
       const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY ?? "";
 
-      await emailjs.send(serviceId, templateId, {
-        form_name: values.name,
-        form_email: values.email,
-        message: values.message,
-      }, publicKey);
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          form_name: values.name,
+          form_email: values.email,
+          message: values.message,
+        },
+        publicKey
+      );
 
-      setSubmitStatus('success');
+      setSubmitStatus("success");
       form.reset();
     } catch (error) {
-      console.error('Failed to send email:', error);
-      setSubmitStatus('error');
+      console.error("Failed to send email:", error);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -154,7 +161,11 @@ export default function Refund() {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="your.email@example.com" {...field} />
+                      <Input
+                        type="email"
+                        placeholder="your.email@example.com"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -181,15 +192,20 @@ export default function Refund() {
                 className="w-full bg-indigo-600 hover:bg-indigo-700"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Request'} <ArrowRightIcon className="ml-2 h-4 w-4" />
+                {isSubmitting ? "Submitting..." : "Submit Request"}{" "}
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
               </Button>
             </form>
           </Form>
-          {submitStatus === 'success' && (
-            <p className="mt-4 text-green-600 text-center">Request submitted successfully!</p>
+          {submitStatus === "success" && (
+            <p className="mt-4 text-green-600 text-center">
+              Request submitted successfully!
+            </p>
           )}
-          {submitStatus === 'error' && (
-            <p className="mt-4 text-red-600 text-center">Failed to submit request. Please try again.</p>
+          {submitStatus === "error" && (
+            <p className="mt-4 text-red-600 text-center">
+              Failed to submit request. Please try again.
+            </p>
           )}
         </section>
       </div>

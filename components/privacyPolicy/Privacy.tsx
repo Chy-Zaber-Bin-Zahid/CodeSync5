@@ -18,8 +18,44 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+// Data for the Privacy Policy
+const privacyPolicyData = {
+  lastUpdated: "September 23, 2024",
+  introParagraph:
+    "At CodeSync, we prioritize your privacy and are committed to protecting your personal information. This policy outlines how we gather, utilize, and safeguard your data.",
+  sections: [
+    {
+      id: "item-1",
+      title: "Information We Gather",
+      content:
+        "We collect information that you voluntarily provide to us, such as when you create an account, complete a form, or interact with our team. This information may include your name, email address, phone number, and company details.",
+    },
+    {
+      id: "item-2",
+      title: "How We Utilize Your Information",
+      content:
+        "The information we collect is used to deliver, maintain, and enhance our services, to communicate with you effectively, and to fulfill our legal obligations. Additionally, we may use your information to keep you informed about updates and new offerings related to our products and services.",
+    },
+    {
+      id: "item-3",
+      title: "Protecting Your Data",
+      content:
+        "We implement various security measures to protect your personal information. While we strive to ensure the highest level of security, it’s important to recognize that no online transmission or storage method can be guaranteed to be completely secure.",
+    },
+    {
+      id: "item-4",
+      title: "Your Rights Regarding Your Information",
+      content:
+        "You have the right to access, modify, or delete your personal information at any time. You may also have the ability to limit or object to specific uses of your data. To exercise these rights, please reach out to us using the contact details provided below.",
+    },
+  ],
+  contactInfo: {
+    email: "privacy@techinnovatesolutions.com",
+    address: "123 Tech Street, Innovation City, 12345",
+  },
+};
+
 export default function Privacy() {
-  const [lastUpdated] = useState("September 23, 2024");
   const [showContact, setShowContact] = useState(false);
   const cardRef = useRef(null);
   const contactRef = useRef(null);
@@ -59,52 +95,20 @@ export default function Privacy() {
             Privacy Policy
           </CardTitle>
           <CardDescription className="text-center text-gray-500">
-            Last updated: {lastUpdated}
+            Last updated: {privacyPolicyData.lastUpdated}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <p className="mb-6 text-gray-700">
-            At TechInnovate Solutions, we take your privacy seriously. This
-            policy describes how we collect, use, and protect your personal
-            information.
+            {privacyPolicyData.introParagraph}
           </p>
           <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Information We Collect</AccordionTrigger>
-              <AccordionContent>
-                We collect information you provide directly to us, such as
-                when you create an account, fill out a form, or communicate
-                with us. This may include your name, email address, phone
-                number, and company information.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>How We Use Your Information</AccordionTrigger>
-              <AccordionContent>
-                We use the information we collect to provide, maintain, and
-                improve our services, to communicate with you, and to comply
-                with legal obligations. We may also use your information to
-                send you updates about our products and services.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Data Security</AccordionTrigger>
-              <AccordionContent>
-                We implement a variety of security measures to maintain the
-                safety of your personal information. However, no method of
-                transmission over the Internet or electronic storage is 100%
-                secure, so we cannot guarantee absolute security.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger>Your Rights</AccordionTrigger>
-              <AccordionContent>
-                You have the right to access, correct, or delete your personal
-                information. You may also have the right to restrict or object
-                to certain processing of your data. To exercise these rights,
-                please contact us using the information provided below.
-              </AccordionContent>
-            </AccordionItem>
+            {privacyPolicyData.sections.map((section) => (
+              <AccordionItem key={section.id} value={section.id}>
+                <AccordionTrigger>{section.title}</AccordionTrigger>
+                <AccordionContent>{section.content}</AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </CardContent>
         <CardFooter className="flex flex-col items-center">
@@ -118,11 +122,15 @@ export default function Privacy() {
             ref={contactRef}
             className="text-center text-gray-700 overflow-hidden"
           >
-            <p>For privacy-related inquiries, please contact:</p>
-            <p className="font-semibold">
-              privacy@techinnovatesolutions.com
-            </p>
-            <p>123 Tech Street, Innovation City, 12345</p>
+            {showContact && (
+              <>
+                <p>For privacy-related inquiries, please contact:</p>
+                <p className="font-semibold">
+                  {privacyPolicyData.contactInfo.email}
+                </p>
+                <p>{privacyPolicyData.contactInfo.address}</p>
+              </>
+            )}
           </div>
         </CardFooter>
       </Card>

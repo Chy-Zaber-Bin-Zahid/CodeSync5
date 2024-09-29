@@ -44,7 +44,7 @@ const AllServicesHero = () => {
     <>
       <div className="relative w-full h-[60vh] flex items-center justify-center">
         <Image
-          src="/assets/AllServices/service.png"
+          src="/assets/AllServices/service.svg"
           alt="Services Hero"
           style={{ objectFit: "contain" }}
           fill
