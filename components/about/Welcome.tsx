@@ -43,7 +43,7 @@ const Welcome = () => {
       <div className=" h-96 w-full relative lg:flex-1">
         {" "}
         <Image
-          src="/assets/about/welcome.png"
+          src="/assets/about/welcome.svg"
           alt="Hello Illustration"
           className="rounded-lg"
           blurDataURL="data:..."

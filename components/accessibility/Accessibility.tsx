@@ -54,24 +54,24 @@ export default function Accessibility() {
 
   const accessibilityPoints = [
     {
-      title: "Our Commitment",
+      title: "Our Pledge",
       content:
-        "TechInnovate Solutions is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.",
+        "At CodeSync, we are dedicated to making our digital platforms accessible to all users, including those with disabilities. We continually strive to enhance the user experience for everyone, ensuring our solutions adhere to relevant accessibility standards.",
     },
     {
-      title: "Conformance Status",
+      title: "Compliance Status",
       content:
-        "The Web Content Accessibility Guidelines (WCAG) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. Our website is partially conformant with WCAG 2.1 level AA.",
+        "The Web Content Accessibility Guidelines (WCAG) set forth essential criteria for improving web accessibility. These guidelines outline three levels of compliance: Level A, Level AA, and Level AAA. Our website currently meets the requirements of WCAG 2.1 at Level AA, reflecting our commitment to accessibility, though we acknowledge that further improvements are needed.",
     },
     {
       title: "Accessibility Features",
       content:
-        "Our website incorporates the following accessibility features: semantic HTML, ARIA attributes, keyboard navigation support, color contrast compliance, resizable text without loss of functionality, and alternative text for images.",
+        "Our website is designed with various accessibility features, including structured HTML for better navigation, ARIA roles to enhance screen reader compatibility, keyboard navigation support, proper colour contrast for readability, resizable text, and alternative text for images to ensure everyone can access our content.",
     },
     {
-      title: "Limitations",
+      title: "Ongoing Improvements",
       content:
-        "Despite our efforts to ensure accessibility of our website, there may be some limitations. We are working to address these issues and achieve full compliance. If you encounter any issues, please contact us.",
+        "While we are committed to providing an accessible online experience, we recognize that some areas may still pose challenges. We are actively working to address these limitations to ensure full compliance. If you encounter any accessibility issues, please don't hesitate to reach out to us for support.",
     },
   ];
 
