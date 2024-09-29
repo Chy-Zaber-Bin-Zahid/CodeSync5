@@ -18,11 +18,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-// Data for the Privacy Policy
 const privacyPolicyData = {
   lastUpdated: "September 23, 2024",
   introParagraph:
-    "At CodeSync, we prioritize your privacy and are committed to protecting your personal information. This policy outlines how we gather, utilize, and safeguard your data.",
+    "At CodeSync5, we prioritize your privacy and are committed to protecting your personal information. This policy outlines how we gather, utilize, and safeguard your data.",
   sections: [
     {
       id: "item-1",
