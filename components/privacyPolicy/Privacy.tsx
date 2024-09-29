@@ -40,7 +40,7 @@ const privacyPolicyData = {
       id: "item-3",
       title: "Protecting Your Data",
       content:
-        "We implement various security measures to protect your personal information. While we strive to ensure the highest level of security, it’s important to recognize that no online transmission or storage method can be guaranteed to be completely secure.",
+        "We implement various security measures to protect your personal information. While we strive to ensure the highest level of security, it's important to recognize that no online transmission or storage method can be guaranteed to be completely secure.",
     },
     {
       id: "item-4",
@@ -50,8 +50,8 @@ const privacyPolicyData = {
     },
   ],
   contactInfo: {
-    email: "privacy@techinnovatesolutions.com",
-    address: "123 Tech Street, Innovation City, 12345",
+    email: "codesyncfive@gmail.com",
+    address: "Dhaka, Bangladesh",
   },
 };
 
@@ -67,9 +67,9 @@ export default function Privacy() {
   }, []);
 
   const toggleContact = () => {
-    setShowContact(!showContact);
     if (contactRef.current) {
       if (!showContact) {
+        setShowContact(true);
         gsap.to(contactRef.current, {
           height: "auto",
           opacity: 1,
@@ -82,6 +82,7 @@ export default function Privacy() {
           opacity: 0,
           duration: 0.5,
           ease: "power2.in",
+          onComplete: () => setShowContact(false),
         });
       }
     }
@@ -122,15 +123,11 @@ export default function Privacy() {
             ref={contactRef}
             className="text-center text-gray-700 overflow-hidden"
           >
-            {showContact && (
-              <>
-                <p>For privacy-related inquiries, please contact:</p>
-                <p className="font-semibold">
-                  {privacyPolicyData.contactInfo.email}
-                </p>
-                <p>{privacyPolicyData.contactInfo.address}</p>
-              </>
-            )}
+            <p>For privacy-related inquiries, please contact:</p>
+            <p className="font-semibold">
+              {privacyPolicyData.contactInfo.email}
+            </p>
+            <p>{privacyPolicyData.contactInfo.address}</p>
           </div>
         </CardFooter>
       </Card>

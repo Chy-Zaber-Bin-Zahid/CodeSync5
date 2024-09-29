@@ -60,8 +60,8 @@ function Meet() {
                             placeholder="blur"
                             className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
                         />
-                        <div className="absolute bottom-0 left-0 min-mq-501:-translate-x-full mq-500:-translate-y-full min-mq-501:group-hover:translate-x-0 mq-500:group-hover:translate-y-0 bg-black opacity-30 w-full h-full transition-transform duration-500 z-10"></div>
-                        <div className="absolute bottom-0 left-0 min-mq-501:-translate-x-full mq-500:-translate-y-full min-mq-501:group-hover:translate-x-0 mq-500:group-hover:translate-y-0 w-full h-full transition-all duration-500 z-20 flex flex-col justify-center items-center text-white">
+                        <div className="absolute bottom-0 left-0 min-mq-501:-translate-x-full mq-500:translate-y-full min-mq-501:group-hover:translate-x-0 mq-500:group-hover:translate-y-0 bg-black opacity-30 w-full h-full transition-transform duration-500 z-10"></div>
+                        <div className="absolute bottom-0 left-0 min-mq-501:-translate-x-full mq-500:translate-y-full min-mq-501:group-hover:translate-x-0 mq-500:group-hover:translate-y-0 w-full h-full transition-all duration-500 z-20 flex flex-col justify-center items-center text-white">
                             <h1 className="m-0 text-[18px] mq-565:text-[16px] mq-500:text-lg font-semibold">{info.name}</h1>
                             <p className="mq-565:text-[14px] mq-500:text-[16px]">{info.position}</p>
                         </div>

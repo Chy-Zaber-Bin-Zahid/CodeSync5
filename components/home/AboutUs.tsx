@@ -33,7 +33,7 @@ function AboutUs() {
       <div id="aboutUs-component" className="w-full px-3 my-16">
         <div className="mx-auto max-w-big-screen w-full flex flex-col lg:flex-row gap-4 justify-between items-center">
           <div className="flex flex-col gap-4 mx-2 justify-center items-center lg:items-start w-full lg:w-[55%]">
-            <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl">
+            <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl m-0">
               About
               <span className="text-primaryText "> {companyName}</span>
             </h1>

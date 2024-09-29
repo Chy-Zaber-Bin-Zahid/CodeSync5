@@ -49,7 +49,7 @@ const VisionStatement = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl">
+            <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl mb-3">
               <span className="text-primaryText">Vision</span> Statement:
             </h1>
             <p className="leading-relaxed text-gray-500 mq-400:text-sm text-2xl mq-875:text-lg">
