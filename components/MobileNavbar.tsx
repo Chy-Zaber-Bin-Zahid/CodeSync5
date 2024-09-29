@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { WhatsappLogo, X } from 'phosphor-react';
+import { X } from 'phosphor-react';
 import React from 'react';
 
 type MobileNavbar = {
@@ -44,7 +44,7 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
                         <Link onClick={() => handleNav()} href="/about" className={`${baseLinkCommonClass} ${currentPath === "/about" ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>About</Link>
                         <Link onClick={() => handleNav()} href="/services" className={`${baseLinkCommonClass} ${currentPath.startsWith("/services") ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>Services</Link>
                         <Link onClick={() => handleNav()} href="/contact" className={`${baseLinkCommonClass} ${currentPath.startsWith("/contact") ? baseLinkActiveClass : baseLinkDefaultClass} w-full`}>Contact Us</Link>
-                        <a
+                        {/* <a
                             href="/"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -52,7 +52,7 @@ function MobileNavbar({ toggleNav, setToggleNav }: MobileNavbar) {
                         >
                             <WhatsappLogo size={26} />
                             Whatsapp
-                        </a>
+                        </a> */}
                     </div>
                </div>
                <div className="absolute top-0 w-full h-full bg-white opacity-95 z-40"></div>

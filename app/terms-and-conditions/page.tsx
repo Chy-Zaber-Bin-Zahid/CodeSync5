@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms And Conditions | CodeSync5 ",
-  description: "CodeSync  Terms And Conditions Page",
+  description: "CodeSync5 Terms And Conditions Page",
 };
 
 export default function TermsAndConditions() {

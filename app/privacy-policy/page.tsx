@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | CodeSync5 ",
-  description: "CodeSync  Privacy Policy Page",
+  description: "CodeSync5 Privacy Policy Page",
 };
 
 export default function PrivacyPolicy() {

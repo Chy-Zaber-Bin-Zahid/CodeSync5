@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { List, WhatsappLogo } from "phosphor-react";
+import { List } from "phosphor-react";
 import { useState } from "react";
 
 function Navbar() {
@@ -75,7 +75,7 @@ function Navbar() {
           >
             Contact Us
           </Link>
-          <a
+          {/* <a
             href="/"
             target="_blank"
             rel="noopener noreferrer"
@@ -83,7 +83,7 @@ function Navbar() {
           >
             <WhatsappLogo size={26} />
             Whatsapp
-          </a>
+          </a> */}
         </div>
         <div
           onClick={() => setToggleNav(true)}

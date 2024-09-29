@@ -7,7 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "CodeSync5",
-  description: "CodeSync  Home Page",
+  description: "CodeSync5 Home Page",
 };
 
 export default function RootLayout({
