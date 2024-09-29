@@ -8,7 +8,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Services | CodeSync5 ",
-  description: "CodeSync  Services Page",
+  description: "CodeSync5 Services Page",
 };
 
 const Services: React.FC = () => {

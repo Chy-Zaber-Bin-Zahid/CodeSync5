@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Meet The Team | CodeSync5 ",
-  description: "CodeSync  Meet The Team Page",
+  description: "CodeSync5 Meet The Team Page",
 };
 
 function MeetTheTeam() {

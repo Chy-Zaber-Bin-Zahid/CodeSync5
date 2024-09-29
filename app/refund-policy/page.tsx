@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Refund Policy | CodeSync5 ",
-  description: "CodeSync  Refund Policy Page",
+  description: "CodeSync5 Refund Policy Page",
 };
 
 export default function RefundPolicy() {

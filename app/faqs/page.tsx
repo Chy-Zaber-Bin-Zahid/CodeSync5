@@ -9,7 +9,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "FQAs | CodeSync5 ",
-  description: "CodeSync  FQAs Page",
+  description: "CodeSync5 FQAs Page",
 };
 
 function page() {

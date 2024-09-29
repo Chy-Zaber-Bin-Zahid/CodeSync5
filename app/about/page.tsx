@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us | CodeSync5 ",
-  description: "CodeSync  About Us Page",
+  description: "CodeSync5 About Us Page",
 };
 
 const Page = () => {
