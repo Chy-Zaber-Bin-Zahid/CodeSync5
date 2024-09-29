@@ -56,7 +56,7 @@ export default function Accessibility() {
     {
       title: "Our Pledge",
       content:
-        "At CodeSync, we are dedicated to making our digital platforms accessible to all users, including those with disabilities. We continually strive to enhance the user experience for everyone, ensuring our solutions adhere to relevant accessibility standards.",
+        "At CodeSync5, we are dedicated to making our digital platforms accessible to all users, including those with disabilities. We continually strive to enhance the user experience for everyone, ensuring our solutions adhere to relevant accessibility standards.",
     },
     {
       title: "Compliance Status",

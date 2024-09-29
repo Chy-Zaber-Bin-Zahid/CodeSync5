@@ -38,7 +38,7 @@ const termsData = [
     id: "item-3",
     title: "Limitation of Liability",
     content:
-      "CodeSync will not be held responsible for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use our services or materials, even if we have been informed of the possibility of such damages.",
+      "CodeSync5 will not be held responsible for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use our services or materials, even if we have been informed of the possibility of such damages.",
   },
   {
     id: "item-4",

@@ -56,7 +56,7 @@ export default function Refund() {
     {
       title: "30-Day Satisfaction Guarantee",
       content:
-        "At CodeSync, we stand by the quality of our software products and offer a 30-day satisfaction guarantee. If you’re not completely happy with your purchase, you can request a full refund within 30 days from the date of purchase.",
+        "At CodeSync5, we stand by the quality of our software products and offer a 30-day satisfaction guarantee. If you’re not completely happy with your purchase, you can request a full refund within 30 days from the date of purchase.",
     },
     {
       title: "Refund Eligibility",
