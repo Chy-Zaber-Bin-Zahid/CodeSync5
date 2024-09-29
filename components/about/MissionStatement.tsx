@@ -48,19 +48,12 @@ const MissionStatement = () => {
             <h1 className="font-bold text-4xl mq-400:text-2xl mq-875:text-3xl mb-3">
               <span className="text-primaryText">Mission</span> Statement:
             </h1>
-            <p className="leading-relaxed text-gray-500 mq-400:text-sm text-2xl mq-875:text-lg">
+            <p className="text-gray-500 mq-400:text-sm text-2xl mq-875:text-lg">
               {/* Our mission at{" "}
               <span className="text-primaryText font-semibold">
                 {companyName}{" "}
               </span> */}
-              Our mission is to provide innovative technology solutions
-              efficiently and affordably. We are committed to addressing your
-              specific needs with quick turnaround times, leveraging modern
-              advancements to drive success. Our goal is to deliver exceptional
-              results that align with your objectives, ensuring our services
-              offer both value and effectiveness. Trust us to support your
-              business with reliable, high-quality solutions that meet your
-              expectations.
+              Our mission is to deliver innovative tech solutions efficiently and affordably. We address your needs with quick turnarounds and high-quality service, ensuring our solutions align with your goals.
             </p>
           </div>
         </div>
