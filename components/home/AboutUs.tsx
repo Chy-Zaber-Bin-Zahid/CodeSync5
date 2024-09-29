@@ -39,16 +39,7 @@ function AboutUs() {
             </h1>
             <div className="flex flex-col gap-3 justify-center items-start w-full">
               <p className="text-gray-500 mq-400:text-sm text-2xl mq-875:text-lg">
-                <span className="text-black font-bold">{companyName}</span> we
-                are committed to empowering businesses through advanced
-                technological solutions. Our expertise spans intelligent
-                automation, creative visual design, and streamlined digital
-                commerce to meet contemporary needs. We excel in developing
-                versatile applications and crafting engaging online experiences
-                with a focus on user-centric design. From bespoke software to
-                impactful digital interfaces, we drive results that align with
-                your business goals. Collaborate with us to elevate your
-                operations with innovative, tailored tech solutions.
+                <span className="text-black font-bold">{companyName}</span> empowers businesses with advanced tech solutions. We specialize in intelligent automation, creative design, and digital commerce. From custom software to engaging digital interfaces, we help elevate your operations.
               </p>
             </div>
           </div>
