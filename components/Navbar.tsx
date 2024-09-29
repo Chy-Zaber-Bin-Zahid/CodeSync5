@@ -76,7 +76,7 @@ function Navbar() {
             Contact Us
           </Link>
           <a
-            href="https://rosetech.dev/services/devops/"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-whatsapp-default rounded text-white flex justify-center items-center gap-1 py-2 px-3 transition-all duration-300 hover:bg-whatsapp-hover no-underline"
