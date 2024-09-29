@@ -18,8 +18,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
+import { companyName } from "@/constant/CompanyName";
 
 const termsData = [
   {
@@ -51,12 +50,11 @@ const termsData = [
 export default function TermsAndCondition({
   lastUpdated = "September 23, 2024",
   contactInfo = {
-    email: "legal@techinnovatesolutions.com",
-    address: "123 Tech Street, Innovation City, 12345",
+    email: "codesyncfive@gmail.com",
+    address: "Dhaka, Bangladesh",
   },
 }) {
   const [showContact, setShowContact] = useState(false);
-  const [accepted, setAccepted] = useState(false);
   const cardRef = useRef(null);
   const contactRef = useRef(null);
 
@@ -67,9 +65,9 @@ export default function TermsAndCondition({
   }, []);
 
   const toggleContact = () => {
-    setShowContact(!showContact);
     if (contactRef.current) {
       if (!showContact) {
+        setShowContact(true);
         gsap.to(contactRef.current, {
           height: "auto",
           opacity: 1,
@@ -82,6 +80,7 @@ export default function TermsAndCondition({
           opacity: 0,
           duration: 0.5,
           ease: "power2.in",
+          onComplete: () => setShowContact(false),
         });
       }
     }
@@ -100,7 +99,7 @@ export default function TermsAndCondition({
         </CardHeader>
         <CardContent>
           <p className="mb-6 text-gray-700">
-            Welcome to TechInnovate Solutions. By using our services, you agree
+            Welcome to {companyName}. By using our services, you agree
             to comply with and be bound by the following terms and conditions.
           </p>
           <Accordion type="single" collapsible className="w-full">
@@ -113,23 +112,9 @@ export default function TermsAndCondition({
           </Accordion>
         </CardContent>
         <CardFooter className="flex flex-col items-center">
-          <div className="flex items-center space-x-2 mb-4">
-            <Checkbox
-              id="terms"
-              checked={accepted}
-              onCheckedChange={(checked) => setAccepted(checked === true)}
-            />
-            <Label
-              htmlFor="terms"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              I accept the terms and conditions
-            </Label>
-          </div>
           <Button
             onClick={toggleContact}
             className="mb-4 bg-primaryText hover:bg-primaryText-hover"
-            disabled={!accepted}
           >
             {showContact ? "Hide Contact Info" : "Show Contact Info"}
           </Button>
@@ -137,15 +122,11 @@ export default function TermsAndCondition({
             ref={contactRef}
             className="text-center text-gray-700 overflow-hidden"
           >
-            {showContact && (
-              <>
-                <p>
-                  For inquiries about our Terms & Conditions, please contact:
-                </p>
-                <p className="font-semibold">{contactInfo.email}</p>
-                <p>{contactInfo.address}</p>
-              </>
-            )}
+            <p>
+              For inquiries about our Terms & Conditions, please contact:
+            </p>
+            <p className="font-semibold">{contactInfo.email}</p>
+            <p>{contactInfo.address}</p>
           </div>
         </CardFooter>
       </Card>
