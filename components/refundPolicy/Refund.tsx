@@ -71,7 +71,7 @@ export default function Refund() {
     {
       title: "Non-Refundable Items",
       content:
-        "Please be aware that custom development services, consultation fees, and subscription-based services that have been accessed for more than 14 days are not eligible for refunds.",
+        "Please be aware that custom development services, consultation fees, and subscription-based services that have been accessed for more than 7 days are not eligible for refunds.",
     },
   ];
 

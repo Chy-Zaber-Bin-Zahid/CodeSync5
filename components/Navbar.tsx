@@ -27,9 +27,9 @@ function Navbar() {
           className="flex justify-end items-end gap-2 no-underline text-black"
         >
           <Image
-            src="/assets/nav-logo.png"
-            width={140}
-            height={35}
+            src="/assets/nav-logo.svg"
+            width={150}
+            height={150}
             style={{ objectFit: "contain" }}
             alt="Logo"
             blurDataURL="data:..."

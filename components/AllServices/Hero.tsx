@@ -55,7 +55,7 @@ const AllServicesHero = () => {
         </div>
       </div>
       <div className="bg-white mq-400:py-0 lg:py-16 ">
-        <div className=" py-8 mq-400:py-4  text-center bg-gray-200 bg-opacity-70  px-8">
+        <div className=" py-8 mq-400:py-4  text-center bg-gray-100 px-8">
           <h1
             id="heading"
             className="text-center font-bold text-4xl mq-400:text-2xl mq-875:text-3xl"

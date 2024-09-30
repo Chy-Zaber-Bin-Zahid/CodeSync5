@@ -74,7 +74,8 @@ const AboutUs = () => {
     );
   });
   return (
-    <div className="max-w-big-screen px-3 mx-auto flex flex-col gap-2  my-14">
+    <section className="bg-gray-100 w-full my-14 py-16">
+      <div className="max-w-big-screen px-3 mx-auto flex flex-col gap-2 ">
       <h1
         className="text-4xl mq-400:text-2xl mq-875:text-3xl font-bold"
         id="about-us"
@@ -113,6 +114,7 @@ const AboutUs = () => {
         client we work with.
       </p>
     </div>
+    </section>
   );
 };
 
