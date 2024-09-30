@@ -16,10 +16,6 @@ export const faqs = [
         answer: "We prioritize data security by employing comprehensive measures such as multi-layered defenses, strong encryption protocols, routine vulnerability assessments, and staff awareness programs. Our team continuously monitors emerging threats and adapts our strategies to protect your critical information effectively."
     },
     {
-        question: "Are you able to assist with transitioning to cloud services?",
-        answer: "Yes, we offer expert assistance with cloud migration. Our experienced team will evaluate your existing systems, create a customized migration plan, and facilitate a smooth transition to the cloud, all while minimizing any impact on your daily business activities."
-    },
-    {
         question: "What sets your IT company apart from competitors?",
         answer: "What sets our IT company apart is our commitment to understanding and addressing the unique needs of each client. With a strong emphasis on collaboration, we leverage our extensive technical knowledge and innovative strategies to deliver tailored solutions. Our proactive approach to emerging technologies ensures that we provide the most effective and forward-thinking services in the industry."
     }
