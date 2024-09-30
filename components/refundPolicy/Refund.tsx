@@ -61,12 +61,12 @@ export default function Refund() {
     {
       title: "Refund Eligibility",
       content:
-        "To qualify for a refund, your purchase must be made directly through our website. Please note that we cannot offer refunds for products acquired through third-party vendors or app stores.",
+        "Refunds are eligible for cancellations made within 7 days of project initiation, provided no substantial work has been completed. Once major deliverables are submitted, no refunds will be issued.",
     },
     {
       title: "How to Request a Refund",
       content:
-        "To begin the refund process, please reach out to our customer support team with your order number and a brief explanation of your request. We aim to process refund requests within 5-7 business days.",
+        "To begin the refund process, please contact us via email or reach out to our HR representative with your order number and a brief explanation of your request. We aim to process refund requests within 7 business days.",
     },
     {
       title: "Non-Refundable Items",

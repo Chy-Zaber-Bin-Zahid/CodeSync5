@@ -1,7 +1,7 @@
 export const faqs = [
     {
         question: "What services does your IT company provide?",
-        answer: "Our IT company provides comprehensive services, including application development, cloud computing, data security, IT strategy consulting, network management, and ongoing IT support. We design our solutions to address the specific challenges of businesses across different sectors, ensuring efficiency and security."
+        answer: "Our IT company provides comprehensive services, including web development, mobile application development, e-commerce solutions, AI integration, UI/UX design, and graphics design. We focus on creating innovative and tailored solutions to meet the unique needs of businesses across various sectors, ensuring a seamless user experience, scalability, and visually appealing designs."
     },
     {
         question: "How can your IT solutions enhance my business operations?",
