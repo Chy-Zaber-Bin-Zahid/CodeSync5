@@ -51,20 +51,20 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#f0f4f8] dark:bg-gray-900">
-      <div className="mx-auto max-w-big-screen px-3 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-big-screen px-3 py-4 sm:px-6 lg:px-8">
         <div className="lg:flex lg:gap-8">
-          <div className="mt-8 flex-1 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-4 lg:gap-y-16">
+          <div className="mt-8 flex-1 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-4 lg:gap-y-4">
             {/* Services Section */}
             <div className="col-span-2 sm:col-span-1">
               <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Services
               </p>
-              <ul className="pl-0 mt-6 space-y-4 text-md">
+              <ul className="pl-0 mt-3 space-y-2 text-md">
                 {services.map((service) => (
                   <li key={service.name}>
                     <Link
                       href={service.href}
-                      className="no-underline duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="no-underline  text-gray-700  transition-all duration-300 hover:text-black hover:underline dark:text-gray-200"
                     >
                       {service.name}
                     </Link>
@@ -78,12 +78,12 @@ const Footer = () => {
               <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Company
               </p>
-              <ul className="pl-0 mt-6 space-y-4 text-md">
+              <ul className="pl-0 mt-3 space-y-2 text-md">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="no-underline duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="no-underline duration-300 text-gray-700 transition-all hover:text-black hover:underline dark:text-gray-200"
                     >
                       {link.name}
                     </Link>
@@ -97,12 +97,12 @@ const Footer = () => {
               <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Helpful Links
               </p>
-              <ul className="pl-0 mt-6 space-y-4 text-md">
+              <ul className="pl-0 mt-3 space-y-2 text-md">
                 {helpfulLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="no-underline duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="no-underline duration-300 text-gray-700 transition-all hover:text-black hover:underline dark:text-gray-200"
                     >
                       {link.name}
                     </Link>
@@ -116,12 +116,12 @@ const Footer = () => {
               <p className="text-xl font-medium text-gray-900 dark:text-white">
                 Legal
               </p>
-              <ul className="pl-0 mt-6 space-y-4 text-md">
+              <ul className="pl-0 mt-3 space-y-2 text-md">
                 {legalLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="no-underline duration-300 text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                      className="no-underline duration-300 text-gray-700 transition hover:text-black hover:underline dark:text-gray-200"
                     >
                       {link.name}
                     </Link>
@@ -135,10 +135,14 @@ const Footer = () => {
               {socialLinks.map((social) => (
                 <li key={social.name}>
                   <a
-                    href={social.name === "Gmail" ? `mailto:${social.href}` : social.href}
+                    href={
+                      social.name === "Gmail"
+                        ? `mailto:${social.href}`
+                        : social.href
+                    }
                     rel="noreferrer"
                     target="_blank"
-                    className="no-underline text-gray-700 transition duration-300 hover:opacity-75 dark:text-gray-200"
+                    className="no-underline text-gray-700 transition-all duration-300 hover:brightness-200 hover:text-black  dark:text-gray-200"
                   >
                     <span className="sr-only">{social.name}</span>
                     <social.icon size={24} />
@@ -149,7 +153,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-gray-700 pt-8 dark:border-gray-800">
+        <div className="mt-4 border-t border-gray-700 pt-4 dark:border-gray-800">
           <div className="sm:flex sm:justify-between">
             <p className="text-md text-gray-500 dark:text-gray-400">
               &copy; {currentYear}. CodeSync5. All rights reserved.
@@ -158,7 +162,7 @@ const Footer = () => {
             <p>
               <Link
                 href="/privacy-policy"
-                className="no-underline text-gray-500 transition duration-300 hover:opacity-75 dark:text-gray-400"
+                className="no-underline text-gray-500 transition-all duration-300 hover:text-black hover:underline dark:text-gray-400"
               >
                 Privacy Policy
               </Link>

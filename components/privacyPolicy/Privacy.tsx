@@ -18,7 +18,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-// Data for the Privacy Policy
 const privacyPolicyData = {
   lastUpdated: "September 23, 2024",
   introParagraph:
